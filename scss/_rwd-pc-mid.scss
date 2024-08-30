@@ -1,0 +1,97 @@
+// 平版 過渡樣式
+@media screen and (max-height:1000px) and (min-width: 769px) {
+  .kv-section {
+    &__decobox {
+      transform: scale(.8);
+      transform-origin: 50% 100%;
+    }
+    &__main-title {
+      width: 400px;
+      margin: 16px auto;
+    }
+    &__play-btn {
+      @include size(96px);
+      margin-top: 24px;
+    }
+    &__row {
+      margin-top: 42px;
+    }
+    &__scroll-down {
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .s4-section {
+    @include flex-column;
+
+    &__container {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__bg {
+      @include size(100%);
+      background-image: url(../images/s4_bg_map_mb.png);
+
+      &-map {
+        @include size(100%,670px);
+        position: relative;
+
+        &::before {
+          content: "";
+        }
+      }
+    }
+
+    &__flag {
+      @include size(100%,auto);
+      @include background-setting;
+      padding-bottom: 72px;
+      background-image: url(../images/s4_img_flag_mb.png);;
+    }
+
+    &__desc {
+      max-width: 480px;
+    }
+
+    &__head {
+      margin-top: 50px;
+    }
+
+    &__row {
+      width: 100%;
+      max-width: 480px;
+    }
+
+
+    &__point {
+      transform: translate3d(-50%, -175%, 0);
+    }
+
+
+  }
+}
+
+@media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
+
+  .s3-section {
+
+    &__head {
+      max-width: initial;
+      margin-top: 350px;
+    }
+
+    &__row {
+      @include flex-column;
+      align-items: center;
+    }
+
+    &__item {
+      &:nth-child(1) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
