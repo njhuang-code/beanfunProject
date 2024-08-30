@@ -105,10 +105,10 @@
     align-items: center;
   }
   &__logo {
-    @include size(60px);
+    @include size(70px);
   }
   &__bar {
-    @include size(100%,3px);
+    @include size(100%,2px);
     position: relative;
     margin: 16px 0;
     border-radius: 4px;

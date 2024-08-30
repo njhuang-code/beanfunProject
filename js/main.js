@@ -1,12 +1,8 @@
 // Swiper js
 
-var swiper = new Swiper(".mySwiper", {
-  breakpoints: {
-    768: {
-      slidesPerView: 6,
-      spaceBetween: 16,
-    },
-  }
+var swiper = new Swiper(".swiper-container", {
+  slidesPerView: 4,
+  spaceBetween: 16,
 });
 
 $(function () {
@@ -163,8 +159,10 @@ $(document).ready(function() {
   function calculateTranslateX() {
     var width = window.innerWidth;
     // 根據裝置尺寸定位起始位置
-    if (width > 1400) {
+    if (width > 1440) {
       translateX = -278; 
+    } else if (width > 1280) {
+      translateX = -400; 
     } else if (width > 960) {
       translateX = -700; 
     } else {

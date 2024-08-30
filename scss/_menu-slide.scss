@@ -18,8 +18,9 @@
   &__button {
     @include flex-center;
     @include size(100%,52px);
+    position: absolute;
+    top: 112px;
     align-items: center;
-    order: 2;
     max-width: 119px;
     color: $text03;
     background: #13100e;
@@ -131,8 +132,7 @@
   .menu-slide {
     &__button {
       @include size(24px);
-      position: relative;
-      left: 0;
+      position: initial;
       background: transparent;
       &:hover {
         background: none;

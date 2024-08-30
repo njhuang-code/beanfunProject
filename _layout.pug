@@ -6,7 +6,7 @@ html(lang="zh-Hant")
     - var author = 'Wars of Prasia'
     - var og_title = '波拉西亞戰記｜第二隻混沌首領「鯨獅」震撼登場！'
     - var og_image = './images/facebook_cover_1200x630.jpg'
-    - var og_url = ''
+    - var og_url = 'https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20240904/index.html'
     - var og_desc = '跨越千年時光的圖騰獸「鯨獅」帶著怨恨重新回歸。'
     - var meta_keyword = '波拉、波拉西亞、Wars of Prasia、混沌首領、鯨獅、mmorpg'
     - var date_publish = '2024-8-17'
@@ -67,14 +67,14 @@ html(lang="zh-Hant")
       header.header
         .header__container.row
           .header__left
+            .header__logo
+              a(href="https://warsofprasia.beanfun.com/Main" target="_blank").header__logo-img.header__logo-mb
             button.menu-slide__button
               p.menu-slide__button-text.event-text.fw-lg 活動
-            .header__logo
-              a(href="").header__logo-img.header__logo-mb
             .menu-slide
               .menu-slide__closed
               .menu-slide__logo.text-center
-                a(href="").header__logo-img
+                a(href="https://warsofprasia.beanfun.com/Main" target="_blank").header__logo-img
                 ul.menu-slide__row
                   li.menu-slide__item.text-center
                     a(href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10634" target="blank").menu-slide__link
@@ -85,13 +85,13 @@ html(lang="zh-Hant")
                       img.menu-slide__img.d-none-sm(src="./images/banner_02.jpg", alt="")
                       h4.text-sm 朗多城堡
                   li.menu-slide__item.text-center
-                    a(href="").menu-slide__link
+                    a(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10431" target="_black").menu-slide__link
                       img.menu-slide__img.d-none-sm(src="./images/banner_03.jpg", alt="")
                       h4.text-sm WPC 10%紅利回饋
           .header__right
             ul.header__row.row
               li.header__item.d-none-sm
-                a(href="https://galaxy.beanfun.com/webapi/view/login/init/twp/OTT:914:Login:ooAoVfC9DqC0aXwuEG3ZWorO5PCY966TeWCGkGp76RhEN0NhuQOhgSOV72OAyX16UdDZoJKmMjYXbXHq?locale=zh-tw" target="_blank").btn-game.text-md.fw-md GAME START
+                a(href="https://galaxy.beanfun.com/webapi/view/login/init/twp/OTT:914:Login:VzMrnQBPcG2YpWUccy72aKq28zBxHm2W5P3GW4G3CXZ1XoyQWNqhMqfDVXgV6QHP82bvYDt873uZRT3U?locale=zh-tw" target="_blank").btn-game.text-md.fw-md GAME START
               li.header__item
                 a(href="https://warsofprasia.beanfun.com/Main" target="_blank").btn-game-link
                   i.btn-game__icon.home
@@ -103,7 +103,7 @@ html(lang="zh-Hant")
                   i.btn-game__icon.yt
     block pages
       .boss-page
-        nav.boss-page__container.container.mySwiper
+        nav.boss-page__container.container.swiper-container
           ul.boss-page__row.row.swiper-wrapper
             li.boss-page__item.open-page.swiper-slide
               a(href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20240709/index.html").boss-page__link
@@ -113,7 +113,7 @@ html(lang="zh-Hant")
                   br
                   strong.boss-title--active 賽爾卡林
             li.boss-page__item.open-page.active.swiper-slide
-              a(href="").boss-page__link
+              .boss-page__link
                 .boss-page__profile.boss-page-2
                   img.boss-page__img(src="./images/img_boss_page_02.png", alt="")
                 p.boss-page__title.boss-title 第二個混沌 :

@@ -20,8 +20,7 @@
     display: none;
     opacity: 0; 
     transition: transform 0.3s ease, opacity 0.3s ease;
-    background: #000;
-    opacity: .7;
+    background: rgba(0, 0, 0, 0.76);
   }
 
   &__closed {
@@ -78,4 +77,26 @@
   display: block;
   opacity: 1;
   transform: translateY(0);
+}
+
+@media screen and (max-width: ($mbrwd-breakpoint* 1px)) {
+  .lightbox {
+    &__inner {
+      @include flex-column;
+      align-items: center;
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+
+    &__closed {
+      position: initial;
+    }
+
+    &__video {
+      &-box {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+    }
+  }
 }
