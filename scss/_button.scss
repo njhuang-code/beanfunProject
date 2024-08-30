@@ -85,5 +85,10 @@
         @include size(24px);
       }
     }
+
+    &__gotop {
+      right: 16px;
+      bottom: 16px;
+    }
   }
 }

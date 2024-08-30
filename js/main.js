@@ -139,7 +139,7 @@ $(document).ready(function() {
   var $bgMap = $('.s4-section__bg-map');
   var isDragging = false;
   var startX, offsetX;
-  var translateX = -378; // 起始顯示位置 translateX 值
+  var translateX = -278; // 起始顯示位置 translateX 值
   var imageWidth = 2560; 
   var imageHeight = 1393; 
 
@@ -164,7 +164,7 @@ $(document).ready(function() {
     var width = window.innerWidth;
     // 根據裝置尺寸定位起始位置
     if (width > 1400) {
-      translateX = -378; 
+      translateX = -278; 
     } else if (width > 960) {
       translateX = -700; 
     } else {
