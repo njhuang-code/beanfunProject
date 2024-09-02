@@ -131,7 +131,7 @@
     @include size(62px,78px);
     position: absolute;
     left: calc((100% - 62px)/2);
-    bottom: 16px;
+    bottom: 42px;
     display: inline-block;
     margin-top: 48px;
     background-image: url(../images/img_btn_scrolldown.png) ;
@@ -397,7 +397,7 @@
 
   &__flag {
     @include flex-column;
-    @include size(600px,1348px);
+    @include size(600px,1047px);
     @include background-setting;
     align-items: center;
     position: relative;

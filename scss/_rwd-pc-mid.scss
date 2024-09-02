@@ -2,12 +2,12 @@
 @media screen and (max-height:1000px) and (min-width: 769px) {
   .kv-section {
     &__decobox {
-      transform: scale(.8);
+      transform: scale(.9);
       transform-origin: 50% 100%;
     }
     &__main-title {
       width: 400px;
-      margin: 16px auto;
+      margin: 20px auto;
     }
     &__play-btn {
       @include size(96px);
@@ -15,9 +15,6 @@
     }
     &__row {
       margin-top: 42px;
-    }
-    &__scroll-down {
-      bottom: 0;
     }
   }
 }
