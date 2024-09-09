@@ -51,7 +51,7 @@
           color: $text03;
 
           &--active {
-            color: #e2b07a;
+            color: $bossColor01;
           }
         }
       }
@@ -61,8 +61,12 @@
       &:hover {
         filter: grayscale(0);
 
-        .text--active {
-          color: #9fb16a;
+        .boss-title {
+          color: $text03;
+
+          &--active {
+            color: $bossColor02;
+          }
         }
       }
     }
@@ -74,7 +78,7 @@
         color: $text03;
 
         &--active {
-          color: #9fb16a;
+          color: $bossColorThis;
         }
       }
     }
@@ -106,15 +110,27 @@
   }
 
   &-1 {
-    border: 2px solid #e2b07a;
+    border: 2px solid $bossColor01;
 
     .text--active {
-      color: #e2b07a;
+      color: $bossColor01;
     }
   }
 
   &-2 {
-    border: 2px solid #9fb16a;
+    border: 2px solid $bossColor02;
+
+    .text--active {
+      color: $bossColor02;
+    }
+  }
+
+  &-3 {
+    border: 2px solid $bossColorThis;
+
+    .text--active {
+      color: $bossColorThis;
+    }
   }
 }
 
@@ -146,18 +162,6 @@
     &__title {
       font-size: 13px;
       padding-top: 12px;
-    }
-  
-    &-1 {
-      border: 2px solid #e2b07a;
-  
-      .text--active {
-        color: #e2b07a;
-      }
-    }
-  
-    &-2 {
-      border: 2px solid #9fb16a;
     }
   }
 }

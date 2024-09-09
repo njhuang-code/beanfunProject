@@ -228,7 +228,7 @@
     align-items: center;
     z-index: 3;
     max-width: 600px;
-    margin-left: auto;
+    margin-right: auto;
   }
 
   &__heading {
@@ -263,7 +263,7 @@
     &-box {
       margin-top: 48px;
       position: relative;
-      border: 3px solid #b3c3a74d;
+      border: 3px solid #968ca34d;
       &::before,&::after {
         @include size(20px,100%);
         @include background-setting;
@@ -397,11 +397,12 @@
 
   &__flag {
     @include flex-column;
-    @include size(600px,1047px);
+    @include size(600px,1300px);
     @include background-setting;
     align-items: center;
     position: relative;
     padding: 0 36px;
+    margin-left: auto;
     background-image: url(../images/s4_img_flag.png);
     z-index: 3;
   }
@@ -430,22 +431,23 @@
 
   &__point {
     @include center;
-    transform: translate3d(194%, -310%, 0);
+    transform: translate3d(-352%, 22%, 0);
     z-index: 3;
   }
 
   &__map {
     @include flex-column;
     @include size(100%,auto);
+    flex-direction: column-reverse;
     align-items: center;
     position: absolute;
     transform-origin: 0 0;
-    top: 50%;
+    bottom: 50%;
     &-devil {
       @include size(61px,70px);
       position: absolute;
+      top: 100%;
       left: 24%;
-      bottom: 100%;
       background-image: url(../images/s4_img_devil.png);
       background-repeat: no-repeat;
       background-size: contain;
@@ -455,9 +457,12 @@
       @include flex-column;
       position: absolute;
       align-items: center;
-      top: -2px;
+      bottom: -2px;
       left: 0;
       width: 100%;
+      &.arrow--reverse {
+        transform: scaleY(-1);
+      }
     }
     &-arrow {
       @include size(42px,21px);
@@ -500,8 +505,8 @@
       background-color: #f3d697;
       display: inline-block;
       position: absolute;
-      top: -7px;
       left: 50%;
+      bottom: 0;
       transform: translate3d(-50%, 0, 0) rotate(45deg);
 
       &::before,&::after {
@@ -554,7 +559,7 @@
 
     &-text {
       position: relative;
-      margin-top: 16px;
+      margin-bottom: 16px;
       font-size: 24px;
       color: #e7c385;
 

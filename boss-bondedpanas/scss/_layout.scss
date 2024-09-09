@@ -223,7 +223,7 @@
       object-fit: cover;
       object-position: 50% 50%;
       transform: translateZ(0) scale(.8);
-      transform-origin: 0 0;
+      transform-origin: 100% 0;
     }
   }
 
@@ -259,6 +259,10 @@
     background-image: url(../images/img_ornate.png);
     background-size: contain;
     padding: 36px 0;
+
+    &.section--opacity {
+      opacity: .3 ;
+    }
   }
 }
 
