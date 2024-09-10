@@ -17,7 +17,10 @@
   }
 
   &-secondary {
-    color: $secondary
+    color: $secondary;
+    &--dark {
+      color: $secondaryDark;
+    }
   }
 
   &-point {
@@ -175,7 +178,7 @@
 
     &:hover {
       &::before {
-        transform: rotate(90deg);
+        transform: rotate(180deg);
       }
     }
 
@@ -293,7 +296,7 @@
         &__bg {
           &::after {
             content: "";
-            background: linear-gradient(0deg, #171911 50%, #17191100);
+            background: linear-gradient(0deg,#1c1a1f 50%,#1c1a1f00);
             display: inline-block;
             height: 100%;
             left: 0;
@@ -369,7 +372,7 @@
       &.s3-section {
         &__bg {
           &::before {
-            background-position: 30% 30%;
+            background-position: 60% 50%;
           }
         }
       }

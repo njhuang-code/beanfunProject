@@ -31,21 +31,19 @@ block content
         a(href="#sectionResent").kv-section__scroll-down
     #sectionResent.section
       .section__bg
-        video.section__video.s2-section-frame.d-block-lg.d-none-sm(autoplay loop muted playsinline)
+        video.section__video.s2-section-frame(autoplay loop muted playsinline)
           source(src='./images/video/s2_video_pc.mp4')
-        video.section__video.s2-section-frame.d-none-lg.d-block-sm(autoplay loop muted playsinline)
-          source(src='./images/video/s2_video_mb.mp4')
         .s2-section__visual.animate.animate_fadeDown
       .s2-section__intro
-        ul.s2-section__row.row 
-          li.s2-section__item.left-box.animate.animate_fadeLeft.animate_delay100
+        .s2-section__row.row 
+          
+          .s2-section__item.left-box.animate.animate_fadeLeft.animate_delay100
             .s2-section__img
               img(src="./images/s2_img_profile.png", alt="")
             h5.s2-section__title.text-center.fw-md 被囚禁在黑暗中擁有光明與黑暗的兩張臉
               p.s2-section__name.color-primary.text-xl.fw-md 被束縛的帕拿斯
-            .section__ornate.d-none-lg.d-block-sm
-          li.s2-section__item.right-box.animate.animate_fadeRight.animate_delay200
-            ol.text-md
+            .section__ornate
+            ol.text-md.color-secondary--dark.animate.animate_fadeRight.animate_delay200
               li 奈索帝國的帕拿斯對妖精們避開深淵、遷移世界的做法持懷疑態度。他認為，與其逃避深淵，不如應該勇敢地面對它，並戰勝這一威脅，從而回到他們原本的生存世界。
               br
               li 帕拿斯專注於曾經充滿黑元素的「黑星世界」，並研究出了一種利用妖精具現的黑元素來抵擋深淵侵襲的方法。
@@ -108,7 +106,7 @@ block content
             br
             strong.color-point.text-xl.fw-md 倒塌之塔
           .section__ornate.section--opacity.animate.animate_fadeLeft.animate_delay100
-          ol.s4-section__desc.text-md.text-left.animate.animate_fadeLeft.animate_delay200
+          ol.s4-section__desc.text-md.text-center.animate.animate_fadeLeft.animate_delay200
             li 妖精來到黎奈亞大陸時，
             li 原本自己擁有的建築也隨之來到大陸，
             li 並開始出現在黎奈亞的各個地方。

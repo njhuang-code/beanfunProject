@@ -146,16 +146,16 @@
 
   &__visual {
     @include center;
-    @include size(100%,913px);
+    @include size(100%,1412px);
     @include background-setting;
-    top: 43px;
-    left: calc((100% - 1271px) / 2);
+    top: 0;
+    left: 40%;
     z-index: 3;
     width: 1271px;
-    transform: translate3d(calc(-50% - 50px), 0, 0);
+    transform: translate3d(-3%,-50%,0);
     background-image: url(../images/s2_visual.png);
     background-size: contain;
-    mask-image: linear-gradient(0deg,#0000 2%,#000 30%,#000 100%,#000 0);
+    mask-image: linear-gradient(0deg,#0000 2%,#000 14%,#000 100%,#000 0);
   }
 
   &__intro {
@@ -163,7 +163,7 @@
     @include size(100%);
     position: relative;
     z-index: 3;
-    margin-top: 862px;
+    margin: 130px 0 250px;
   }
 
   &__row {
@@ -342,14 +342,14 @@
   &__item {     
     @include size(100%,200px); 
     @include background-setting;
-    max-width: 500px;
+    max-width: 518px;
     background-size: contain;
     &:nth-child(1) {
       background-image: url(../images/s3_img_equip_01.png);
     }
     &:nth-child(2) {
       background-image: url(../images/s3_img_equip_02.png);
-      height: 170px;;
+      height: 182px;;
     }
   }
 
@@ -496,13 +496,13 @@
         position: absolute;
         top: 0;
         display: inline-block;
-        background: linear-gradient(0deg,#dea86f,#f3d697);
+        background: #c55525;
       }
     }
 
     &-dot {
       @include size(10px);
-      background-color: #f3d697;
+      background-color: #c55525;
       display: inline-block;
       position: absolute;
       left: 50%;
@@ -516,7 +516,7 @@
         display: inline-block;
         top: 0;
         left: 0;
-        border: .5px solid #f3d697;
+        border: .5px solid #c55525;
         animation: scaleWave 2s cubic-bezier(.33,1,.68,1) infinite;
       }
 
@@ -551,7 +551,7 @@
     }
 
     &-img {
-      @include size(192px);
+      @include size(188px);
       @include background-setting;
       z-index: 2;
       background-image: url(../images/s4_img_view.png);
