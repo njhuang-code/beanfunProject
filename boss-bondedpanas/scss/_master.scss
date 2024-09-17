@@ -32,14 +32,50 @@
       transition-delay: .5s;
     }
   }
-  &__main-title {
-    @include size(408px,180px);
-    background: url(../images/kv_main_title.png) no-repeat;
-    margin: 24px auto;
-    background-size: contain;
-    background-position: center;
-    animation: flameWindRightCenter 1800ms cubic-bezier(.65,0,.35,1) 1 forwards;
+  &__main {
+    @include flex-center;
+    position: relative;
+    animation: flameWindDown 1800ms cubic-bezier(.65,0,.35,1) 1 forwards;
     transition-delay: 1s;
+    &-title {
+      // @include size(768px,155px);
+      // background: url(../images/kv_main_title.png) no-repeat;
+      // margin: 24px auto;
+      // background-size: contain;
+      // background-position: center;
+      @include background-setting;
+      margin: 24px auto;
+      font-size: 120px;
+      color: #0000;
+      background-image: url(../images/kv_main_title_bg.png);
+      background-size: 150% 100%;
+      -webkit-background-clip: text;
+      filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, .96));
+      animation: textFlow 10s cubic-bezier(.37,0,.63,1) infinite alternate-reverse;
+      max-height: 155px;
+    }
+    &-ring {
+      @include background-setting;
+      @include size(80px);
+      position: absolute;
+      top: 26%;
+      left: 33%;
+      background-image: url(../images/kv_ring.png);
+      background-size: contain;
+      clip-path: polygon(0 0, 46.1% 0, 45.1% 48%, 56% 48%, 59% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+    &-effect {
+      @include size(100%,200%);
+      @include background-setting;
+      position: absolute;
+      left: 0;
+      bottom: -2%;
+      background-image: url(../images/kv_effect.png);
+      background-size: contain;
+      opacity: .4;
+      pointer-events: none;
+      filter: url(#smokeFlow) blur(1px);
+    }
   }
 
   &__link {
@@ -345,6 +381,7 @@
     max-width: 518px;
     background-size: contain;
     &:nth-child(1) {
+      max-width: 560px;
       background-image: url(../images/s3_img_equip_01.png);
     }
     &:nth-child(2) {
@@ -431,23 +468,22 @@
 
   &__point {
     @include center;
-    transform: translate3d(-352%, 22%, 0);
+    transform: translate3d(194%, -310%, 0);
     z-index: 3;
   }
 
   &__map {
     @include flex-column;
     @include size(100%,auto);
-    flex-direction: column-reverse;
     align-items: center;
     position: absolute;
     transform-origin: 0 0;
-    bottom: 50%;
+    top: 50%;
     &-devil {
       @include size(61px,70px);
       position: absolute;
-      top: 100%;
       left: 24%;
+      bottom: 100%;
       background-image: url(../images/s4_img_devil.png);
       background-repeat: no-repeat;
       background-size: contain;
@@ -457,12 +493,9 @@
       @include flex-column;
       position: absolute;
       align-items: center;
-      bottom: -2px;
+      top: -2px;
       left: 0;
       width: 100%;
-      &.arrow--reverse {
-        transform: scaleY(-1);
-      }
     }
     &-arrow {
       @include size(42px,21px);
@@ -496,17 +529,17 @@
         position: absolute;
         top: 0;
         display: inline-block;
-        background: #c55525;
+        background: linear-gradient(0deg,#dea86f,#f3d697);
       }
     }
 
     &-dot {
       @include size(10px);
-      background-color: #c55525;
+      background-color: #f3d697;
       display: inline-block;
       position: absolute;
+      top: -7px;
       left: 50%;
-      bottom: 0;
       transform: translate3d(-50%, 0, 0) rotate(45deg);
 
       &::before,&::after {
@@ -516,7 +549,7 @@
         display: inline-block;
         top: 0;
         left: 0;
-        border: .5px solid #c55525;
+        border: .5px solid #f3d697;
         animation: scaleWave 2s cubic-bezier(.33,1,.68,1) infinite;
       }
 
@@ -551,7 +584,7 @@
     }
 
     &-img {
-      @include size(188px);
+      @include size(192px);
       @include background-setting;
       z-index: 2;
       background-image: url(../images/s4_img_view.png);
@@ -559,7 +592,7 @@
 
     &-text {
       position: relative;
-      margin-bottom: 16px;
+      margin-top: 16px;
       font-size: 24px;
       color: #e7c385;
 

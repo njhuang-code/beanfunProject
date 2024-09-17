@@ -61,6 +61,8 @@
             <div class="menu-slide__closed"></div>
             <div class="menu-slide__logo text-center"><a class="header__logo-img" href="https://warsofprasia.beanfun.com/Main" target="_blank"></a>
               <ul class="menu-slide__row">
+                <li class="menu-slide__item text-center"><a class="menu-slide__link" href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20240904/index.html" target="blank"><img class="menu-slide__img d-none-sm" src="./images/banner_01.jpg" alt="">
+                    <h4 class="text-sm">鯨獅</h4></a></li>
                 <li class="menu-slide__item text-center"><a class="menu-slide__link" href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10634" target="blank"><img class="menu-slide__img d-none-sm" src="./images/banner_01.jpg" alt="">
                     <h4 class="text-sm">直升系統</h4></a></li>
                 <li class="menu-slide__item text-center"><a class="menu-slide__link" href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20240813C/index.html" target="_black"><img class="menu-slide__img d-none-sm" src="./images/banner_02.jpg" alt="">
@@ -117,7 +119,7 @@
         </ul>
       </nav>
     </div>
-    <div class="menu-nav d-none-sm">
+    <div class="menu-nav d-none-md">
       <nav class="menu-nav__container">
         <ul class="menu-nav__row">
           <li class="menu-nav__item active"><a class="menu-nav__name color-primary text-md" href="#sectionMain">混沌BOSS：被束縛的帕拿斯 </a></li>
@@ -139,7 +141,22 @@
         </div>
         <div class="kv-section__decobox">
           <h4 class="kv-section__sub-title fw-lg"><span class="kv-section__sub-title sub-text-strong">被黑暗蠶食的</span><span class="kv-section__sub-title sub-text">罪人</span></h4>
-          <div class="kv-section__main-title"></div>
+          <div class="kv-section__main">
+            <div class="kv-section__main-title fw-lg">被束縛的帕拿斯
+              <div class="kv-section__main-ring"></div>
+            </div>
+            <div class="kv-section__main-effect"></div>
+            <svg width="0" height="0">
+              <defs>
+                <filter id="smokeFlow" x="0" y="0" width="100%" height="100%">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="turbulence">
+                    <animate attributeName="baseFrequency" dur="10s" values="0.01; 0.02; 0.01" repeatCount="indefinite"></animate>
+                  </feTurbulence>
+                  <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30"></feDisplacementMap>
+                </filter>
+              </defs>
+            </svg>
+          </div>
           <p class="section__msg kv-section__date fw-lg">2024年O月O日 (三) UPDATE</p>
           <button class="section__play-btn kv-section__play-btn"></button>
           <ul class="kv-section__row row">

@@ -11,10 +11,14 @@
       font-size: 20px;
     }
 
-    &__main-title {
-      @include size(323px, 86px);
+    &__main {
+      &-title {
+        font-size: min(48px, 18.7vw);
+      }
+      &-ring {
+        @include size(34px);
+      }
     }
-
     &__row {
       margin-top: 24px;
     }
@@ -38,9 +42,9 @@
     &__visual {
       @include center;
       width: 620px;
-      top: 36%;
-      mask-image: linear-gradient(0deg,#0000,#0000 50%,#000 68%,#000);
+      top: 38%;
       transform: translate3d(-41%,-50%,0);
+      mask-image: linear-gradient(0deg,#0000,#0000 50%,#000 68%,#000);
     }
 
     &__intro {

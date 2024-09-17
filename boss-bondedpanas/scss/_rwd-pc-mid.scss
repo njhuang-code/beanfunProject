@@ -5,10 +5,7 @@
       transform: scale(.9);
       transform-origin: 50% 100%;
     }
-    &__main-title {
-      width: 400px;
-      margin: 20px auto;
-    }
+
     &__play-btn {
       @include size(96px);
       margin-top: 24px;
@@ -19,7 +16,51 @@
   }
 }
 
+@media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
+
+  .kv-section {
+    &__main {
+      &-title {
+        margin: 12px auto;
+        font-size: min(82px, 18.7vw);
+        letter-spacing: max(-3.656px, -1.05vw);
+      }
+      &-ring {
+        @include size(55px);
+        top: 24%;
+      }
+    }
+  }
+  
+
+  .s2-section {
+    &__visual {
+      left: 20%;
+    }
+  }
+
+  .s3-section {
+
+    &__head {
+      max-width: initial;
+      margin-top: 350px;
+    }
+
+    &__row {
+      @include flex-column;
+      align-items: center;
+    }
+
+    &__item {
+      &:nth-child(1) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
+
   .s4-section {
     @include flex-column;
 
@@ -71,23 +112,50 @@
   }
 }
 
-@media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
-
-  .s3-section {
-
-    &__head {
-      max-width: initial;
-      margin-top: 350px;
+@media screen and (min-width: 961px) {
+  .s4-section {
+    &__point {
+      transform: translate3d(-352%, 22%, 0);
     }
-
-    &__row {
-      @include flex-column;
-      align-items: center;
-    }
-
-    &__item {
-      &:nth-child(1) {
-        margin-bottom: 24px;
+    &__map {
+      top: unset;
+      bottom: 50%;
+      &-devil {
+        top: 100%;
+        left: 24%;
+      }
+      &-row {
+        top: unset;
+        bottom: 0;
+        &.arrow--reverse {
+          transform: scaleY(-1);
+        }
+      }
+      &-line {
+        order: 3;
+        &::after {
+          background: #c55525;
+        }
+      }
+  
+      &-dot {
+        top: unset;
+        bottom: 0;
+        background-color: #c55525;
+        &::before,&::after {
+          border: .5px solid #c55525;
+        }
+      }
+  
+      &-view {
+        order: 2;
+        &::before {
+          background: linear-gradient(-45deg, #c35328, #dea86f);
+        }
+      }
+  
+      &-text {
+        margin-bottom: 16px;
       }
     }
   }

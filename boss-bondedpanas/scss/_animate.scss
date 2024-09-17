@@ -24,6 +24,20 @@
   }
 }
 
+@keyframes flameWindDown {
+  0% {
+    transform: translateY(-30%);
+    filter: blur(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes flameWindInLeft {
   0% {
     transform: translateX(-20%) scaleX(-1);
@@ -173,6 +187,33 @@
 
   100% {
     background-position: 300px 200px;
+  }
+}
+
+@keyframes textFlow {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 50%;
+  }
+}
+
+@keyframes smokeWave {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-10px, -10px) scale(1.05);
+  }
+  50% {
+    transform: translate(10px, -20px) scale(1.1);
+  }
+  75% {
+    transform: translate(-15px, -30px) scale(1.15);
+  }
+  100% {
+    transform: translate(0, -40px) scale(1.2);
   }
 }
 
