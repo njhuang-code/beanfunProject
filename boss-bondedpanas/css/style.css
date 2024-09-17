@@ -2705,11 +2705,12 @@ button {
     font-size: 20px;
   }
   .kv-section__main-title {
-    font-size: min(48px, 18.7vw);
+    font-size: min(55px, 18.7vw);
   }
   .kv-section__main-ring {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
+    left: 34%;
   }
   .kv-section__row {
     margin-top: 24px;

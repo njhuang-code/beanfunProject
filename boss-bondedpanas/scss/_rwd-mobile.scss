@@ -13,10 +13,11 @@
 
     &__main {
       &-title {
-        font-size: min(48px, 18.7vw);
+        font-size: min(55px, 18.7vw);
       }
       &-ring {
-        @include size(34px);
+        @include size(30px);
+        left: 34%;
       }
     }
     &__row {
