@@ -55,11 +55,12 @@
       max-height: 155px;
     }
     &-ring {
+      @include flex-center;
       @include background-setting;
       @include size(80px);
       position: absolute;
-      top: 26%;
-      left: 33%;
+      top: 40px;
+      left: 276px;
       background-image: url(../images/kv_ring.png);
       background-size: contain;
       clip-path: polygon(0 0, 46.1% 0, 45.1% 48%, 56% 48%, 59% 0, 100% 0, 100% 100%, 0 100%, 0 0);
