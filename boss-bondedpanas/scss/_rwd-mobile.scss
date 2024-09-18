@@ -147,6 +147,10 @@
 
   .s4-section {
 
+    &__head {
+      font-size: 24px;
+    }
+
     &__bg {
       &::before {
         @include size(100%);
@@ -158,6 +162,10 @@
     }
     &__row {
       margin-top: 24px;
+    }
+
+    &__flag {
+      padding: 0 24px 72px;
     }
 
   }
