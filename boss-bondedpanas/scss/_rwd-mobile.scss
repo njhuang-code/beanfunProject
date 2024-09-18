@@ -13,7 +13,7 @@
 
     &__main {
       &-title {
-        font-size: min(55px, 18.7vw);
+        font-size: min(55px);
       }
       &-ring {
         @include size(30px);

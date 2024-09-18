@@ -67,7 +67,7 @@
   &__inner {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: ($pc-midrwd-breakpoint* 1px);
     padding: 40px;
     transition: padding-top .4s cubic-bezier(.16,1,.3,1);
   }

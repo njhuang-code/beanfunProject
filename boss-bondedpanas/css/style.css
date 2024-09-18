@@ -1260,18 +1260,14 @@ button {
 }
 .kv-section__sub-title {
   font-size: 42px;
-  -webkit-animation: flameWindLeftCenter 1500ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
-          animation: flameWindLeftCenter 1500ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+  -webkit-animation: flameWindInRight 1500ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+          animation: flameWindInRight 1500ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
 .kv-section__sub-title.sub-text {
   color: #b992f2;
   margin-left: 8px;
-  -webkit-animation: flameWindRight 1500ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
-          animation: flameWindRight 1500ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
 }
 .kv-section__main {
   display: -webkit-box;
@@ -1283,7 +1279,6 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   -webkit-animation: flameWindDown 1800ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
           animation: flameWindDown 1800ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
   -webkit-transition-delay: 1s;
@@ -1293,6 +1288,7 @@ button {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  position: relative;
   margin: 24px auto;
   font-size: 120px;
   color: rgba(0, 0, 0, 0);
@@ -1727,6 +1723,7 @@ button {
 
 .s4-section {
   overflow: hidden;
+  min-height: 1200px;
 }
 .s4-section__container {
   padding-top: 0;
@@ -1779,7 +1776,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 600px;
-  height: 1300px;
+  height: 980px;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -1821,7 +1818,7 @@ button {
           transform: translate(-50%, -50%);
   -webkit-transform: translate3d(194%, -310%, 0);
           transform: translate3d(194%, -310%, 0);
-  z-index: 3;
+  z-index: 10;
 }
 .s4-section__map {
   display: -webkit-box;
@@ -2575,7 +2572,7 @@ button {
 @media screen and (max-width: 1200px) {
   .kv-section__main-title {
     margin: 12px auto;
-    font-size: min(82px, 18.7vw);
+    font-size: 82px;
     letter-spacing: max(-3.656px, -1.05vw);
   }
   .kv-section__main-ring {
@@ -2715,7 +2712,7 @@ button {
     font-size: 20px;
   }
   .kv-section__main-title {
-    font-size: min(55px, 18.7vw);
+    font-size: 55px;
   }
   .kv-section__main-ring {
     width: 30px;

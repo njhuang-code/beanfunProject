@@ -134,7 +134,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: ($mbrwd-breakpoint* 1px)) {
   .boss-page {
     top: 65px;
   

@@ -262,7 +262,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
 
   .d-block {
     &-md {

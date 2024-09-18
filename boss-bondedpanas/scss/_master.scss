@@ -23,27 +23,20 @@
 
   &__sub-title {
     font-size: 42px;
-    animation: flameWindLeftCenter 1500ms cubic-bezier(.65,0,.35,1) 1 forwards;
+    animation: flameWindInRight 1500ms cubic-bezier(.65,0,.35,1) 1 forwards;
     transition-delay: .3s;
     &.sub-text {
       color: $primary;
       margin-left: 8px;
-      animation: flameWindRight 1500ms cubic-bezier(.65,0,.35,1) 1 forwards;
-      transition-delay: .5s;
     }
   }
   &__main {
     @include flex-center;
-    position: relative;
     animation: flameWindDown 1800ms cubic-bezier(.65,0,.35,1) 1 forwards;
     transition-delay: 1s;
     &-title {
-      // @include size(768px,155px);
-      // background: url(../images/kv_main_title.png) no-repeat;
-      // margin: 24px auto;
-      // background-size: contain;
-      // background-position: center;
       @include background-setting;
+      position: relative;
       margin: 24px auto;
       font-size: 120px;
       color: #0000;
@@ -396,6 +389,7 @@
 
 .s4-section {
   overflow: hidden;
+  min-height: 1200px;
   &__container {
     padding-top: 0;
   }
@@ -435,7 +429,7 @@
 
   &__flag {
     @include flex-column;
-    @include size(600px,1300px);
+    @include size(600px,980px);
     @include background-setting;
     align-items: center;
     position: relative;
@@ -470,7 +464,7 @@
   &__point {
     @include center;
     transform: translate3d(194%, -310%, 0);
-    z-index: 3;
+    z-index: 10;
   }
 
   &__map {

@@ -128,7 +128,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: ($mbrwd-breakpoint* 1px)) {
   .menu-slide {
     &__button {
       @include size(24px);
