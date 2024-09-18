@@ -2740,7 +2740,7 @@ button {
             transform: translate(-50%, -50%);
     width: 620px;
     height: 100%;
-    top: 38%;
+    top: 45%;
     -webkit-transform: translate3d(-41%, -50%, 0);
             transform: translate3d(-41%, -50%, 0);
     -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(68%, #000), to(#000));
