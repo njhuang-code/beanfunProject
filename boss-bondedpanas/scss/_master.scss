@@ -36,6 +36,8 @@
     transition-delay: 1s;
     &-title {
       @include background-setting;
+      display: flex;
+      align-items: center;
       position: relative;
       margin: 24px auto;
       font-size: 120px;

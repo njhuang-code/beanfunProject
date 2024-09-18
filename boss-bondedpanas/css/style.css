@@ -1288,6 +1288,12 @@ button {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   margin: 24px auto;
   font-size: 120px;
@@ -2708,6 +2714,7 @@ button {
     font-size: 20px;
   }
   .kv-section__main-title {
+    max-height: 55px;
     font-size: 55px;
   }
   .kv-section__main-ring {
