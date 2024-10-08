@@ -269,6 +269,10 @@
   }
 }
 
+.gradeArea {
+  flex-shrink: 0;
+}
+
 @media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
 
   .d-block {
@@ -310,6 +314,8 @@
     }
   }
 }
+
+
 
 @media screen and (max-width: ($mbrwd-breakpoint* 1px)) {
 

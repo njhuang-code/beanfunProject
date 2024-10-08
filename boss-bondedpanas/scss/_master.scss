@@ -54,7 +54,7 @@
       @include background-setting;
       @include size(80px);
       position: absolute;
-      top: 40px;
+      top: 32px;
       left: 276px;
       background-image: url(../images/kv_ring.png);
       background-size: contain;
@@ -275,22 +275,6 @@
     position: relative;
     display: block;
     max-width: 510px;
-    &-wrapper {
-      position: relative;
-      &::before {
-        @include size(100%);
-        content: "";
-        display: block;
-        position: absolute;
-        background: #000c;
-        z-index: 1;
-      }
-      &.black-overlay {
-        &::before {
-          display: none;
-        }
-      }
-    }
     &-box {
       margin-top: 48px;
       position: relative;
@@ -387,7 +371,6 @@
 
 }
 
-
 .s4-section {
   overflow: hidden;
   min-height: 1200px;
@@ -457,8 +440,16 @@
 
   &__item {
     @include size(260px,auto);
+    overflow: hidden;
     &:nth-child(1) {
       margin-right: 15px;
+    }
+  }
+
+  &__img {
+    transition: all .3s;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 

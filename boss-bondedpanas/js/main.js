@@ -84,13 +84,26 @@ $(document).ready(function() {
     });
   });
 
-  $('.s3-section__video-btn').click(function() {
-    $('.s3-section__video-wrapper').addClass('black-overlay');
-    $(this).css('display','none');
+  $(window).on('scroll', function() {
+    var sectionPowerTop = $('#sectionPower').offset().top;
+    var sectionPowerBottom = sectionPowerTop + $('#sectionPower').outerHeight();
+    var scrollTop = $(window).scrollTop();
+    var windowHeight = $(window).height();
     var video = $('.s3-section__video').get(0);
-    $('.s3-section__video').show();
-    video.play();
-  });
+
+    if (scrollTop + windowHeight >= sectionPowerTop && scrollTop <= sectionPowerBottom) {
+        if (video && video.paused) {
+            video.currentTime = 0; // 將播放位置重設為 0
+            video.play();
+        }
+    } else {
+        if (video && !video.paused) {
+            video.pause();
+        }
+    }
+});
+
+
 
   $('.menu-slide__button, .menu-slide__closed').click(function() {
     $('.menu-slide').toggleClass('open');

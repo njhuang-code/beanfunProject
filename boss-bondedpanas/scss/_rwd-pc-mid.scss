@@ -16,6 +16,16 @@
   }
 }
 
+@media screen and (max-width: 1400px) {
+  .kv-section {
+    &__item {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
 
   .kv-section {

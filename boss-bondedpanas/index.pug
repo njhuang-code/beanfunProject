@@ -35,7 +35,7 @@ block content
             a.kv-section__link.img-android(href="https://play.google.com/store/apps/details?id=com.gamania.twp&hl=zh-TW" target="_blank")
           li.kv-section__item
             a.kv-section__link.img-ios(href="https://apps.apple.com/tw/app/%E6%B3%A2%E6%8B%89%E8%A5%BF%E4%BA%9E%E6%88%B0%E8%A8%98/id6451229143" target="_blank")
-          li.kv-section__item.d-none-md
+          li.kv-section__item
             a.kv-section__link.img-pc(href="https://warsofprasia.beanfun.com/Download?downloadTarget=1" target="_blank")
         a(href="#sectionResent").kv-section__scroll-down
     #sectionResent.section
@@ -60,7 +60,7 @@ block content
               li 成功啟動艾雷後，帕拿斯的身體被注入黑元素，這些元素化作青灰色的閃耀物質，形成強效防護罩。
     #sectionPower.section
       .section__bg.s3-section__bg
-        video.section__video.s3-section-frame(autoplay loop muted playsinline)
+        video.section__video.s3-section-frame(loop muted playsinline)
           source(src='./images/video/s3_video_pc.mp4')
       .container
         .s3-section__content
@@ -70,8 +70,6 @@ block content
                 b.color-primary 黑元素
                 |與
                 b.color-primary 魔法艾雷
-                p.text-lg 主要武器
-                  span.s3-section-msg.color-primary 黑元素與魔法艾雷
             .section__ornate.animate.animate_fadeRight.animate_delay200
             p.s3-section__desc.text-center.text-md.animate.animate_fadeRight.animate_delay300 如同星光閃爍的夜空般美麗，
               br
@@ -80,7 +78,6 @@ block content
               |卻有帕拿斯「艾雷」中的光之力提供保護，源源不斷地注入生命力。
             .s3-section__video-box.animate.animate_fadeRight.animate_delay400
               .s3-section__video-wrapper
-                button.section__play-btn.s3-section__video-btn
                 video.s3-section__video(loop muted playsinline)
                   source(src='./images/video/s2_video_pc.mp4')
                 
