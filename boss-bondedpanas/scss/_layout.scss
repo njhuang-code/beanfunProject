@@ -271,6 +271,14 @@
 
 .gradeArea {
   flex-shrink: 0;
+  &__img {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+  }
+  img {
+    width: 45px;
+  }
 }
 
 @media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {

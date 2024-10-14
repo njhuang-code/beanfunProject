@@ -64,7 +64,7 @@
 
     &__item {
       &:nth-child(1) {
-        margin-bottom: 24px;
+        margin-bottom: 40px;
       }
     }
   }
@@ -85,7 +85,7 @@
       background-image: url(../images/s4_bg_map_mb.png);
 
       &-map {
-        @include size(100%,670px);
+        @include size(100%,550px);
         position: relative;
 
         &::before {
@@ -116,7 +116,7 @@
 
 
     &__point {
-      transform: translate3d(-50%, -175%, 0);
+      transform: translate3d(-50%, -153%, 0);
     }
 
 
