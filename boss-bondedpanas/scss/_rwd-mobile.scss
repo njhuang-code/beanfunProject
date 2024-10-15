@@ -2,7 +2,10 @@
 
   // kv 主視覺
   .kv-section {
-
+    &.section {
+      min-height: 70vh;
+      height: 100%;
+    }
     &__decobox {
       top: 42px;
     }
@@ -47,13 +50,13 @@
       width: 620px;
       height: 100%;
       top: 25%;
-      transform: translate3d(-41%,-50%,0);
+      transform: translate3d(-42%,-55%,0);
       background-image: url(../images/s2_visual_mb.png);
     }
 
     &__intro {
       @include flex-center;
-      margin-top: 400px;
+      margin-top: 320px;
       margin-bottom: 40px;
     }
 
