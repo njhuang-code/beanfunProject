@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
+    top: 20px;;
     z-index: 2;
     color: $secondary;
     text-align: center;
@@ -39,7 +40,7 @@
       display: flex;
       align-items: center;
       position: relative;
-      margin: 24px auto;
+      margin: 0 auto 24px;
       font-size: 120px;
       color: #0000;
       background-image: url(../images/kv_main_title_bg.png);
