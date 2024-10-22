@@ -136,6 +136,12 @@
   position: relative;
   overflow: hidden;
 
+  &:nth-child(3) {
+    .container {
+      padding: 0;
+    }
+  }
+
   &.kv-section {
     min-height: 100vh;
     height: 900px;

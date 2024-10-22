@@ -353,20 +353,21 @@
   &__row {
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: nowrap
   }
 
   &__item {     
     @include size(100%,200px); 
     @include background-setting;
-    max-width: 518px;
     background-size: contain;
     &:nth-child(1) {
-      max-width: 560px;
+      max-width: 533px;
       background-image: url(../images/s3_img_equip_01.png);
     }
     &:nth-child(2) {
+      max-width: 640px;
       background-image: url(../images/s3_img_equip_02.png);
-      height: 182px;;
+      height: 175px;;
     }
   }
 
