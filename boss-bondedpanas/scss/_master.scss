@@ -361,13 +361,14 @@
     @include background-setting;
     background-size: contain;
     &:nth-child(1) {
-      max-width: 533px;
+      max-width: 500px;
       background-image: url(../images/s3_img_equip_01.png);
     }
     &:nth-child(2) {
       max-width: 640px;
+      margin-left: 80px;
       background-image: url(../images/s3_img_equip_02.png);
-      height: 175px;;
+      height: 175px;
     }
   }
 
