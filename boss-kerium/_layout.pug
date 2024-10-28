@@ -1,0 +1,171 @@
+doctype html
+html(lang="zh-Hant")
+  block vars
+    - var hasSwiper = true
+    - var header_title = '波拉西亞戰記｜第三隻混沌首領「被束縛的帕拿斯」轟然登場！'
+    - var author = 'Wars of Prasia'
+    - var og_title = '波拉西亞戰記｜第三隻混沌首領「被束縛的帕拿斯」轟然登場！'
+    - var og_image = './images/facebook_cover_1200x630.jpg'
+    - var og_url = ''
+    - var og_desc = '他的到來，彷彿深淵本身隨之而至，寂靜與威壓籠罩整片大地...'
+    - var meta_keyword = '波拉、波拉西亞、Wars of Prasia、混沌首領、被束縛的帕拿斯、帕拿斯、mmorpg'
+    - var date_publish = '2024-9-04'
+
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(http-equiv='X-UA-Compatible', content="IE=edge, Chrome=1")
+      meta(http-equiv="Pragma" content="no-cache")
+      meta(http-equiv="Expires" content="0")
+      //- mobile only
+      meta(name="HandheldFriendly" content="true")
+      meta(name="MobileOptimized" content="320")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0 , viewport-fit=cover")
+      //- meta info
+      title #{og_title ? og_title + ' | ' + author : ''}
+      meta(property='description', content=og_desc ? og_desc : '')
+      meta(property='og:title', content=og_title ? og_title + ' | ' + author : '')
+      meta(property='og:image', content=og_image ? og_image : '')
+      meta(property='og:url', content=og_url ? og_url : '')
+      meta(property='og:type', content='website')
+      meta(property='og:locale', content='zh_TW')
+      meta(property='og:site_name', content=og_title)
+      meta(name='author', content=author)
+      meta(name='copyright', content=author)
+      if meta_keyword != ''
+        meta(name='keywords', content=meta_keyword)
+      //- 標準網址
+      link(rel='canonical', href=og_url)
+      link(rel="shortcut icon", href="./images/icon/favicon.ico", type="image/x-icon")
+      //- google fonts
+      link(rel="preconnect", href="https://fonts.googleapis.com")
+      link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+      link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet")
+      link(rel="stylesheet", href="./css/style.css")
+      if hasSwiper
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+      script(src="https://tw.beanfun.com/js/GA_CodeNew.js" type="text/javascript")
+  body
+    //- block loading
+    //-   #loading 
+    //-     .loading
+    //-       .loading__content
+    //-         .loading__logo
+    //-           img(src="./images/icon/icon_logo.png", alt="")
+    //-         .loading__bar
+    //-           .loading__progress
+    //-         .loading__text.text-sm loading
+    block lightbox
+      #fade.lightbox__black-overlay
+      .lightbox
+        .lightbox__container
+          .lightbox__inner
+            button.lightbox__closed
+            .lightbox__video-box
+              iframe.lightbox__video(src="https://www.youtube.com/embed/wrbWtdNfN-0?mute=1&amp;autoplay=0&amp;loop=1&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+    block header
+      header.header
+        .header__container.row
+          .header__left
+            .header__logo
+              a(href="https://warsofprasia.beanfun.com/Main" target="_blank").header__logo-img.header__logo-mb
+            button.menu-slide__button
+              p.menu-slide__button-text.event-text.fw-lg 活動
+            .menu-slide
+              .menu-slide__closed
+              .menu-slide__logo.text-center
+                a(href="https://warsofprasia.beanfun.com/Main" target="_blank").header__logo-img
+                ul.menu-slide__row
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10634" target="blank").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_01.jpg", alt="")
+                      h4.text-sm 直升系統
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10884" target="blank").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_02.jpg", alt="")
+                      h4.text-sm 波拉魂養成班
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10872" target="_black").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_03.jpg", alt="")
+                      h4.text-sm 特別 WP Coupon
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10431" target="_black").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_04.jpg", alt="")
+                      h4.text-sm 10% 紅利回饋
+          .header__right
+            ul.header__row.row
+              li.header__item.d-none-sm
+                a.btn-game.text-md.fw-md(href="https://galaxy.beanfun.com/webapi/view/login/twp?redirect_url=https://warsofprasia.beanfun.com/Main" target="_blank") GAME START
+              li.header__item
+                a(href="https://warsofprasia.beanfun.com/Main" target="_blank").btn-game-link
+                  i.btn-game__icon.home
+              li.header__item 
+                a(href="https://www.facebook.com/warsofprasia.tw" target="_blank").btn-game-link
+                  i.btn-game__icon.fb
+              li.header__item
+                a(href="https://www.youtube.com/@user-warsofprasia" target="_blank").btn-game-link
+                  i.btn-game__icon.yt
+    block pages
+      .boss-page
+        nav.boss-page__container.container.swiper-container
+          ul.boss-page__row.row.swiper-wrapper
+            li.boss-page__item.open-page.swiper-slide
+              a.boss-page__link(href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20240709/index.html")
+                .boss-page__profile.boss-page-1
+                  img.boss-page__img(src="./images/img_boss_page_01.png", alt="")
+                p.boss-page__title.boss-title 第一個混沌 :
+                  br
+                  strong.boss-title--active 賽爾卡林
+            li.boss-page__item.open-page.swiper-slide
+              a.boss-page__link(href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20240904/index.html")
+                .boss-page__profile.boss-page-2
+                  img.boss-page__img(src="./images/img_boss_page_02.png", alt="")
+                p.boss-page__title.boss-title 第二個混沌 :
+                  br
+                  strong.boss-title--active 鯨獅傳奇
+            li.boss-page__item.open-page.swiper-slide
+              a.boss-page__link(href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20241022J/index.html")
+                .boss-page__profile.boss-page-3
+                  img.boss-page__img(src="./images/img_boss_page_03.png", alt="")
+                p.boss-page__title.boss-title 第三個混沌：
+                  br
+                  strong.boss-title--active 被束縛的帕拿斯
+            li.boss-page__item.open-page.active.swiper-slide
+              .boss-page__link
+                .boss-page__profile.boss-page-4
+                  img.boss-page__img(src="./images/img_boss_page_04.png", alt="")
+                p.boss-page__title.boss-title 第四個混沌：
+                  br
+                  strong.boss-title--active 凱黎溫
+            li.boss-page__item.swiper-slide
+              .boss-page__link
+                .boss-page__profile.boss-page-5
+                  img.boss-page__img(src="./images/img_boss_page_unopened.png", alt="")
+                p.boss-page__title ???
+            li.boss-page__item.swiper-slide
+              .boss-page__link
+                .boss-page__profile.boss-page-6
+                  img.boss-page__img(src="./images/img_boss_page_unopened.png", alt="")
+                p.boss-page__title ???
+    block nav
+      .menu-nav.d-none-md
+        nav.menu-nav__container
+          ul.menu-nav__row
+            li.menu-nav__item.active
+              a(href="#sectionMain").menu-nav__name.color-secondary.text-md 混沌首領:凱黎溫
+            li.menu-nav__item
+              a(href="#sectionResent").menu-nav__name.color-secondary.text-md 毒蜂亡靈們的軍團長
+            li.menu-nav__item
+              a(href="#sectionPower").menu-nav__name.color-secondary.text-md 苦痛中揮舞的鐵鎚
+            li.menu-nav__item
+              a(href="#sectionMap").menu-nav__name.color-secondary.text-md 最後的要塞中心部
+    block content
+
+    block script
+      script(src="./js/jquery-3.7.1.min.js") 
+      script(src="./js/animate.js") 
+      if hasSwiper
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+      script(src="./js/main.js")
+      script(src="https://frontend.beanfun.com/plugins/game-footer/game-footer.js" type="text/javascript" id="game-footer" prod="波拉西亞" theme="dark")
+

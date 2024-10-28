@@ -1,0 +1,176 @@
+@media screen and (max-width: ($mbrwd-breakpoint* 1px)) {
+
+  // kv 主視覺
+  .kv-section {
+    &.section {
+      min-height: 620px;
+      height: 100%;
+    }
+    &__decobox {
+      top: 80px;
+    }
+
+    &__sub-title {
+      font-size: 20px;
+    }
+
+    &__main {
+      &-title {
+        max-height: 55px;
+        font-size: min(55px);
+      }
+      &-ring {
+        @include size(30px);
+        top: 7px;
+        left: 124px;
+      }
+    }
+    &__row {
+      margin-top: 24px;
+    }
+
+    &__item {
+      @include size(100px, 36px);
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__scroll-down {
+      @include size(32px, 38px);
+      position: initial;
+    }
+  }
+
+  .s2-section {
+    &__visual {
+      @include center;
+      width: 620px;
+      height: 100%;
+      top: 25%;
+      transform: translate3d(-42%,-55%,0);
+      background-image: url(../images/s2_visual_mb.png);
+    }
+
+    &__intro {
+      @include flex-center;
+      margin-top: 320px;
+      margin-bottom: 40px;
+    }
+
+    &__row {
+      @include flex-column;
+      width: 100%;
+      margin-bottom: 0;
+      padding: 0 16px;
+    }
+
+    &__item {
+
+      &.left-box,
+      &.right-box {
+        width: 100%;
+      }
+
+      &.right-box {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+    }
+
+    &__img {
+      @include size(136px, 124px);
+    }
+
+    &__title {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    &__name {
+      font-size: 30px;
+    }
+  }
+
+  .s3-section {
+
+    &-msg {
+      margin-left: 8px;
+      &::before {
+        left: -7px;
+        transform: scale(.45);
+      }
+    }
+
+    &__content {
+      max-width: 572px;
+      margin: 0 auto;
+    }
+
+    &__head {
+      margin-top: 270px;
+    }
+
+    &__video {
+      &-btn {
+        @include size(80px);
+      }
+
+      &-box {
+        max-width: 400px;
+      }
+    }
+
+    &__body {
+      margin: 30px 0 40px;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin: 30px 0 20px;
+    }
+
+    &__sub-title {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    &__item {
+      max-width: 400px;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        height: 130px;
+      }
+    }
+
+  }
+
+  .s4-section {
+
+    &__head {
+      font-size: 24px;
+    }
+
+    &__bg {
+      &::before {
+        @include size(100%);
+        content: "";
+        position: absolute;
+        z-index: 3;
+        background: linear-gradient(90deg, #000c, #0000 30%, #f2d49500 70%, #000c);
+      }
+    }
+    &__row {
+      margin-top: 24px;
+    }
+
+    &__flag {
+      padding: 0 24px 72px;
+    }
+
+  }
+
+}

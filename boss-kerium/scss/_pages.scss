@@ -1,0 +1,189 @@
+.boss-page {
+  position: absolute;
+  top: 112px;
+  z-index: 9;
+  left: 0;
+  width: 100%;
+  animation: fadeDown 1600ms cubic-bezier(.65,1,.9,1);
+  overflow: hidden;
+
+  &::before {
+    @include size(100%,1px);
+    content: "";
+    position: absolute;
+    top: calc((100% - 53px)/2);
+    background: #fff3;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: px-em($pc-midrwd-breakpoint);
+    margin: auto;
+    padding: 0 24px;
+  }
+
+  &__row {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__item {
+    flex: 1;
+    width: auto;
+    min-width: 70px;
+    filter: grayscale(1);
+
+    &.open-page {
+      &:hover {
+        .boss-page__profile {
+          transition: ease-in-out .2s;
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    // 待想到更好的寫法
+    &:nth-child(1) {
+      &:hover {
+        filter: grayscale(0);
+
+        .boss-title {
+          color: $text03;
+
+          &--active {
+            color: $bossColor01;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      &:hover {
+        filter: grayscale(0);
+
+        .boss-title {
+          color: $text03;
+
+          &--active {
+            color: $bossColor02;
+          }
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      &:hover {
+        filter: grayscale(0);
+
+        .boss-title {
+          color: $text03;
+
+          &--active {
+            color: $bossColor03;
+          }
+        }
+      }
+    }
+
+    &.active {
+      filter: grayscale(0);
+
+      .boss-title {
+        color: $text03;
+
+        &--active {
+          color: $bossColorThis;
+        }
+      }
+    }
+  }
+
+  &__link {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.3;
+  }
+
+  &__profile {
+    @include flex-center;
+    @include size(76px);
+    position: relative;
+    border: 2px solid #fff6;
+    border-radius: 999em;
+  }
+
+  &__img {
+    @include size(60px);
+  }
+
+  &__title {
+    padding-top: 12px;
+    text-align: center;
+    color: #fff6;
+  }
+
+  &-1 {
+    border: 2px solid $bossColor01;
+
+    .text--active {
+      color: $bossColor01;
+    }
+  }
+
+  &-2 {
+    border: 2px solid $bossColor02;
+
+    .text--active {
+      color: $bossColor02;
+    }
+  }
+
+  &-3 {
+    border: 2px solid $bossColor03;
+
+    .text--active {
+      color: $bossColor03;
+    }
+  }
+
+  &-4 {
+    border: 2px solid $bossColorThis;
+
+    .text--active {
+      color: $bossColorThis;
+    }
+  }
+}
+
+@media screen and (max-width: ($mbrwd-breakpoint* 1px)) {
+  .boss-page {
+    top: 65px;
+  
+    &__container {
+      white-space: nowrap;
+    }
+  
+    &__row {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+
+    &__item {
+      margin-right: 12px;
+    }
+  
+    &__profile {
+      @include size(40px);
+    }
+  
+    &__img {
+      @include size(30px);
+    }
+  
+    &__title {
+      font-size: 13px;
+      padding-top: 12px;
+    }
+  }
+}

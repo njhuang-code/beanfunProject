@@ -1,0 +1,175 @@
+// 平版 過渡樣式
+@media screen and (max-height:1000px) and (min-width: 769px) {
+  .kv-section {
+    &__decobox {
+      transform: scale(.9);
+      transform-origin: 50% 100%;
+    }
+
+    &__play-btn {
+      margin-top: 24px;
+    }
+    &__row {
+      margin-top: 42px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .kv-section {
+    &__item {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
+
+  .kv-section {
+    &__main {
+      &-title {
+        margin: 12px auto;
+        font-size: min(82px);
+        letter-spacing: max(-3.656px, -1.05vw);
+      }
+      &-ring {
+        @include size(55px);
+        top: 28px;
+        left: 182px;
+      }
+    }
+  }
+  
+
+  .s2-section {
+    &__visual {
+      left: 30%;
+    }
+  }
+
+  .s3-section {
+
+    &__head {
+      max-width: initial;
+      margin-top: 350px;
+    }
+
+    &__row {
+      @include flex-column;
+      align-items: center;
+    }
+
+    &__item {
+      &:nth-child(1) {
+        margin-bottom: 40px;
+      }
+      &:nth-child(2) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+
+  .s4-section {
+    @include flex-column;
+
+    &__container {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__bg {
+      @include size(100%);
+      background-image: url(../images/s4_bg_map_mb.png);
+
+      &-map {
+        @include size(100%,550px);
+        position: relative;
+
+        &::before {
+          content: "";
+        }
+      }
+    }
+
+    &__flag {
+      @include size(100%,auto);
+      @include background-setting;
+      padding-bottom: 72px;
+      background-image: url(../images/s4_img_flag_mb.png);;
+    }
+
+    &__desc {
+      max-width: 480px;
+    }
+
+    &__head {
+      margin-top: 50px;
+    }
+
+    &__row {
+      width: 100%;
+      max-width: 480px;
+    }
+
+
+    &__point {
+      transform: translate3d(-50%, -153%, 0);
+    }
+
+
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .s4-section {
+    &__point {
+      transform: translate3d(-352%, 22%, 0);
+    }
+    &__map {
+      top: unset;
+      bottom: 50%;
+      &-devil {
+        top: 100%;
+        left: 24%;
+      }
+      &-row {
+        top: unset;
+        bottom: 0;
+        &.arrow--reverse {
+          transform: scaleY(-1);
+        }
+      }
+      &-line {
+        order: 3;
+        &::after {
+          background: #c55525;
+        }
+      }
+  
+      &-dot {
+        top: unset;
+        bottom: 0;
+        background-color: #c55525;
+        &::before,&::after {
+          border: .5px solid #c55525;
+        }
+      }
+  
+      &-view {
+        order: 2;
+        &::before {
+          background: linear-gradient(-45deg, #c35328, #dea86f);
+        }
+      }
+  
+      &-text {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

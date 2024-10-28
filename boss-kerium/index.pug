@@ -1,0 +1,115 @@
+extends _layout.pug
+
+append vars
+//- block append loading
+block append lightbox
+block append header
+block append pages
+block append nav
+block content
+  main.content
+    #sectionMain.section.kv-section
+      .kv-section__bg
+        video.section__video.d-none-sm(loop muted playsinline)
+          source(src='./images/video/kv_video_pc.mp4')
+        video.section__video.d-none-lg.d-block-sm(loop muted playsinline)
+          source(src='./images/video/kv_video_mb.mp4')
+      .kv-section__decobox
+        h4.kv-section__sub-title.fw-md
+          span.kv-section__sub-title.sub-text-strong 毒蜂亡靈們的
+          span.kv-section__sub-title.sub-text 軍團長
+        .kv-section__main.fw-lg
+          .kv-section__main-title 凱黎溫
+          .kv-section__main-shadow 凱黎溫
+          .kv-section__main-ink 凱黎溫
+        p.section__msg.kv-section__date.fw-md 2024年11月20日 (三) UPDATE
+        button.section__play-btn.kv-section__play-btn
+        ul.kv-section__row.row
+          li.kv-section__item
+            a.kv-section__link.img-android(href="https://play.google.com/store/apps/details?id=com.gamania.twp&hl=zh-TW" target="_blank")
+          li.kv-section__item
+            a.kv-section__link.img-ios(href="https://apps.apple.com/tw/app/%E6%B3%A2%E6%8B%89%E8%A5%BF%E4%BA%9E%E6%88%B0%E8%A8%98/id6451229143" target="_blank")
+          li.kv-section__item
+            a.kv-section__link.img-pc(href="https://warsofprasia.beanfun.com/Download?downloadTarget=1" target="_blank")
+        a(href="#sectionResent").kv-section__scroll-down
+    #sectionResent.section
+      .section__bg
+        video.section__video.s2-section-frame(loop muted playsinline)
+          source(src='./images/video/s2_video_pc.mp4')
+        .s2-section__visual.animate.animate_fadeDown
+      .s2-section__intro
+        .s2-section__row.row 
+          
+          .s2-section__item.left-box.animate.animate_fadeLeft.animate_delay100
+            .s2-section__img
+              img(src="./images/s2_img_profile.png", alt="")
+            h5.s2-section__title.text-center.fw-md 被囚禁在黑暗中擁有光明與黑暗的兩張臉
+              p.s2-section__name.color-primary.text-xl.fw-md 被束縛的帕拿斯
+            .section__ornate
+            ol.text-md.color-secondary--dark.animate.animate_fadeRight.animate_delay200
+              li 奈索帝國的帕拿斯對妖精們避開深淵、遷移世界的策略持懷疑態度。他主張應該勇敢面對並戰勝深淵，重返原本的世界。
+              br
+              li 帕拿斯專注於「黑星世界」的黑元素，並研發出一種利用妖精具現的黑元素來抵禦深淵的方法。他創造了名為「艾雷」的魔法道具，類似紡車，能將妖精身體與黑元素結合，穩定後可承受深淵威脅。為驗證理論，他親自成為實驗對象。
+              br
+              li 成功啟動艾雷後，帕拿斯的身體被注入黑元素，這些元素化作青灰色的閃耀物質，形成強效防護罩。
+    #sectionPower.section
+      .section__bg.s3-section__bg
+        video.section__video.s3-section-frame(loop muted playsinline)
+          source(src='./images/video/s3_video_pc.mp4')
+      .container
+        .s3-section__content
+          .s3-section__head
+            .s3-section__heading.text-xl.color-secondary.text-center
+              h4.fw-md.color-secondary.animate.animate_fadeRight
+                b.color-primary 黑元素
+                |與
+                b.color-primary 魔法艾雷
+            .section__ornate.animate.animate_fadeRight.animate_delay200
+            p.s3-section__desc.text-center.text-md.animate.animate_fadeRight.animate_delay300 如同星光閃爍的夜空般美麗，
+              br
+              |青灰色閃爍的「黑元素」力量雖會侵蝕守護者，
+              br
+              |卻有帕拿斯「艾雷」中的光之力提供保護，源源不斷地注入生命力。
+            .s3-section__video-box.animate.animate_fadeRight.animate_delay400
+              .s3-section__video-wrapper
+                video.s3-section__video(loop muted playsinline)
+                  source(src='./images/video/s2_video_pc.mp4')
+                
+          .s3-section__body
+            h4.s3-section__title.color-secondary.text-center.fw-md.animate.animate_fadeDown.animate_delay500 主要獎勵
+            ul.s3-section__row.row 
+              li.s3-section__item.animate.animate_fadeDown.animate_delay600
+              li.s3-section__item.animate.animate_fadeDown.animate_delay700
+    #sectionMap.section.s4-section
+      .s4-section__bg-map
+        .s4-section__bg
+        .s4-section__cloudy.d-none-md
+        .s4-section__point
+          .s4-section__map-devil.animate.animate_fadeUp
+          .s4-section__map-row.arrow--reverse.animate.animate_fadeUp
+            .s4-section__map-arrow
+            .s4-section__map-arrow
+          .s4-section__map-circle.animate.animate_fadeUp
+          .s4-section__map.animate.animate_fadeDown.animate_delay100
+            .s4-section__map-line
+              .s4-section__map-dot
+            .s4-section__map-view
+              .s4-section__map-img
+            p.s4-section__map-text.fw-md 倒塌之塔
+      .s4-section__container.container
+        .s4-section__flag.text-center
+          h3.s4-section__head.fw-md.animate.animate_fadeLeft 被束縛的帕拿斯出沒地區
+            br
+            strong.color-point.text-xl.fw-md 倒塌之塔
+          .section__ornate.section--opacity.animate.animate_fadeLeft.animate_delay100
+          ol.s4-section__desc.text-md.text-left.animate.animate_fadeLeft.animate_delay200
+            li 當妖精來到黎奈亞大陸時，原有的建築也隨之出現，朗多家族管理的朗多之塔是其中最高的古代妖精建築之一。這座塔被用作囚禁違抗奈索妖精的監牢，塔內的古代妖精力量能限制妖精的行動自由。
+            br
+            li 帕拿斯拒絕波濤世界的纏結具現，轉而使用黑元素力量，結果被囚禁在塔的地下。塔內，他的人格與受黑元素影響的分裂人格激烈對抗，經歷極大痛苦，並在古代妖精力量的影響下不斷變得強大。帕拿斯最終突破塔的防禦，摧毀了巨塔，將周圍地區變成了任何妖精和人類都不敢輕易靠近的禁地，唯有守護者例外。
+          ul.s4-section__row
+            li.s4-section__item.animate.animate_fadeDown.animate_delay300
+              img.s4-section__img(src="./images/s4_img_01.png", alt="")
+            li.s4-section__item.animate.animate_fadeDown.animate_delay400
+              img.s4-section__img(src="./images/s4_img_02.png", alt="")
+    #gotop
+      a.btn__gotop(href="#")
