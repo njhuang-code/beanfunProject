@@ -1800,8 +1800,18 @@ button {
   background-image: url(../images/s4_bg_map.png);
   will-change: background-position;
   pointer-events: none;
-  -webkit-animation: animateBg 1s ease-out forwards;
-          animation: animateBg 1s ease-out forwards;
+  -webkit-transform: translate(3%, 0) scale(1.1);
+          transform: translate(3%, 0) scale(1.1);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease; /* 設定動畫過渡 */
+}
+.s4-section__bg.active {
+  -webkit-transform: translate(0, 0) scale(1);
+          transform: translate(0, 0) scale(1);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 .s4-section__bg-map {
   width: 100%;
@@ -1876,8 +1886,8 @@ button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transform: translate3d(194%, -310%, 0);
-          transform: translate3d(194%, -310%, 0);
+  -webkit-transform: translate3d(-409%, -194%, 0);
+          transform: translate3d(-409%, -194%, 0);
   z-index: 10;
 }
 .s4-section__map {
@@ -2055,6 +2065,7 @@ button {
   margin-top: 16px;
   font-size: 24px;
   color: #e7c385;
+  white-space: nowrap;
 }
 .s4-section__map-text::before {
   width: 100%;
@@ -2716,55 +2727,6 @@ button {
   .s4-section__point {
     -webkit-transform: translate3d(-50%, -153%, 0);
             transform: translate3d(-50%, -153%, 0);
-  }
-}
-@media screen and (min-width: 961px) {
-  .s4-section__point {
-    -webkit-transform: translate3d(-352%, 22%, 0);
-            transform: translate3d(-352%, 22%, 0);
-  }
-  .s4-section__map {
-    top: unset;
-    bottom: 50%;
-  }
-  .s4-section__map-devil {
-    top: 100%;
-    left: 24%;
-  }
-  .s4-section__map-row {
-    top: unset;
-    bottom: 0;
-  }
-  .s4-section__map-row.arrow--reverse {
-    -webkit-transform: scaleY(-1);
-            transform: scaleY(-1);
-  }
-  .s4-section__map-line {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  .s4-section__map-line::after {
-    background: #c55525;
-  }
-  .s4-section__map-dot {
-    top: unset;
-    bottom: 0;
-    background-color: #c55525;
-  }
-  .s4-section__map-dot::before, .s4-section__map-dot::after {
-    border: 0.5px solid #c55525;
-  }
-  .s4-section__map-view {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  .s4-section__map-view::before {
-    background: linear-gradient(-45deg, #c35328, #dea86f);
-  }
-  .s4-section__map-text {
-    margin-bottom: 16px;
   }
 }
 @media screen and (max-width: 768px) {

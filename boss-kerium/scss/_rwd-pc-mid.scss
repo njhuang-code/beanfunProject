@@ -43,12 +43,6 @@
   }
   
 
-  // .s2-section {
-  //   &__visual {
-  //     left: 30%;
-  //   }
-  // }
-
   .s3-section {
 
     &__head {
@@ -116,7 +110,6 @@
       max-width: 480px;
     }
 
-
     &__point {
       transform: translate3d(-50%, -153%, 0);
     }
@@ -124,52 +117,51 @@
 
   }
 }
-
+// 反向 s4-section point 位置使用
 @media screen and (min-width: 961px) {
-  .s4-section {
-    &__point {
-      transform: translate3d(-352%, 22%, 0);
-    }
-    &__map {
-      top: unset;
-      bottom: 50%;
-      &-devil {
-        top: 100%;
-        left: 24%;
-      }
-      &-row {
-        top: unset;
-        bottom: 0;
-        &.arrow--reverse {
-          transform: scaleY(-1);
-        }
-      }
-      &-line {
-        order: 3;
-        &::after {
-          background: #c55525;
-        }
-      }
   
-      &-dot {
-        top: unset;
-        bottom: 0;
-        background-color: #c55525;
-        &::before,&::after {
-          border: .5px solid #c55525;
-        }
-      }
+  // .s4-section {
+  //   &__point {
+  //     transform: translate3d(-352%, 22%, 0);
+  //   }
+  //   &__map {
+  //     top: 0;
+  //     bottom: 50%;
+  //     &-devil {
+  //       top: 100%;
+  //       left: 24%;
+  //     }
+  //     &-row {
+  //       top: 0;
+  //       bottom: 0;
+  //       &.arrow--reverse {
+  //         transform: scaleY(-1);
+  //       }
+  //     }
+  //     &-line {
+  //       &::after {
+  //         background: #c55525;
+  //       }
+  //     }
   
-      &-view {
-        order: 2;
-        &::before {
-          background: linear-gradient(-45deg, #c35328, #dea86f);
-        }
-      }
+  //     &-dot {
+  //       top: unset;
+  //       bottom: 0;
+  //       background-color: #c55525;
+  //       &::before,&::after {
+  //         border: .5px solid #c55525;
+  //       }
+  //     }
   
-      &-text {
-        margin-bottom: 16px;
-      }
-    }
-  }
+  //     &-view {
+  //       &::before {
+  //         background: linear-gradient(-45deg, #c35328, #dea86f);
+  //       }
+  //     }
+  
+  //     &-text {
+  //       margin-bottom: 16px;
+  //     }
+  //   }
+  // }
 }
