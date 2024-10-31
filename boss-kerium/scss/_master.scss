@@ -176,14 +176,13 @@
 
   &__visual {
     @include center;
-    @include size(100%);
+    @include size(1080px,1085px);
     @include background-setting;
     top: 0;
-    left: 0;
+    left: calc((50% - 960px));
     z-index: 3;
-    transform: translate3d(-50%,-50%,0);
     background-image: url(../images/s2_visual.png);
-    background-size: contain;
+    background-size: cover;
   }
 
   &__intro {
@@ -202,7 +201,7 @@
   }
   
   &__item {
-    flex: 0 0 50%;
+    flex: 0 0 58%;
     &.left-box {
       @include flex-column;
       justify-content: center;
