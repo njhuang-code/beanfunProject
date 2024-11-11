@@ -27,22 +27,6 @@
 
 @media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
 
-  .kv-section {
-    &__main {
-      &-title {
-        margin: 12px auto;
-        font-size: min(82px);
-        letter-spacing: max(-3.656px, -1.05vw);
-      }
-      &-ring {
-        @include size(55px);
-        top: 28px;
-        left: 182px;
-      }
-    }
-  }
-  
-
   .s3-section {
 
     &__head {
@@ -56,6 +40,9 @@
     }
 
     &__item {
+      &.new-equit {
+        flex: auto;
+      }
       &:nth-child(1) {
         margin-bottom: 40px;
       }

@@ -50,6 +50,18 @@
   }
 }
 
+@keyframes flameInLeft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes flameWindInRight {
   0% {
     transform: translateX(20%);
@@ -61,6 +73,7 @@
     opacity: 1;
   }
 }
+
 
 @keyframes flameWindRightCenter {
   0% {
@@ -215,6 +228,23 @@
   100% {
     transform: translate(0, -40px) scale(1.2);
   }
+}
+
+@keyframes effectColor {
+  0% {
+    background-position-x: 130%;
+    background-position-y: 20%;
+    opacity: 1;
+}
+
+50% {
+    opacity: .7;
+}
+100% {
+    background-position-x: 10%;
+    background-position-y: 90%;
+    opacity: 1;
+}
 }
 
 // scrollAnimation

@@ -15,14 +15,14 @@
     }
 
     &__main {
-      &-title {
-        max-height: 55px;
-        font-size: min(55px);
+      margin-bottom: 16px;
+      font-size: min(82px, 18.7vw);
+      letter-spacing: max(-3.656px, -1.05vw);
+      &-shadow {
+        text-shadow: -1px -1px 0 #fff;
       }
-      &-ring {
-        @include size(30px);
-        top: 7px;
-        left: 124px;
+      &-ink {
+        padding: 4px;
       }
     }
     &__row {
@@ -47,16 +47,16 @@
   .s2-section {
     &__visual {
       @include center;
-      width: 620px;
-      height: 100%;
-      top: 25%;
+      top: 370px;
+      left: calc(50% - 55px);
       transform: translate3d(-42%,-55%,0);
-      background-image: url(../images/s2_visual_mb.png);
+      mask-image: linear-gradient(0deg, #0000, #0000 50%, #000 68%, #000);
+      background-size: contain;
     }
 
     &__intro {
       @include flex-center;
-      margin-top: 320px;
+      margin-top: min(88vw, 320px);
       margin-bottom: 40px;
     }
 
@@ -137,12 +137,31 @@
       font-size: 16px;
     }
 
+    &__row {
+      &:last-child {
+        padding-top: 24px;
+      }
+    }
+
     &__item {
       max-width: 400px;
 
-      &:nth-child(1),
+      &:nth-child(1) {
+        height: 270px;
+        margin-bottom: 40px;
+      }
       &:nth-child(2) {
-        height: 130px;
+        height: 240px;
+      }
+
+      &.new-equit {
+        &:first-child {
+          height: 200px;
+          margin-bottom: 40px;
+        }
+        &:nth-child(2) {
+          height: 270px;
+        }
       }
     }
 
