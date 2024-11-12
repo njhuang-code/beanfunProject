@@ -66,6 +66,7 @@
     &__bg {
       @include size(100%);
       background-image: url(../images/s4_bg_map_mb.png);
+      transform: translate(0, 0) scale(1);
 
       &-map {
         @include size(100%,550px);
@@ -98,7 +99,7 @@
     }
 
     &__point {
-      transform: translate3d(-51%, -174%, 0);
+      transform: translate3d(-61%, -162%, 0);
     }
 
 
