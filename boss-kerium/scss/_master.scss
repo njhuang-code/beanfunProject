@@ -363,7 +363,7 @@
         @include size(100vw,1px);
         content: "";
         position: absolute;
-        top: 12px;
+        top: 0;
         left: 50%;
         transform: translate3d(-50%,0,0);
         background: #a5c78c1a;

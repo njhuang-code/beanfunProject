@@ -47,16 +47,18 @@
   .s2-section {
     &__visual {
       @include center;
-      top: 370px;
+      width: 600px;
+      height: 100%;
+      top: 55%;
       left: calc(50% - 55px);
       transform: translate3d(-42%,-55%,0);
-      mask-image: linear-gradient(0deg, #0000, #0000 50%, #000 68%, #000);
+      background: url(../images/s2_visual_mb.png) no-repeat;
       background-size: contain;
     }
 
     &__intro {
       @include flex-center;
-      margin-top: min(88vw, 320px);
+      margin-top: min(88vw, 300px);
       margin-bottom: 40px;
     }
 
