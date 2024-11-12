@@ -2782,6 +2782,8 @@ button {
     width: 100%;
     height: 100%;
     background-image: url(../images/s4_bg_map_mb.png);
+    -webkit-transform: translate(3%, 4%) scale(1.1);
+            transform: translate(3%, 4%) scale(1.1);
   }
   .s4-section__bg-map {
     width: 100%;
