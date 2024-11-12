@@ -41,7 +41,8 @@
     letter-spacing: -7px;
     transition-delay: 1s;
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, .96));
-    animation: flameWindDown 1500ms cubic-bezier(.65,0,.35,1) 1 forwards;
+    opacity: 0;
+    animation: textSpacingFadeIn 3s ease-in-out forwards;
     
     &-title {
       @include background-setting;

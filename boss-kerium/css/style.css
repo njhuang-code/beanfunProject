@@ -1343,8 +1343,9 @@ button {
           transition-delay: 1s;
   -webkit-filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.96));
           filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.96));
-  -webkit-animation: flameWindDown 1500ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
-          animation: flameWindDown 1500ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+  opacity: 0;
+  -webkit-animation: textSpacingFadeIn 3s ease-in-out forwards;
+          animation: textSpacingFadeIn 3s ease-in-out forwards;
 }
 .kv-section__main-title {
   background-size: cover;
@@ -2598,6 +2599,32 @@ button {
     background-position-x: 10%;
     background-position-y: 90%;
     opacity: 1;
+  }
+}
+@-webkit-keyframes textSpacingFadeIn {
+  0% {
+    letter-spacing: 48px; /* 初始字距，緊密 */
+    opacity: 0; /* 初始不透明度 */
+  }
+  50% {
+    opacity: 1; /* 中間過程中逐漸顯現 */
+  }
+  100% {
+    letter-spacing: 2px; /* 最終字距 */
+    opacity: 1; /* 完全顯現 */
+  }
+}
+@keyframes textSpacingFadeIn {
+  0% {
+    letter-spacing: 48px; /* 初始字距，緊密 */
+    opacity: 0; /* 初始不透明度 */
+  }
+  50% {
+    opacity: 1; /* 中間過程中逐漸顯現 */
+  }
+  100% {
+    letter-spacing: 2px; /* 最終字距 */
+    opacity: 1; /* 完全顯現 */
   }
 }
 .animate {
