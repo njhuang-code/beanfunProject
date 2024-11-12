@@ -1898,8 +1898,8 @@ button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transform: translate3d(-409%, -194%, 0);
-          transform: translate3d(-409%, -194%, 0);
+  -webkit-transform: translate3d(-420%, -206%, 0);
+          transform: translate3d(-420%, -206%, 0);
   z-index: 10;
 }
 .s4-section__map {
