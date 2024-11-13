@@ -237,27 +237,24 @@
     opacity: 1;
 }
 
-50% {
-    opacity: .7;
-}
-100% {
-    background-position-x: 10%;
-    background-position-y: 90%;
-    opacity: 1;
-}
+  50% {
+      opacity: .7;
+  }
+  100% {
+      background-position-x: 10%;
+      background-position-y: 90%;
+      opacity: 1;
+  }
 }
 
 @keyframes textSpacingFadeIn {
   0% {
-      letter-spacing: 48px; /* 初始字距，緊密 */
-      opacity: 0; /* 初始不透明度 */
-  }
-  50% {
-      opacity: 1; /* 中間過程中逐漸顯現 */
+    letter-spacing: .8em;
+    opacity: 0;
   }
   100% {
-      letter-spacing: 2px; /* 最終字距 */
-      opacity: 1; /* 完全顯現 */
+    letter-spacing: 0;
+    opacity: 1;
   }
 }
 

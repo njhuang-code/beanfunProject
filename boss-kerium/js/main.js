@@ -20,6 +20,10 @@ $(function () {
   });
 });
 
+
+
+
+
 // laoding 畫面
 document.addEventListener("DOMContentLoaded", function() {
   var progressBar = document.querySelector('.loading__progress');

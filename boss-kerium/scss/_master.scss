@@ -24,7 +24,7 @@
 
   &__sub-title {
     font-size: 42px;
-    animation: flameWindInRight 1500ms cubic-bezier(.65,0,.35,1) 1 forwards;
+    animation: flameWindUp 1500ms cubic-bezier(.65,0,.35,1) 1 forwards;
     transition-delay: .3s;
     &.sub-text {
       color: $bossColor03;
@@ -38,12 +38,10 @@
     margin-bottom: 24px;
     font-size: 140px;
     line-height: 1.1;
-    letter-spacing: -7px;
-    transition-delay: 1s;
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, .96));
     opacity: 0;
-    animation: textSpacingFadeIn 3s ease-in-out forwards;
-    
+    animation: textSpacingFadeIn 1.5s ease-out forwards;
+
     &-title {
       @include background-setting;
       @include flex-center;
@@ -56,14 +54,16 @@
       background-clip: text;
     }
     &-shadow {
+      @include flex-center;
       @include size(100%);
       position: absolute;
-      top: 4px;
+      top: 2px;
       left: 0;
       z-index: -1;
       text-shadow: -1px -2.5px 0 #fff;
     }
     &-ink {
+      @include flex-center;
       @include background-setting;
       @include size(100%);
       @include center;
