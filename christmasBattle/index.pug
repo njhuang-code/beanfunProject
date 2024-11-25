@@ -1,3 +1,11 @@
 extends _layout.pug
 
 append vars
+block content
+  main.content
+    #sectionMain.section.kv-section
+      .kv-section__bg
+        video.section__video.d-none-sm(autoplay loop muted playsinline)
+          source(src='./images/video/kv_video_pc.mp4')
+        video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
+          source(src='./images/video/kv_video_mb.mp4')

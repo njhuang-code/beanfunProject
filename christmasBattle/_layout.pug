@@ -45,3 +45,52 @@ html(lang="zh-Hant")
       if hasSwiper
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
       script(src="https://tw.beanfun.com/js/GA_CodeNew.js" type="text/javascript")
+  body
+    block header
+      header.header
+        .header__container.row
+          .header__left
+            .header__logo
+              a(href="https://warsofprasia.beanfun.com/Main" target="_blank").header__logo-img.header__logo-mb
+            button.menu-slide__button
+              p.menu-slide__button-text.event-text.fw-lg 活動
+            .menu-slide
+              .menu-slide__closed
+              .menu-slide__logo.text-center
+                a(href="https://warsofprasia.beanfun.com/Main" target="_blank").header__logo-img
+                ul.menu-slide__row
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10634" target="blank").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_01.jpg", alt="")
+                      h4.text-sm 直升系統
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10884" target="blank").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_02.jpg", alt="")
+                      h4.text-sm 波拉魂養成班
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10872" target="_black").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_03.jpg", alt="")
+                      h4.text-sm 特別 WP Coupon
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10431" target="_black").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_04.jpg", alt="")
+                      h4.text-sm 10% 紅利回饋
+          .header__right
+            ul.header__row.row
+              li.header__item.d-none-sm
+                a.btn-game.text-md.fw-md(href="https://galaxy.beanfun.com/webapi/view/login/twp?redirect_url=https://warsofprasia.beanfun.com/Main" target="_blank") GAME START
+              li.header__item
+                a(href="https://warsofprasia.beanfun.com/Main" target="_blank").btn-game-link
+                  i.btn-game__icon.home
+              li.header__item 
+                a(href="https://www.facebook.com/warsofprasia.tw" target="_blank").btn-game-link
+                  i.btn-game__icon.fb
+              li.header__item
+                a(href="https://www.youtube.com/@user-warsofprasia" target="_blank").btn-game-link
+                  i.btn-game__icon.yt
+    block content
+    block script
+      script(src="./js/jquery-3.7.1.min.js") 
+      script(src="./js/animate.js")
+      script(src="./js/main.js")
+      //- script(src="https://frontend.beanfun.com/plugins/game-footer/game-footer.js" type="text/javascript" id="game-footer" prod="波拉西亞" theme="dark")
