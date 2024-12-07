@@ -1,14 +1,9 @@
-$primary: #b992f2;
-$secondary: #d5c9e7;
+$primary: #ff0000;
+$secondary: #ffec82;
 $secondaryDark: #c8c8c8;
 $point: #9e4b2a;
 $point-sec: #765555;
 $header: #a2bacd;
-
-// Boss Color
-$bossColor01: #e2b07a;
-$bossColor02: #9fb16a;
-$bossColorThis: #b992f2;
 
 // Basic Color
 $backgroundB1: #ffffff;
@@ -68,11 +63,18 @@ $mbrwd-breakpoint: 768;
   transform: translate(-50%, -50%);
 }
 
-@mixin background-setting {
+@mixin background-cover {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
+@mixin background-contain {
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 
 @function xy($xy, $ttlw) {
   @return ($xy / $ttlw * 100%);

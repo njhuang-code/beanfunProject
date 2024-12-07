@@ -67,7 +67,7 @@
     border-radius: 4px;
     background: #00000080;
     &::before {
-      @include background-setting;
+      @include background-cover;
       @include size(40%,50%);
       content: "";
       display: inline-block;

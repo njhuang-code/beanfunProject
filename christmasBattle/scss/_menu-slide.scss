@@ -1,6 +1,6 @@
 .menu-slide {
   @include size(170px,100%);
-  @include background-setting;
+  @include background-cover;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@
 
     &::after {
       @include size(20px);
-      @include background-setting;
+      @include background-cover;
       content: "";
       display: inline-block;
       background-image: url(../images/icon_menu_hamburger.png);
@@ -58,7 +58,7 @@
     cursor: pointer;
       &::after {
         @include size(32px);
-        @include background-setting;
+        @include background-cover;
         content: "";
         display: inline-block;
         margin-right: 0;

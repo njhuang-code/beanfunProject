@@ -13,7 +13,7 @@
   &__logo {
     &-img {
       @include size(120px);
-      @include background-setting;
+      @include background-cover;
       background-image: url(../images/icon/icon_logo_pc.png);
     }
   }
@@ -27,6 +27,66 @@
   }
   &__item {
     margin: 0 8px;
+  }
+}
+
+.bg-deco {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+
+  &__tree {
+    background-image: url(../images/kv_img_tree.png);
+    @include background-contain;
+    @include size(423px, 165px);
+    position: absolute;
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+      transform: rotateY(-180deg);
+    }
+  }
+
+  &__ball {
+    
+    &-red {
+      background: url(../images/kv_img_ball_red.png) no-repeat 0 100%/100% auto;
+      @include background-contain;
+      @include size(41px, 207px);
+      &:nth-child(1) {
+        left: pct(100px);
+      }
+      &:nth-child(3) {
+        left: pct(300px);
+      }
+
+      &:nth-child(4) {
+        right: pct(300px);
+      }
+      &:nth-child(5) {
+        right: pct(100px);
+      }
+    }
+
+    &-sliver {
+      background: url(../images/kv_img_ball_sliver.png);
+      @include background-contain;
+      @include size(48px, 290px);
+      left: pct(200px);
+    }
+    &-box {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      * {
+        position: absolute;
+      }
+    }
   }
 }
 

@@ -24,7 +24,7 @@
     }
     &::after {
       @include size(16px,20px);
-      @include background-setting;
+      @include background-cover;
       content: "";
       position: relative;
       top: 0;

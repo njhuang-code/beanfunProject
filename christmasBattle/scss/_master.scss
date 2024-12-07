@@ -1,0 +1,50 @@
+.kv-section {
+  &__bg {
+    position: relative;
+    &::after {
+      display: block;
+      content: "";
+      background-image: url(../images/black_overlay_bg.png);
+      @include background-cover;
+      @include size(100%);
+      @include center;
+    }
+  }
+
+  &__decobox {
+    @include center;
+  }
+
+  &__main {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    max-width: 960px;
+    margin: auto
+  }
+
+  &__visual {
+    @include size(476px,600px);
+  }
+
+  &__textbox {
+    margin: 52px auto;
+  }
+
+  &__title {
+    color: $text03;
+    font-size: 2rem;
+    &:nth-child(2) {
+      font-size: 1.5rem;
+      margin-top: 28px;
+    }
+  }
+
+  &__scroll {
+    display: inline-block;
+    @include background-cover;
+    @include size(37px,108px);
+    background-image: url(../images/kv_scrolldown.png);
+  }
+
+}
