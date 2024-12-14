@@ -1,31 +1,16 @@
 @media screen and (max-height: 1000px) and (min-width: 769px) {
   .kv-section {
     &__main {
-      transform: scale(.75);
+      transform: scale(0.75);
+    }
+  }
+  .section {
+    &__wrapper {
+      transform: scale(0.9);
     }
   }
 }
 
 @media screen and (max-width: $pc-midrwd-breakpoint* 1px)   {
-  .kv-section {
-    &__main {
-      max-width: vw(960px);
-    }
-    &__visual {
-      @include size(vw(476px),vw(600px));
-    }
-    &__textbox {
-      margin: vw(52px) auto;
-    }
-    &__title {
-      font-size: vw(32px);
-      &:nth-child(2) {
-        font-size: vw(24px);
-        margin-top: vw(28px);
-      }
-    }
-    &__scroll {
-      @include size(vw(37px),vw(108px));
-    }
-  }
+
 }

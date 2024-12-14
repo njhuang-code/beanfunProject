@@ -3,27 +3,66 @@ extends _layout.pug
 append vars
 block content
   main.content
-    #sectionMain.section.kv-section
-      .kv-section__bg
-        video.section__video.d-none-sm(autoplay loop muted playsinline)
-          source(src='./images/video/kv_video_pc.mp4')
-        video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
-          source(src='./images/video/kv_video_mb.mp4')
-      .kv-section__decobox
-        .kv-section__main
-          .kv-section__visual
-            img.kv-section__img(src="./images/kv_main_title.png", alt="")
-          .kv-section__textbox
-            p.kv-section__title.text-center 
-              span.color-primary 克隆
-              |聖誕快樂!
-            p.kv-section__title.text-center 首次迎來聖誕節的波拉西亞戰記
-              br
-              span.color-primary 克隆地區
-              |燈塔村莊正準備著
-              span.color-primary 聖誕節
-              |慶祝活動
-              br
-              |邀請所有守護者們一同參與！
-          a(href="#sectionResent").kv-section__scroll
-    #section
+    .swiper.section-slide
+      .swiper-wrapper
+        #sectionMain.swiper-slide
+          .section.kv-section
+            .kv-section__bg
+              video.section__video.d-none-sm(autoplay loop muted playsinline)
+                source(src='./images/video/kv_video_pc.mp4')
+              video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
+                source(src='./images/video/kv_video_mb.mp4')
+            .kv-section__decobox
+              .kv-section__main
+                .kv-section__visual
+                  img.kv-section__img(src="./images/kv_main_title.png", alt="")
+                .kv-section__textbox
+                  p.kv-section__title.text-center 
+                    span.color-primary 克隆
+                    |聖誕快樂!
+                  p.kv-section__title.text-center 首次迎來聖誕節的波拉西亞戰記
+                    br
+                    span.color-primary 克隆地區
+                    |燈塔村莊正準備著
+                    span.color-primary 聖誕節
+                    |慶祝活動
+                    br
+                    |邀請所有守護者們一同參與！
+                a(href="#sectionResent").kv-section__scroll
+        #sectionSec.swiper-slide
+          .section.swiper-wrapper
+            .section__bg.s2-section__bg
+            .section__container
+              .section__wrapper.column
+                .section__logo
+                .s2-section__title
+                .s2-section__gift
+                a(href="").section__btn
+        #sectionThird.swiper-slide
+          .section.s3-section.swiper-wrapper
+            .section__bg
+              video.section__video.d-none-sm(autoplay loop muted playsinline)
+                source(src='./images/video/s3_video_pc.mp4')
+              video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
+                source(src='./images/video/s3_video_mb.mp4')
+            .section__container
+              .s3-section__deco
+                .s3-section__img
+                  .section__img
+                .s3-section__img
+                  .section__img
+                .s3-section__img
+                  .section__img
+              .section__wrapper.column
+                .section__logo
+                .s3-section__title
+                ul.s3-section__textbox
+                  li.s3-section__text 拉西亞戰記特別推出「白夜聖誕奇跡之旅」直播接力活動
+                  li.s3-section__text 邀請五位實況主與守護者們共度佳節。
+                  li.s3-section__text 除了介紹有趣的改版內容和聖誕資源外
+                  li.s3-section__text 還將發放聖誕特別序號「聖誕花圈、薑餅屋、雪人」，超過100抽送給你。
+                .s3-section__info
+                a(href="").section__btn.s3__btn
+      .swiper-button-prev
+      .swiper-button-next
+      .swiper-pagination

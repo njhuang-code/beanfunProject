@@ -2,6 +2,7 @@ doctype html
 html(lang="zh-Hant")
   block vars
     - var hasSwiper = true
+    - var hasCopyright = true
     - var header_title = '波拉西亞戰記｜第三隻混沌首領「被束縛的帕拿斯」轟然登場！'
     - var author = 'Wars of Prasia'
     - var og_title = '波拉西亞戰記｜第三隻混沌首領「被束縛的帕拿斯」轟然登場！'
@@ -40,10 +41,10 @@ html(lang="zh-Hant")
       //- google fonts
       link(rel="preconnect", href="https://fonts.googleapis.com")
       link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
-      link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet")
-      link(rel="stylesheet", href="./css/style.css")
       if hasSwiper
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+      link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet")
+      link(rel="stylesheet", href="./css/style.css")
       script(src="https://tw.beanfun.com/js/GA_CodeNew.js" type="text/javascript")
   body
     block header
@@ -102,6 +103,8 @@ html(lang="zh-Hant")
     block content
     block script
       script(src="./js/jquery-3.7.1.min.js") 
-      script(src="./js/animate.js")
+      if hasSwiper
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
       script(src="./js/main.js")
-      //- script(src="https://frontend.beanfun.com/plugins/game-footer/game-footer.js" type="text/javascript" id="game-footer" prod="波拉西亞" theme="dark")
+      if hasCopyright
+        script(src="https://frontend.beanfun.com/plugins/game-footer/game-footer.js" type="text/javascript" id="game-footer" prod="波拉西亞" theme="dark")

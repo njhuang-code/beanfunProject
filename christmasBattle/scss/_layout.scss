@@ -5,6 +5,10 @@
   flex-wrap: wrap;
 }
 
+.column {
+  @include flex-column;
+}
+
 .container {
   max-width: $pc-midrwd-breakpoint + px;
   margin: 0 auto;
@@ -132,13 +136,20 @@
 }
 
 .section {
-  @include size(100%);
+  @include size(100%,100vh);
   position: relative;
   overflow: hidden;
 
   &.kv-section {
     min-height: 100vh;
     height: 900px;
+  }
+
+  &__bg {
+    background: url(../images/bg_festival.jpg);
+    width: 100%;
+    height: 100%;
+    @include background-cover;
   }
 
 }
