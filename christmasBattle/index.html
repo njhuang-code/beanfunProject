@@ -24,11 +24,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://tw.beanfun.com/js/GA_CodeNew.js" type="text/javascript"></script>
   </head>
   <body>
+    <div id="loading"> 
+      <div class="loading">
+        <div class="loading__content">
+          <div class="loading__logo"><img src="./images/icon/icon_logo.png" alt=""></div>
+          <div class="loading__bar">
+            <div class="loading__progress"></div>
+          </div>
+          <div class="loading__text text-sm">loading</div>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="header__container row">
         <div class="header__left">
@@ -71,14 +82,15 @@
         <div class="bg-deco__ball-red"></div>
         <div class="bg-deco__ball-red"></div>
         <div class="bg-deco__ball-red"></div>
+        <div class="bg-deco__ball-sliver d-none-lg d-block-md"></div>
       </div>
     </div>
     <main class="content">
       <div class="swiper section-slide">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" id="sectionMain">
+        <div class="swiper-wrapper section-slide__wrapper">
+          <section class="swiper-slide" id="sectionMain">
             <div class="section kv-section">
-              <div class="kv-section__bg">
+              <div class="section__bg">
                 <video class="section__video d-none-sm" autoplay loop muted playsinline>
                   <source src="./images/video/kv_video_pc.mp4">
                 </video>
@@ -86,31 +98,31 @@
                   <source src="./images/video/kv_video_mb.mp4">
                 </video>
               </div>
-              <div class="kv-section__decobox">
-                <div class="kv-section__main">
-                  <div class="kv-section__visual"><img class="kv-section__img" src="./images/kv_main_title.png" alt=""></div>
+              <div class="section__container">
+                <div class="section__wrapper column">
+                  <div class="kv-section__visual animate animate_fadeDown"><img class="kv-section__img" src="./images/kv_main_title.png" alt=""></div>
                   <div class="kv-section__textbox">
                     <p class="kv-section__title text-center"> <span class="color-primary">克隆</span>聖誕快樂!</p>
                     <p class="kv-section__title text-center">首次迎來聖誕節的波拉西亞戰記<br><span class="color-primary">克隆地區</span>燈塔村莊正準備著<span class="color-primary">聖誕節</span>慶祝活動<br>邀請所有守護者們一同參與！</p>
-                  </div><a class="kv-section__scroll" href="#sectionResent"></a>
+                  </div><a class="kv-section__scroll" href="#sectionSec"></a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="swiper-slide" id="sectionSec">
-            <div class="section swiper-wrapper">
+          </section>
+          <section class="swiper-slide" id="sectionSec">
+            <div class="section s2-section">
               <div class="section__bg s2-section__bg"></div>
               <div class="section__container">
                 <div class="section__wrapper column">
-                  <div class="section__logo"></div>
-                  <div class="s2-section__title"></div>
-                  <div class="s2-section__gift"></div><a class="section__btn" href=""></a>
+                  <div class="section__logo animate animate_fadeDown"></div>
+                  <div class="s2-section__title section__title animate animate_fadeDown animate_delay100"></div>
+                  <div class="s2-section__gift animate animate_fadeDown animate_delay200"></div><a class="section__btn animate animate_fadeDown" href=""></a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="swiper-slide" id="sectionThird">
-            <div class="section s3-section swiper-wrapper">
+          </section>
+          <section class="swiper-slide" id="sectionThird">
+            <div class="section s3-section">
               <div class="section__bg">
                 <video class="section__video d-none-sm" autoplay loop muted playsinline>
                   <source src="./images/video/s3_video_pc.mp4">
@@ -120,40 +132,31 @@
                 </video>
               </div>
               <div class="section__container">
-                <div class="s3-section__deco">
-                  <div class="s3-section__img">
-                    <div class="section__img"></div>
-                  </div>
-                  <div class="s3-section__img">
-                    <div class="section__img"></div>
-                  </div>
-                  <div class="s3-section__img">
-                    <div class="section__img"></div>
-                  </div>
-                </div>
-                <div class="section__wrapper column">
-                  <div class="section__logo"></div>
-                  <div class="s3-section__title"></div>
-                  <ul class="s3-section__textbox">
+                <div class="section__wrapper column s3-section__wrapper">
+                  <div class="section__logo animate animate_fadeDown"></div>
+                  <div class="s3-section__title section__title section__title animate animate_fadeDown animate_delay100"></div>
+                  <ul class="s3-section__textbox section__title animate animate_fadeDown animate_delay100">
                     <li class="s3-section__text">拉西亞戰記特別推出「白夜聖誕奇跡之旅」直播接力活動</li>
                     <li class="s3-section__text">邀請五位實況主與守護者們共度佳節。</li>
                     <li class="s3-section__text">除了介紹有趣的改版內容和聖誕資源外</li>
                     <li class="s3-section__text">還將發放聖誕特別序號「聖誕花圈、薑餅屋、雪人」，超過100抽送給你。</li>
                   </ul>
-                  <div class="s3-section__info"></div><a class="section__btn s3__btn" href=""></a>
+                  <div class="s3-section__imgbox">
+                    <div class="s3-section__img s3-section__img-01 animate animate_fadeDown animate_delay100"><img src="./images/s3_img01.png" alt=""></div>
+                    <div class="s3-section__img s3-section__img-02 animate animate_fadeDown animate_delay200"><img src="./images/s3_img02.png" alt=""></div>
+                    <div class="s3-section__img s3-section__img-03 animate animate_fadeDown animate_delay100"><img src="./images/s3_img03.png" alt=""></div>
+                  </div>
+                  <div class="s3-section__info section__title animate animate_fadeDown animate_delay300"></div><a class="section__btn s3__btn section__title animate animate_fadeDown" href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=12171" target="__blank"></a>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
       </div>
     </main>
     <script src="./js/jquery-3.7.1.min.js"> </script>
+    <script src="./js/animate.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="https://frontend.beanfun.com/plugins/game-footer/game-footer.js" type="text/javascript" id="game-footer" prod="波拉西亞" theme="dark"></script>
   </body>
 </html>

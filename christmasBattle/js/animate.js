@@ -1,0 +1,2 @@
+$((function(){var t,a;function i(){t=$(document).scrollTop(),a=t+$(window).height(),$(".animate").each((function(t){$(this).offset().top<a-30?$(this).addClass("animate_active"):$(this).removeClass("animate_active")}))}i(),$(document).on("scroll",i)}));
+//# sourceMappingURL=animate.js.map

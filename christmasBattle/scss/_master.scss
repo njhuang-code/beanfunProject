@@ -1,33 +1,23 @@
-.kv-section {
+.section {
   &__bg {
-    position: relative;
-    &::after {
-      display: block;
-      content: "";
-      background-image: url(../images/black_overlay_bg.png);
-      @include background-cover;
-      @include size(100%);
-      @include center;
+    &.s2-section__bg {
+      &::after {
+        display: none;
+      }
     }
   }
-  &__decobox {
-    @include center;
-  }
+}
 
-  &__main {
-    @include flex-column;
-    align-items: center;
-    justify-content: center;
-    max-width: 960px;
-    margin: auto
-  }
+.kv-section {
 
   &__visual {
     @include size(476px,600px);
+    animation: flameWindUp 3s cubic-bezier(0.65,0,0.35,1) 1 forwards;
   }
 
   &__textbox {
-    margin: 52px auto;
+    margin: 32px auto;
+    animation: fadeUp 1.5s cubic-bezier(0.65,0,0.35,1) 1 forwards;
   }
 
   &__title {
@@ -35,138 +25,72 @@
     font-size: 2rem;
     &:nth-child(2) {
       font-size: 1.5rem;
-      margin-top: 28px;
+      margin-top: 24px;
     }
   }
 
   &__scroll {
-    display: inline-block;
-    @include background-cover;
+    flex-shrink: 0;
+    @include background-contain;
     @include size(37px,108px);
     background-image: url(../images/kv_scrolldown.png);
+    animation: fadeUp2 2.2s forwards, float 1.3s infinite;
   }
 
-}
-
-.section {
-  &__bg {
-    position: relative;
-    &::after {
-      display: block;
-      content: "";
-      background-image: url(../images/black_overlay_bg.png);
-      @include background-cover;
-      @include size(100%);
-      @include center;
-    }
-    &.s2-section__bg {
-      &::after {
-        display: none;
-      }
-    }
-  }
-  &__video {
-    transform: translateZ(0) scale(.9);
-    object-fit: cover;
-    object-position: 50% 50%;
-    transform-origin: 0 -80%;
-  }
-  &__logo {
-    background-image: url(../images/img_head_logo.png);
-    @include background-cover;
-    @include size(172px,120px);
-  }
-
-  &__container {
-    @include center;
-    height: 100%;
-  }
-
-  &__wrapper {
-    align-items: center;
-  }
-
-  &__btn {
-    background-image: url(../images/s2_btn_off.png);
-    @include background-contain;
-    @include size(280px,82px);
-    transition: background-image .3s ease;
-    &:hover {
-      background-image: url(../images/s2_btn_active.png);
-    }
-    &.s3__btn {
-      background-image: url(../images/s3_btn_off.png);
-      &:hover {
-        background-image: url(../images/s3_btn_active.png);
-      }
-    }
-  }
 }
 
 .s2-section {
+  &__bg {
+    background: url(../images/bg_festival.jpg);
+    @include background-cover;
+  }
 
   &__title {
     background-image: url(../images/s2_head_title.png);
-    @include background-contain;
-    @include size(480px,120px);
-    margin-top: 32px;
   }
+
   &__gift {
     background-image: url(../images/s2_img_gift.png);
     @include background-contain;
-    @include size(500px,474px);
+    @include size(485px,474px);
     margin: 24px auto;
+    flex-shrink: 0;
   }
 }
 
 .s3-section {
-  &__deco {
-    position: relative;
-    max-width: 960px;
-    margin: auto;
-    * {
-      position: absolute;
-    }
-  }
-  &__img {
-    &:nth-child(1) {
-      top: 209px;
-      left: -350px;
-      .section__img {
-        @include size(398px,298px);
-        background-image: url(../images/s3_img01.png);
-        @include background-contain;
-      }
-    }
-    &:nth-child(2) {
-      top: 215px;
-      right: 0;;
-      .section__img {
-        @include size(328px,228px);
-        background-image: url(../images/s3_img02.png);
-        @include background-contain;
-      }
-    }
-    &:nth-child(3) {
-      top: 460px;
-      right: 120px;
-      z-index: 9;
-      .section__img {
-        @include size(353px,277px);
-        background-image: url(../images/s3_img03.png);
-        @include background-contain;
-      }
-    }
+  &__wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px 0;
   }
   &__title {
     background-image: url(../images/s3_head_title.png);
+  }
+  &__img {
     @include background-contain;
-    @include size(480px,120px);
-    margin-top: 32px;
+    position: absolute;
+    z-index: 9;
+    &-01 {
+      @include size(398px,298px);
+      top: pct(320px);
+      left: calc(50% + #{-(690)}px);
+    }
+    &-02 {
+      @include size(327px,228px);
+      top: pct(300px);
+      right: calc(50% + #{-(625)}px);
+    }
+    &-03 {
+      @include size(353px,277px);
+      right: calc(50% + #{-(560)}px);
+      bottom: pct(120px);
+    }
   }
   &__textbox {
-    margin-top: 40px;
+    margin: 40px 0 16px;
   }
+
   &__text {
     color: $text01;
     text-align: center;

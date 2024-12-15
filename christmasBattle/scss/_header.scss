@@ -42,6 +42,7 @@
     @include background-contain;
     @include size(423px, 165px);
     position: absolute;
+    z-index: 9;
     &.left {
       left: 0;
     }
@@ -52,23 +53,27 @@
   }
 
   &__ball {
-    
     &-red {
       background: url(../images/kv_img_ball_red.png) no-repeat 0 100%/100% auto;
       @include background-contain;
       @include size(41px, 207px);
+      animation: bouncing-bell 3s forwards;
       &:nth-child(1) {
         left: pct(100px);
+        animation-delay: .4s;
       }
       &:nth-child(3) {
         left: pct(300px);
+        animation-delay: .8s;
       }
 
       &:nth-child(4) {
         right: pct(300px);
+        animation-delay: .5s;
       }
       &:nth-child(5) {
         right: pct(100px);
+        animation-delay: .8s;
       }
     }
 
@@ -77,6 +82,8 @@
       @include background-contain;
       @include size(48px, 290px);
       left: pct(200px);
+      animation: bouncing-bell 3s forwards;
+      animation-delay: 1.5s;
     }
     &-box {
       position: absolute;
@@ -107,6 +114,28 @@
       &-mb {
         @include size(130px,60px);
         background-image: url(../images/icon/icon_logo_mb.png);
+      }
+    }
+  }
+
+  .bg-deco {
+    &__tree {
+      display: none;
+    }
+    &__ball {
+      &-red {
+        @include size(20px,100px);
+        &:nth-child(1),&:nth-child(5) {
+          display: none;
+        } 
+      }
+      &-sliver {
+        @include size(20px,120px);
+        left: pct(100px);
+        &:nth-of-type(2) {
+          left: initial;
+          right: pct(100px);
+        }
       }
     }
   }

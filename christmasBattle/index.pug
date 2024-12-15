@@ -4,17 +4,17 @@ append vars
 block content
   main.content
     .swiper.section-slide
-      .swiper-wrapper
-        #sectionMain.swiper-slide
+      .swiper-wrapper.section-slide__wrapper
+        section#sectionMain.swiper-slide
           .section.kv-section
-            .kv-section__bg
+            .section__bg
               video.section__video.d-none-sm(autoplay loop muted playsinline)
                 source(src='./images/video/kv_video_pc.mp4')
               video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
                 source(src='./images/video/kv_video_mb.mp4')
-            .kv-section__decobox
-              .kv-section__main
-                .kv-section__visual
+            .section__container
+              .section__wrapper.column
+                .kv-section__visual.animate.animate_fadeDown
                   img.kv-section__img(src="./images/kv_main_title.png", alt="")
                 .kv-section__textbox
                   p.kv-section__title.text-center 
@@ -28,41 +28,38 @@ block content
                     |慶祝活動
                     br
                     |邀請所有守護者們一同參與！
-                a(href="#sectionResent").kv-section__scroll
-        #sectionSec.swiper-slide
-          .section.swiper-wrapper
+                a(href="#sectionSec").kv-section__scroll
+        section#sectionSec.swiper-slide
+          .section.s2-section
             .section__bg.s2-section__bg
             .section__container
               .section__wrapper.column
-                .section__logo
-                .s2-section__title
-                .s2-section__gift
-                a(href="").section__btn
-        #sectionThird.swiper-slide
-          .section.s3-section.swiper-wrapper
+                .section__logo.animate.animate_fadeDown
+                .s2-section__title.section__title.animate.animate_fadeDown.animate_delay100
+                .s2-section__gift.animate.animate_fadeDown.animate_delay200
+                a(href="").section__btn.animate.animate_fadeDown
+        section#sectionThird.swiper-slide
+          .section.s3-section
             .section__bg
               video.section__video.d-none-sm(autoplay loop muted playsinline)
                 source(src='./images/video/s3_video_pc.mp4')
               video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
                 source(src='./images/video/s3_video_mb.mp4')
             .section__container
-              .s3-section__deco
-                .s3-section__img
-                  .section__img
-                .s3-section__img
-                  .section__img
-                .s3-section__img
-                  .section__img
-              .section__wrapper.column
-                .section__logo
-                .s3-section__title
-                ul.s3-section__textbox
+              .section__wrapper.column.s3-section__wrapper
+                .section__logo.animate.animate_fadeDown
+                .s3-section__title.section__title.section__title.animate.animate_fadeDown.animate_delay100
+                ul.s3-section__textbox.section__title.animate.animate_fadeDown.animate_delay100
                   li.s3-section__text 拉西亞戰記特別推出「白夜聖誕奇跡之旅」直播接力活動
                   li.s3-section__text 邀請五位實況主與守護者們共度佳節。
                   li.s3-section__text 除了介紹有趣的改版內容和聖誕資源外
                   li.s3-section__text 還將發放聖誕特別序號「聖誕花圈、薑餅屋、雪人」，超過100抽送給你。
-                .s3-section__info
-                a(href="").section__btn.s3__btn
-      .swiper-button-prev
-      .swiper-button-next
-      .swiper-pagination
+                .s3-section__imgbox
+                  .s3-section__img.s3-section__img-01.animate.animate_fadeDown.animate_delay100
+                    img(src="./images/s3_img01.png", alt="")
+                  .s3-section__img.s3-section__img-02.animate.animate_fadeDown.animate_delay200
+                    img(src="./images/s3_img02.png", alt="")
+                  .s3-section__img.s3-section__img-03.animate.animate_fadeDown.animate_delay100
+                    img(src="./images/s3_img03.png", alt="")
+                .s3-section__info.section__title.animate.animate_fadeDown.animate_delay300
+                a.section__btn.s3__btn.section__title.animate.animate_fadeDown(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=12171" target="__blank")

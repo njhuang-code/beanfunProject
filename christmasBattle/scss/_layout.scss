@@ -1,5 +1,10 @@
 // ----- Common Style Start -----//
 
+html,
+body {
+  position: relative;
+  height: 100%;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -136,34 +141,81 @@
 }
 
 .section {
-  @include size(100%,100vh);
+  @include size(100%,100%);
   position: relative;
   overflow: hidden;
 
-  &.kv-section {
-    min-height: 100vh;
-    height: 900px;
+  &__bg {
+    @include size(100%);
+    @include flex-center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &::after {
+      display: block;
+      content: "";
+      background-image: url(../images/black_overlay_bg.png);
+      @include background-cover;
+      @include size(100%,110%);
+      @include center;
+    }
   }
 
-  &__bg {
-    background: url(../images/bg_festival.jpg);
-    width: 100%;
+  &__video {
+    @include size(100%);
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__container {
+    @include center;
+    @include size(100%);
+  }
+
+  &__wrapper {
+    @include flex-center;
+    position: relative;
     height: 100%;
-    @include background-cover;
+  }
+
+  &__logo {
+    @include background-contain;
+    @include size(172px,120px);
+    flex-shrink: 0;
+    background-image: url(../images/img_head_logo.png);
+  }
+
+  &__title {
+    @include background-contain;
+    @include size(580px,120px);
+    flex-shrink: 0;
+    margin-top: 24px;
+  }
+
+  &__btn {
+    @include background-contain;
+    @include size(280px,82px);
+    background-image: url(../images/s2_btn_off.png);
+    transition: .3s all;
+    flex-shrink: 0;
+    &:hover {
+      background-image: url(../images/s2_btn_active.png);
+    }
+    &.s3__btn {
+      background-image: url(../images/s3_btn_off.png);
+      &:hover {
+        background-image: url(../images/s3_btn_active.png);
+      }
+    }
   }
 
 }
 
-.gradeArea {
-  flex-shrink: 0;
-  &__img {
-    width: 45px;
-    height: 45px;
-    overflow: hidden;
-  }
-  img {
-    width: 45px;
-  }
+// swiper 套件
+
+.section-slide {
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 @media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
@@ -177,12 +229,6 @@
   .d-none {
     &-md {
       display: none;
-    }
-  }
-
-  .section {
-    &.kv-section {
-      height: vw(900px);
     }
   }
 
@@ -220,6 +266,23 @@
   .d-none {
     &-sm {
       display: none;
+    }
+  }
+
+  .section {
+
+    &__logo {
+      @include size(100px,80px);
+    }
+
+    &__title {
+      @include size(pct(1000px),82px);
+      margin-top: 16px;
+    }
+
+    &__btn {
+      @include size(200px,59px);
+      flex-shrink: 0;
     }
   }
 }
