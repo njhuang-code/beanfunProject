@@ -211,6 +211,12 @@ body {
 
 }
 
+.UNI-footer {
+  &.dark {
+    display: none;
+  }
+}
+
 // swiper 套件
 
 .section-slide {

@@ -30,6 +30,9 @@ window.addEventListener("load", function () {
         swiper = null;
       }
     }
+    
+    // 確保 UNI-footer 顯示在手機版和桌面版
+    handleFooter();
   }
 
   function handleSlideAnimations(activeIndex) {
@@ -61,6 +64,31 @@ window.addEventListener("load", function () {
     }
   });
 
+  // 處理 UNI-footer 的邏輯
+  function handleFooter() {
+    // 移除重複的 UNI-footer
+    $(".UNI-footer-clone").remove();
+
+    // 確保第三個 slide 存在
+    const thirdSlide = document.querySelectorAll(".swiper-slide")[2];
+    if (thirdSlide && !thirdSlide.querySelector(".UNI-footer-clone")) {
+      $(".UNI-footer")
+        .clone()
+        .addClass("UNI-footer-clone")
+        .appendTo(thirdSlide)
+        .css({
+          "z-index": 100,
+          bottom: 0,
+          position: "absolute",
+          width: "100%",
+          height: "80px",
+        });
+    }
+
+    // 確保 UNI-footer 顯示
+    $(".UNI-footer-clone").fadeIn();
+  }
+
   handleSwiper();
 
   window.addEventListener("resize", handleSwiper);
@@ -90,6 +118,9 @@ window.addEventListener("load", function () {
   // 當窗口尺寸改變時重新檢查是否為手機版
   window.addEventListener("resize", handleMobileScroll);
 });
+
+
+
 
 
 

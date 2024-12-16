@@ -919,6 +919,10 @@ body {
   background-image: url(../images/s3_btn_active.png);
 }
 
+.UNI-footer.dark {
+  display: none;
+}
+
 .section-slide {
   min-height: 100vh;
   max-height: 100vh;
