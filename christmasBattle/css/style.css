@@ -1646,7 +1646,6 @@ body {
     height: 490px;
   }
   .section__wrapper {
-    margin-top: 48px;
     -webkit-transform: scale(0.85);
             transform: scale(0.85);
   }
