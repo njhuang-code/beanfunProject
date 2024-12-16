@@ -1646,8 +1646,9 @@ body {
     height: 490px;
   }
   .section__wrapper {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    margin-top: 48px;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
   }
 }
 @media screen and (max-width: 1200px) and (min-width: 769px) {
