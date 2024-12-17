@@ -8,6 +8,9 @@
       .swiper-slide {
         flex-direction: column;
         height: 100vh;
+        &:nth-child(2) {
+          height: 88vh;
+        }
         &:nth-child(3) {
           min-height: 800px;
         }
@@ -45,8 +48,12 @@
 
   .s2-section {
 
+    &__heading {
+      max-width: 180px
+    }
+
     &__gift {
-      @include size(380px, 100%);
+      @include size(325px, auto);
       max-height: 360px;
       margin: 16px auto;
     }
@@ -54,6 +61,10 @@
   }
 
   .s3-section {
+
+    &__wrapper {
+      padding: 0;
+    }
     &__textbox {
       max-width: 400px;
       height: pct(240px);
@@ -80,4 +91,13 @@
     }
   }
 
+}
+
+
+@media (max-width: 540px) {
+  .s3-section {
+    &__wrapper {
+      justify-content: flex-start;
+    }
+  }
 }

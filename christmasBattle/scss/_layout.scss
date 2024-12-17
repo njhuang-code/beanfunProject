@@ -185,6 +185,16 @@ body {
     background-image: url(../images/img_head_logo.png);
   }
 
+  &__textbox {
+    margin: 40px 0 16px;
+  }
+
+  &__text {
+    color: $text01;
+    text-align: center;
+    font-size: 18px;
+  }
+
   &__title {
     @include background-contain;
     @include size(580px,120px);
@@ -278,12 +288,21 @@ body {
   .section {
 
     &__logo {
-      @include size(100px,80px);
+      @include size(80px,70px);
     }
 
     &__title {
-      @include size(pct(1000px),82px);
+      @include size(100%,75px);
+      padding: 0 8px;
       margin-top: 16px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__textbox {
+      padding: 0 8px;
     }
 
     &__btn {

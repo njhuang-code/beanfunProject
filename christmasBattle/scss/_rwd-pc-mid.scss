@@ -7,21 +7,33 @@
   .section {
     &__wrapper {
       transform: scale(.85);
+      &.s3-section__wrapper {
+        margin-top: -40px;
+      }
     }
   }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 769px) {
+  .section {
+    &__logo {
+      @include size(100px, 70px);
+    }
+  }
   .s3-section {
     &__wrapper {
       max-width: 100%;
     }
     &__imgbox {
       display: flex;
-      margin-top: 24px;
+    }
+    &__info {
+      width: 400px;
+      height: 200px;
+      margin: 16px auto;
     }
     &__img {
-      @include size(100%, auto);
+      @include size(200px, auto);
       position: initial;
     }
   }

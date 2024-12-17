@@ -124,20 +124,20 @@ window.addEventListener("load", function () {
 
 
 
-// laoding 畫面
-document.addEventListener("DOMContentLoaded", function() {
-  var progressBar = document.querySelector('.loading__progress');
+// // laoding 畫面
+// document.addEventListener("DOMContentLoaded", function() {
+//   var progressBar = document.querySelector('.loading__progress');
 
-  // 設定進度條寬度
-  setTimeout(function() {
-    progressBar.style.width = '100%';
-  }, 100);
+//   // 設定進度條寬度
+//   setTimeout(function() {
+//     progressBar.style.width = '100%';
+//   }, 100);
 
-  // 載入完成隱藏畫面
-  setTimeout(function() {
-    document.getElementById('loading').style.display = 'none';
-  }, 600);
-});
+//   // 載入完成隱藏畫面
+//   setTimeout(function() {
+//     document.getElementById('loading').style.display = 'none';
+//   }, 600);
+// });
 
 
 $('.menu-slide__button, .menu-slide__closed').click(function() {

@@ -3,13 +3,13 @@ html(lang="zh-Hant")
   block vars
     - var hasSwiper = true
     - var hasCopyright = true
-    - var header_title = ''
+    - var header_title = '波拉西亞戰記｜波拉白夜聖誕奇跡之旅直播開跑！100抽狂歡等你！'
     - var author = 'Wars of Prasia'
-    - var og_title = '！'
+    - var og_title = '波拉西亞戰記｜波拉白夜聖誕奇跡之旅直播開跑！100抽狂歡等你！'
     - var og_image = './images/facebook_cover_1200x630.jpg'
     - var og_url = ''
-    - var og_desc = ''
-    - var meta_keyword = ''
+    - var og_desc = '參與「波拉白夜聖誕奇跡之旅」，鎖定KOL直播，解鎖聖誕驚喜！狂贈100抽等你領取，與好友共度歡樂佳節！'
+    - var meta_keyword = '波拉西亞戰記｜波拉白夜聖誕奇跡之旅直播開跑！100抽狂歡等你！'
     - var date_publish = '2024-11-25'
   
   head
@@ -43,19 +43,19 @@ html(lang="zh-Hant")
       link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
       if hasSwiper
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
-      link(href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet")
+      link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet")
       link(rel="stylesheet", href="./css/style.css")
       script(src="https://tw.beanfun.com/js/GA_CodeNew.js" type="text/javascript")
   body
-    block loading
-    #loading 
-      .loading
-        .loading__content
-          .loading__logo
-            img(src="./images/icon/icon_logo.png", alt="")
-          .loading__bar
-            .loading__progress
-          .loading__text.text-sm loading
+    //- block loading
+    //-   #loading 
+    //-     .loading
+    //-       .loading__content
+    //-         .loading__logo
+    //-           img(src="./images/icon/icon_logo.png", alt="")
+    //-         .loading__bar
+    //-           .loading__progress
+    //-         .loading__text.text-sm loading
     block header
       header.header
         .header__container.row
