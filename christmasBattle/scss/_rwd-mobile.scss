@@ -85,10 +85,14 @@
     }
 
     &__info {
-      @include size(100%, 183px);
-      margin: 16px auto;
+      @include size(100%, 150px);
+      margin: 0 auto;
       flex-shrink: 0;
     }
+  }
+
+  .UNI-footer .gradeArea .gradeArea__img img {
+    width: 50px;
   }
 
 }

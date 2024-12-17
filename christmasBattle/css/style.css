@@ -1767,10 +1767,13 @@ body {
   }
   .s3-section__info {
     width: 100%;
-    height: 183px;
-    margin: 16px auto;
+    height: 150px;
+    margin: 0 auto;
     -ms-flex-negative: 0;
         flex-shrink: 0;
+  }
+  .UNI-footer .gradeArea .gradeArea__img img {
+    width: 50px;
   }
 }
 @media (max-width: 540px) {
