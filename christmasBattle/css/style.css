@@ -1745,6 +1745,9 @@ body {
     max-height: 360px;
     margin: 16px auto;
   }
+  .s2-section__textbox {
+    padding: 0 8px;
+  }
   .s3-section__wrapper {
     padding: 0;
   }
