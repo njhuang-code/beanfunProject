@@ -979,6 +979,7 @@ body {
   }
   .section__textbox {
     padding: 0 8px;
+    margin: 16px auto;
   }
   .section__btn {
     width: 200px;
