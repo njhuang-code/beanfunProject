@@ -176,6 +176,20 @@
   }
 
   &-4 {
+    border: 2px solid $bossColor04;
+
+    .text--active {
+      color: $bossColor04;
+    }
+  }
+  &-5 {
+    border: 2px solid $bossColor05;
+
+    .text--active {
+      color: $bossColor05;
+    }
+  }
+  &-6 {
     border: 2px solid $bossColorThis;
 
     .text--active {

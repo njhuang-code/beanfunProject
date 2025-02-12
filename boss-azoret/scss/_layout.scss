@@ -26,6 +26,11 @@
   &-point {
     color: $point;
   }
+
+  &-white {
+    color: $text03;
+    opacity: .6;
+  }
 }
 
 .text {
@@ -146,32 +151,12 @@
     display: inline-block;
     padding: 0 24px;
     font-size: 24px;
+    color: #caaa76;
 
-    // 裝飾箭頭
-    &::before,
-    &::after {
-      @include size(326px,10px);
-      @include background-setting;
-      content: "";
-      display: inline-block;
-      position: absolute;
-      top: calc((100% - 10px)/2);
-      background-image: url(../images/kv_arrow.png);
-      background-size: contain;
-    }
-
-    &::before {
-      left: 100%;
-    }
-
-    &::after {
-      right: 100%;
-      transform: scaleX(-1);
-    }
   }
 
   &__play-btn {
-    @include size (132px);
+    @include size (163px);
     display: inline-block;
     position: relative;
     margin-top: 56px;
