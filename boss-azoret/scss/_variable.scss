@@ -1,0 +1,113 @@
+$primary: #d396e0;
+$secondary: #d5c9e7;
+$secondaryDark: #bdbac3;
+$point: #9e4b2a;
+$point-sec: #765555;
+$header: #dcb686;
+
+// Boss Color
+$bossColor01: #e2b07a;
+$bossColor02: #9fb16a;
+$bossColor03: #b992f2;
+$bossColor04: #d396e0;
+$bossColor05: #f5c0b6;
+$bossColorThis: #d396e0;
+
+// Basic Color
+$backgroundB1: #ffffff;
+$background1F: #f2f2f2;
+$background2F: #a7a7a7;
+
+$backgroundDarkB1: #000000;
+$backgroundDark1F: #1f252d;
+$backgroundDark2F: #282828;
+
+// Fonts Color
+$text01: #1f252d;
+$text02: #a7a7a7;
+$text03: #ffffff;
+
+// Border Color
+$border: #e8e8e8;
+
+// Breakpoint
+$pcrwd-breakpoint: 1597;
+$pc-midrwd-breakpoint: 1200;
+$mbrwd-breakpoint: 768;
+
+@mixin d-flex {
+  display: flex;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin background-setting {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@function xy($xy, $ttlw) {
+  @return ($xy / $ttlw * 100%);
+}
+
+@function pct($target) {
+  $vw-context: (
+    $pc-midrwd-breakpoint * .01) * 1px;
+  @return ($target / $vw-context) * 1%;
+}
+
+@function vw($target) {
+  $vw-context: (
+    $pc-midrwd-breakpoint * .01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function vwm($target){
+  $vw-context: ($mbrwd-breakpoint * .01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function px-em($px, $base: 16) {
+  @return ($px / $base * 1em);
+}
+
+@mixin posXY($x: 0, $y: 0) {
+  left: calc(50% + #{$x}px);
+  top: xy($y, $h);
+}
+
+@mixin size($w: null, $h: $w) {
+  width: $w;
+  height: $h;
+}

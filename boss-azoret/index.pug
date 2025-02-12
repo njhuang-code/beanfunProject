@@ -1,0 +1,126 @@
+extends _layout.pug
+
+append vars
+//- block append loading
+block append lightbox
+block append header
+block append pages
+block append nav
+block content
+  main.content
+    #sectionMain.section.kv-section
+      .kv-section__bg
+        video.section__video.d-none-sm(autoplay loop muted playsinline)
+          source(src='./images/video/kv_video_pc.mp4')
+        video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
+          source(src='./images/video/kv_video_mb.mp4')
+      .kv-section__decobox
+        h4.kv-section__sub-title.fw-md
+          span.kv-section__sub-title.sub-text-strong 深淵覺醒的
+          span.kv-section__sub-title.sub-text 軍團長
+        .kv-section__main.fw-lg
+          .kv-section__main-title 
+            span.title__left 凱
+            span.title__center 黎
+            span.title__right 溫
+          .kv-section__main-shadow
+            span.title__left 凱
+            span.title__center 黎
+            span.title__right 溫
+          .kv-section__main-ink
+            span.title__left 凱
+            span.title__center 黎
+            span.title__right 溫
+        p.section__msg.kv-section__date.fw-md 2024年11月20日 (三) UPDATE
+        button.section__play-btn.kv-section__play-btn
+        ul.kv-section__row.row
+          li.kv-section__item
+            a.kv-section__link.img-android(href="https://play.google.com/store/apps/details?id=com.gamania.twp&hl=zh-TW" target="_blank")
+          li.kv-section__item
+            a.kv-section__link.img-ios(href="https://apps.apple.com/tw/app/%E6%B3%A2%E6%8B%89%E8%A5%BF%E4%BA%9E%E6%88%B0%E8%A8%98/id6451229143" target="_blank")
+          li.kv-section__item
+            a.kv-section__link.img-pc(href="https://warsofprasia.beanfun.com/Download?downloadTarget=1" target="_blank")
+        a(href="#sectionResent").kv-section__scroll-down
+    #sectionResent.section
+      .section__bg
+        video.section__video.s2-section-iframe(autoplay loop muted playsinline)
+          source(src='./images/video/s2_video_pc.mp4')
+        .s2-section__visual.animate.animate_fadeDown
+      .s2-section__intro
+        .s2-section__row.row
+          .s2-section__item.left-box.animate.animate_fadeLeft.animate_delay100
+            .s2-section__img
+              img(src="./images/s2_img_profile.png", alt="")
+            h5.s2-section__title.text-center.fw-md 深淵覺醒的軍團長
+              p.s2-section__name.color-primary.text-xl.fw-md 凱黎溫
+            .section__ornate
+            ol.text-md.color-secondary--dark.animate.animate_fadeRight.animate_delay200
+              li 黑暗騎士團曾是波拉西亞王國皇室直屬的秘密騎士團，負責處理由絕倫者研究纏結過程中無意創造的纏結生命體。當在朗多發現四顆纏結石時，波拉西亞王國迅速派遣凱黎溫與黑暗騎士團前往支援。黑暗騎士團首次出現於AN100年，是最後一批抵抗妖精襲擊的騎士。
+              br
+              li 在將絕倫者的研究資料安全轉移過程中，黑暗騎士團與妖精激烈對抗，但最終全軍覆沒，凱黎溫在妖精的魔法攻擊中喪命，朗多城堡亦落入妖精之手，黑暗騎士團宣告結束。
+              br
+              li 隨著一場大洪水改變了纏結，黑暗騎士團重生，但凱黎溫已變為亡靈。他遺忘了騎士的名譽，唯記得最後的命令——保護朗多，並永遠無法忘記自己被毒蜂吞噬的痛苦與憤怒。
+    #sectionPower.section
+      .section__bg.s3-section__bg
+        video.section__video.s3-section-iframe(autoplay loop muted playsinline)
+          source(src='./images/video/s3_video_pc.mp4')
+      .container
+        .s3-section__content
+          .s3-section__head
+            .s3-section__heading.text-xl.color-secondary.text-center
+              h4.fw-md.color-primary.animate.animate_fadeRight
+                b.color-secondary 苦痛中揮舞的
+                b.s3-section__text 鐵鎚
+                p.color-secondary.text-lg.fw-normal 主要武器
+                  span.s3-section-msg.color-primary 鐵鎚
+            .section__ornate.animate.animate_fadeRight.animate_delay200
+            p.s3-section__desc.text-center.text-md.animate.animate_fadeRight.animate_delay300 凱黎溫被毒蜂吞噬身的亡靈。
+              br
+              |橫掃戰場經常在騎著白骨馬，以及懷著痛苦和憤怒揮舞著鐵鎚。
+            .s3-section__video-box.animate.animate_fadeRight.animate_delay400
+              .s3-section__video-wrapper
+                video.s3-section__video(autoplay loop muted playsinline)
+                  source(src='./images/video/s3_video_play.mp4')
+          .s3-section__body
+            h4.s3-section__title.color-secondary.text-center.fw-md.animate.animate_fadeDown.animate_delay500 主要獎勵
+            ul.s3-section__row.row 
+              li.s3-section__item.animate.animate_fadeDown.animate_delay600
+              li.s3-section__item.animate.animate_fadeDown.animate_delay700
+            ul.s3-section__row.row
+              li.s3-section__item.new-equit.animate.animate_fadeDown.animate_delay600
+              li.s3-section__item.new-equit.animate.animate_fadeDown.animate_delay700
+    #sectionMap.section.s4-section
+      .s4-section__bg-map
+        .s4-section__bg
+        .s4-section__cloudy.d-none-md
+        .s4-section__point
+          .s4-section__map-devil.animate.animate_fadeUp
+          .s4-section__map-row.arrow--reverse.animate.animate_fadeUp
+            .s4-section__map-arrow
+            .s4-section__map-arrow
+          .s4-section__map-circle.animate.animate_fadeUp
+          .s4-section__map.animate.animate_fadeDown.animate_delay100
+            .s4-section__map-line
+              .s4-section__map-dot
+            .s4-section__map-view
+              .s4-section__map-img
+            p.s4-section__map-text.fw-md 最後的要塞中心部
+      .s4-section__container.container
+        .s4-section__flag.text-center
+          h3.s4-section__head.fw-md.animate.animate_fadeLeft 凱黎溫出沒地區
+            br
+            strong.color-point.text-xl.fw-md 最後的要塞中心部
+          .section__ornate.section--opacity.animate.animate_fadeLeft.animate_delay100
+          ol.s4-section__desc.text-md.text-left.animate.animate_fadeLeft.animate_delay200
+            li 最後的要塞是黑暗騎士團的總部，這裡曾是他們與妖精進行最後激戰的地方，也是他們喪命之處。與騎士團本部周圍的廢棄武器一同，黑暗騎士所使用的武器造型非常獨特，它們專為消滅纏結生物體而設計，而部份纏結生物體的屍體可能因大洪水遺留在此。
+            br
+            li 在戰鬥結束後，為了保存知識，無數人類屍體和他們無法挽回的資料、移動時所用的裝置散落四處。儘管人類的知識對妖精毫無價值，妖精沒有動過它們，可這些知識最終在大洪水和歷史中消失無蹤。
+            br
+            li 那些移動時使用的裝置也在大洪水中被摧毀，而凱黎溫團長和黑暗騎士團，仍徘徊在這座遺失的要塞中。
+          ul.s4-section__row
+            li.s4-section__item.animate.animate_fadeDown.animate_delay300
+              img.s4-section__img(src="./images/s4_img_01.png", alt="")
+            li.s4-section__item.animate.animate_fadeDown.animate_delay400
+              img.s4-section__img(src="./images/s4_img_02.png", alt="")
+    #gotop
+      a.btn__gotop(href="#")
