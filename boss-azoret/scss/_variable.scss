@@ -77,6 +77,12 @@ $mbrwd-breakpoint: 768;
   background-repeat: no-repeat;
 }
 
+@mixin contain {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 @function xy($xy, $ttlw) {
   @return ($xy / $ttlw * 100%);
 }
