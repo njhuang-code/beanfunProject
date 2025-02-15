@@ -155,11 +155,11 @@
 .s2-section {
 
   &__visual {
-    @include center;
+    position: absolute;
     @include size(1080px,1085px);
     @include background-setting;
-    top: 0;
-    left: calc((50% - 960px));
+    top: pct(-120px);
+    left: pct(540px);
     z-index: 3;
     background-image: url(../images/s2_visual.png);
     background-size: cover;
@@ -170,7 +170,7 @@
     @include size(100%);
     position: relative;
     z-index: 3;
-    margin: 80px 0 95px;
+    margin: 40px 0 95px;
   }
 
   &__row {
@@ -235,7 +235,7 @@
     align-items: center;
     z-index: 3;
     max-width: 600px;
-    margin-right: auto;
+    margin-left: auto;
   }
 
   &__heading {
@@ -258,24 +258,25 @@
     &-box {
       margin-top: 48px;
       position: relative;
-      border: 3px solid #968ca34d;
-      &::before,&::after {
-        @include size(20px,100%);
-        @include background-setting;
-        content: "";
-        position: absolute;
-        top: 0;
-        background-image: url(../images//s3_video_border.png);
-        background-size: contain;
-        opacity: .4;
-      }
-      &::before {
-        left: -23px;
-      }
-      &::after {
-        right: -23px;
-        transform: scaleX(-1);
-      }
+      border: 3px solid #7e6b7f4d;
+      // video background border effect style --02/15/24
+      // &::before,&::after {
+      //   @include size(20px,100%);
+      //   @include background-setting;
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   background-image: url(../images/s3_video_border.png);
+      //   background-size: contain;
+      //   opacity: .4;
+      // }
+      // &::before {
+      //   left: -23px;
+      // }
+      // &::after {
+      //   right: -23px;
+      //   transform: scaleX(-1);
+      // }
     }
     &-btn {
       @include center;
