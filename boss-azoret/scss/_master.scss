@@ -30,7 +30,6 @@
     font-size: 140px;
     line-height: 1.1;
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, .96));
-    opacity: 0;
     animation: textSpacingFadeIn 1.5s ease-out forwards;
 
     &-title {
@@ -39,8 +38,8 @@
       background: url(../images/kv_main_title.png) no-repeat;
       margin: 24px auto;
       @include contain;
-      animation: flameWindRightCenter 1800ms cubic-bezier(.65,0,.35,1) 1 forwards;
-      transition-delay: 1s;
+      // animation: flameWindRightCenter 1800ms cubic-bezier(.65,0,.35,1) 1 forwards;
+      // transition-delay: 1s;
       &-effect {
         position: absolute;
         top: -8%;
@@ -422,12 +421,12 @@
 
   &__flag {
     @include flex-column;
-    @include size(600px,980px);
+    @include size(600px,860px);
     @include background-setting;
     align-items: center;
     position: relative;
     padding: 0 36px;
-    margin-left: auto;
+    margin-right: auto;
     background-image: url(../images/s4_img_flag.png);
     z-index: 3;
   }
@@ -457,7 +456,7 @@
 
   &__point {
     @include center;
-    transform: translate3d(-420%, -206%, 0);
+    transform: translate3d(515%, -330%, 0);
     z-index: 10;
   }
 
@@ -471,7 +470,7 @@
     &-devil {
       @include size(61px,70px);
       position: absolute;
-      left: 24%;
+      left: 50%;
       bottom: 100%;
       background-image: url(../images/s4_img_devil.png);
       background-repeat: no-repeat;
