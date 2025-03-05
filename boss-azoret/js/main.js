@@ -177,9 +177,9 @@ $(document).ready(function() {
     var width = window.innerWidth;
     // 根據裝置尺寸定位起始位置
     if (width > 1440) {
-      translateX = -600; 
+      translateX = -900; 
     } else if (width > 1200) {
-      translateX = -997; 
+      translateX = -800; 
     } else if (width > 960) {
       translateX = -1077; 
     } else {
