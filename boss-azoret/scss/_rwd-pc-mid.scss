@@ -54,6 +54,16 @@
 
 @media screen and (max-width: 960px) {
 
+  .kv-section {
+    &__main-title {
+      @include size(600px,80px);
+    }
+    &__main-title-effect {
+      top: -44%;
+      left: calc((100% - 137px) / 2);
+    }
+  }
+
   .s4-section {
     @include flex-column;
 
@@ -103,52 +113,4 @@
 
 
   }
-}
-// 反向 s4-section point 位置使用
-@media screen and (min-width: 961px) {
-
-  // .s4-section {
-  //   &__point {
-  //     transform: translate3d(-352%, 22%, 0);
-  //   }
-  //   &__map {
-  //     top: 0;
-  //     bottom: 50%;
-  //     &-devil {
-  //       top: 100%;
-  //       left: 24%;
-  //     }
-  //     &-row {
-  //       top: 0;
-  //       bottom: 0;
-  //       &.arrow--reverse {
-  //         transform: scaleY(-1);
-  //       }
-  //     }
-  //     &-line {
-  //       &::after {
-  //         background: #c55525;
-  //       }
-  //     }
-  
-  //     &-dot {
-  //       top: unset;
-  //       bottom: 0;
-  //       background-color: #c55525;
-  //       &::before,&::after {
-  //         border: .5px solid #c55525;
-  //       }
-  //     }
-  
-  //     &-view {
-  //       &::before {
-  //         background: linear-gradient(-45deg, #c35328, #dea86f);
-  //       }
-  //     }
-  
-  //     &-text {
-  //       margin-bottom: 16px;
-  //     }
-  //   }
-  // }
 }

@@ -1,8 +1,8 @@
 // ----- Common Style Start -----//
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-corner {
@@ -313,16 +313,24 @@
   .section {
     &__video {
       &.s3-section-iframe {
-        @include size(100%,50%);
-        left: 0;
-        object-position: 25% 50%;
-        transform: translateZ(0);
+        box-sizing: border-box;
+        height: 49%;
+        top: -10%;
+        left: 50%;
+        -webkit-mask-image: none;
+        mask-image: none;
+        object-position: 60% 50%;
+        transform: translate3d(-50%,0,0);
+        width: 100%;
       }
     }
 
     &__bg {
       &.s3-section {
         &__bg {
+          &::before {
+            background-position: 30% 50%;
+          }
           &::after {
             content: "";
             background: linear-gradient(0deg,#1c1a1f 70%,#1c1a1f00);
@@ -399,8 +407,9 @@
         opacity: .7;
       }
       &.s3-section-iframe {
-        height: 40%;
-        top: -5%;
+        height: 100%;
+        top: -15%;
+        object-position: 50% 50%;
       }
     }
 
@@ -408,11 +417,11 @@
       &.s3-section {
         &__bg {
           &::before {
-            background-position: 60% 50%;
+            background-position: 25% 50%;
           }
-          &::after {
-            background: linear-gradient(0deg, #1c1a1f 50%, rgba(28, 26, 31, 0));
-          }
+          // &::after {
+          //   background: linear-gradient(0deg, #1c1a1f 50%, rgba(28, 26, 31, 0));
+          // }
         }
       }
     }

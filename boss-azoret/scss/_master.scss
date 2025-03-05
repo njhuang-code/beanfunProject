@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 10px;
+    top: 32px;
     z-index: 2;
     color: $secondary;
     text-align: center;
@@ -26,7 +26,6 @@
     @include flex-center;
     position: relative;
     max-width: 1500px;
-    margin-bottom: 24px;
     font-size: 140px;
     line-height: 1.1;
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, .96));

@@ -179,9 +179,9 @@ $(document).ready(function() {
     if (width > 1440) {
       translateX = -600; 
     } else if (width > 1200) {
-      translateX = -500; 
+      translateX = -997; 
     } else if (width > 960) {
-      translateX = -700; 
+      translateX = -1077; 
     } else {
       translateX = 0;
     }
