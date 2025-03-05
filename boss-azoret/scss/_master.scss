@@ -209,7 +209,10 @@
 }
 
 .s3-section {
-
+  .container {
+    max-width: 1290px;
+    padding: 16px 0;
+  }
   &-msg {
     position: relative;
     margin-left: 36px;
@@ -299,6 +302,7 @@
       background: #a5c78c1a;
     }
     @include flex-column;
+    align-items: center;
     position: relative;
     z-index: 3;
     margin: 74px 0 92px;
@@ -330,45 +334,22 @@
 
   &__row {
     position: relative;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
     flex-wrap: nowrap;
-    &:last-child {
-      margin-top: 28px;
-      padding-top: 56px;
-      &::before {
-        @include size(100vw,1px);
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate3d(-50%,0,0);
-        background: #a5c78c1a;
-      }
-    }
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden
   }
 
   &__item {     
-    @include size(100%,368px); 
+    @include size(1290px,641px); 
     @include background-setting;
     background-size: contain;
     &:nth-child(1) {
       background-image: url(../images/s3_img_equip_01.png);
-    }
-    &:nth-child(2) {
-      background-image: url(../images/s3_img_equip_02.png);
-      height: 324px;
-    }
-    &.new-equit {
-      flex: 0 0 50%;
-      &:nth-child(1) {
-        background-image: url(../images/s3_img_equip_03.png);
-        height: 242px;
-      }
-      &:nth-child(2) {
-        background-image: url(../images/s3_img_equip_04.png);
-        height: 368px;
-      }
     }
   }
 }

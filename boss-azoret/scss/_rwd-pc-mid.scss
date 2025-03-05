@@ -36,7 +36,6 @@
 
     &__row {
       @include flex-column;
-      align-items: center;
     }
 
     &__item {
@@ -107,7 +106,7 @@
 }
 // 反向 s4-section point 位置使用
 @media screen and (min-width: 961px) {
-  
+
   // .s4-section {
   //   &__point {
   //     transform: translate3d(-352%, 22%, 0);

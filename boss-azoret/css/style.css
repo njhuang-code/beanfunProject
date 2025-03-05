@@ -709,6 +709,20 @@ button {
     margin-bottom: 16px;
   }
 }
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1569,6 +1583,10 @@ button {
   font-size: 32px;
 }
 
+.s3-section .container {
+  max-width: 1290px;
+  padding: 16px 0;
+}
 .s3-section-msg {
   position: relative;
   margin-left: 36px;
@@ -1656,6 +1674,9 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   z-index: 3;
   margin: 74px 0 92px;
@@ -1697,33 +1718,22 @@ button {
 }
 .s3-section__row {
   position: relative;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-}
-.s3-section__row:last-child {
-  margin-top: 28px;
-  padding-top: 56px;
-}
-.s3-section__row:last-child::before {
-  width: 100vw;
-  height: 1px;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, 0, 0);
-          transform: translate3d(-50%, 0, 0);
-  background: rgba(165, 199, 140, 0.1019607843);
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .s3-section__item {
-  width: 100%;
-  height: 368px;
+  width: 1290px;
+  height: 641px;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -1731,23 +1741,6 @@ button {
 }
 .s3-section__item:nth-child(1) {
   background-image: url(../images/s3_img_equip_01.png);
-}
-.s3-section__item:nth-child(2) {
-  background-image: url(../images/s3_img_equip_02.png);
-  height: 324px;
-}
-.s3-section__item.new-equit {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-}
-.s3-section__item.new-equit:nth-child(1) {
-  background-image: url(../images/s3_img_equip_03.png);
-  height: 242px;
-}
-.s3-section__item.new-equit:nth-child(2) {
-  background-image: url(../images/s3_img_equip_04.png);
-  height: 368px;
 }
 
 .s4-section {
@@ -2084,9 +2077,6 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .s3-section__item.new-equit {
     -webkit-box-flex: 1;
