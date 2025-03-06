@@ -37,8 +37,8 @@
       background: url(../images/kv_main_title.png) no-repeat;
       margin: 24px auto;
       @include contain;
-      // animation: flameWindRightCenter 1800ms cubic-bezier(.65,0,.35,1) 1 forwards;
-      // transition-delay: 1s;
+      animation: flameWindUp 1800ms cubic-bezier(.65,0,.35,1) 1 forwards;
+      transition-delay: 1s;
       &-effect {
         animation: titleEffect 4s ease infinite alternate;
         position: absolute;

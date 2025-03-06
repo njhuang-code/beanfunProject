@@ -1387,6 +1387,10 @@ button {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  -webkit-animation: flameWindUp 1800ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+          animation: flameWindUp 1800ms cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 .kv-section__main-title-effect {
   -webkit-animation: titleEffect 4s ease infinite alternate;
