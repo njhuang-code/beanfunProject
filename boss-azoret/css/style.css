@@ -1389,6 +1389,8 @@ button {
   background-repeat: no-repeat;
 }
 .kv-section__main-title-effect {
+  -webkit-animation: titleEffect 4s ease infinite alternate;
+          animation: titleEffect 4s ease infinite alternate;
   position: absolute;
   top: -8%;
   left: calc((100% - 125px) / 2);
@@ -2527,34 +2529,72 @@ button {
             transform: translate(0, -40px) scale(1.2);
   }
 }
-@-webkit-keyframes effectColor {
+@-webkit-keyframes titleEffect {
   0% {
-    background-position-x: 130%;
-    background-position-y: 20%;
-    opacity: 1;
+    -webkit-filter: brightness(1.3);
+            filter: brightness(1.3);
   }
-  50% {
-    opacity: 0.7;
+  20% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
   }
-  100% {
-    background-position-x: 10%;
-    background-position-y: 90%;
-    opacity: 1;
+  30% {
+    -webkit-filter: brightness(1.4);
+            filter: brightness(1.4);
+  }
+  40% {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+  60% {
+    -webkit-filter: brightness(1.7);
+            filter: brightness(1.7);
+  }
+  70% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  80% {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+  to {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
   }
 }
-@keyframes effectColor {
+@keyframes titleEffect {
   0% {
-    background-position-x: 130%;
-    background-position-y: 20%;
-    opacity: 1;
+    -webkit-filter: brightness(1.3);
+            filter: brightness(1.3);
   }
-  50% {
-    opacity: 0.7;
+  20% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
   }
-  100% {
-    background-position-x: 10%;
-    background-position-y: 90%;
-    opacity: 1;
+  30% {
+    -webkit-filter: brightness(1.4);
+            filter: brightness(1.4);
+  }
+  40% {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+  60% {
+    -webkit-filter: brightness(1.7);
+            filter: brightness(1.7);
+  }
+  70% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  80% {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+  to {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
   }
 }
 @-webkit-keyframes textSpacingFadeIn {
