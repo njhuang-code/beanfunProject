@@ -160,6 +160,7 @@
     }
 
     &__bg {
+
       &::before {
         @include size(100%);
         content: "";
@@ -179,3 +180,15 @@
   }
 
 }
+
+@media screen and (max-width: 540px) {
+  .s4-section {
+    &__bg {
+      background-position: 60% 50%;
+      
+    }
+    &__point {
+      transform: translate3d(-45%, -170%, 0);
+    }
+  }
+} 

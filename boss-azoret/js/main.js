@@ -235,12 +235,14 @@ $(document).ready(function() {
     var backgroundOffset = $background.offset().top;
 
     $(window).on('scroll', function() {
-        var scrollTop = $(this).scrollTop();
-
-        if (scrollTop + $(window).height() > backgroundOffset) {
-            $background.addClass('active');
-        } else {
-            $background.removeClass('active');
-        }
-    });
+      var scrollTop = $(this).scrollTop();
+      var windowHeight = $(window).height();
+      var windowWidth = $(window).width(); // 取得視窗寬度
+  
+      if (windowWidth > 960 && (scrollTop + windowHeight > backgroundOffset)) {
+          $background.addClass('active');
+      } else {
+          $background.removeClass('active');
+      }
+  });
 });
