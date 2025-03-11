@@ -7,12 +7,13 @@
       height: 100%;
     }
     &__decobox {
-      top: 60px;
+      top: 100px;
     }
 
     &__sub-title {
       font-size: 20px;
     }
+
 
     &__main {
       &-title {
@@ -23,6 +24,10 @@
         top: -10%;
         left: calc((100% - 78px) / 2);
       }
+    }
+
+    &__date {
+      margin-top: 28px;
     }
     &__row {
       margin-top: 24px;

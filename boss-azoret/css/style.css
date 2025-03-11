@@ -786,7 +786,7 @@ button {
   font-weight: 400;
 }
 .fw-md {
-  font-weight: 500;
+  font-weight: 600;
 }
 .fw-lg {
   font-weight: 700;
@@ -2817,7 +2817,7 @@ button {
     height: 100%;
   }
   .kv-section__decobox {
-    top: 60px;
+    top: 100px;
   }
   .kv-section__sub-title {
     font-size: 20px;
@@ -2831,6 +2831,9 @@ button {
     height: 100%;
     top: -10%;
     left: calc((100% - 78px) / 2);
+  }
+  .kv-section__date {
+    margin-top: 28px;
   }
   .kv-section__row {
     margin-top: 24px;
