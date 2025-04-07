@@ -152,9 +152,10 @@ body {
     top: 0;
     left: 0;
     &::after {
-      display: block;
       content: "";
-      background-image: url(../images/black_overlay_bg.png);
+      display: block;
+      background: #000;
+      opacity: 0.5;
       @include background-cover;
       @include size(100%,110%);
       @include center;

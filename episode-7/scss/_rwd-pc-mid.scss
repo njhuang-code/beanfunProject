@@ -1,17 +1,5 @@
 @media screen and (max-height: 1000px) and (min-width: 769px) {
-  .kv-section {
-    &__visual {
-      @include size(375px,490px)
-    }
-  }
-  .section {
-    &__wrapper {
-      transform: scale(.85);
-      &.s3-section__wrapper {
-        margin-top: -40px;
-      }
-    }
-  }
+
 }
 
 @media screen and (max-width: 1200px) and (min-width: 769px) {

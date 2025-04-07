@@ -310,17 +310,18 @@ button {
   margin-bottom: 16px;
 }
 .menu-nav__item.active::after {
-  background-image: url(../images/icon_side_menu_active.png);
+  background-image: url(../images/nav_arrow_active.png);
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 .menu-nav__item.active .menu-nav__name {
-  color: #ff0000;
-  opacity: 1;
+  color: #ffffff;
+  -webkit-filter: drop-shadow(0 0 5px rgba(121, 203, 242, 0.7)) drop-shadow(0 0 15px rgba(110, 205, 255, 0.3));
+          filter: drop-shadow(0 0 5px rgba(121, 203, 242, 0.7)) drop-shadow(0 0 15px rgba(110, 205, 255, 0.3));
 }
 .menu-nav__item::after {
-  width: 16px;
-  height: 20px;
+  width: 24px;
+  height: 25px;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -330,23 +331,42 @@ button {
   right: 0;
   display: inline-block;
   margin-left: 12px;
-  background-image: url(../images/icon_side_menu.png);
+  background-image: url(../images/nav_arrow.png);
   background-size: contain;
-  -webkit-transform: scale(0.6, 0.5);
-          transform: scale(0.6, 0.5);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: 0.4s ease, -webkit-transform 0.9s cubic-bezier(0.33, 1, 0.68, 1);
   transition: 0.4s ease, -webkit-transform 0.9s cubic-bezier(0.33, 1, 0.68, 1);
   transition: 0.4s ease, transform 0.9s cubic-bezier(0.33, 1, 0.68, 1);
   transition: 0.4s ease, transform 0.9s cubic-bezier(0.33, 1, 0.68, 1), -webkit-transform 0.9s cubic-bezier(0.33, 1, 0.68, 1);
 }
+.menu-nav__item:nth-child(2) {
+  margin-bottom: 8px;
+}
+.menu-nav__item:last-child {
+  margin: 16px 0 0;
+}
+.menu-nav__item.nav__sub {
+  margin-right: 24px;
+  margin-bottom: 0;
+}
+.menu-nav__item.nav__sub::after {
+  content: "・";
+  background: none;
+  margin-left: 0;
+  color: rgba(208, 208, 208, 0.8156862745);
+}
 .menu-nav__name {
   display: inline-block;
   text-align: right;
-  opacity: 0.5;
+  color: rgba(208, 208, 208, 0.8156862745);
+  -webkit-transition: 0.4s ease, -webkit-transform 0.9s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: 0.4s ease, -webkit-transform 0.9s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: 0.4s ease, transform 0.9s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: 0.4s ease, transform 0.9s cubic-bezier(0.33, 1, 0.68, 1), -webkit-transform 0.9s cubic-bezier(0.33, 1, 0.68, 1);
 }
 .menu-nav__name:hover {
-  color: #b992f2;
-  opacity: 1;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1200px) {
@@ -833,9 +853,10 @@ body {
   left: 0;
 }
 .section__bg::after {
-  display: block;
   content: "";
-  background-image: url(../images/black_overlay_bg.png);
+  display: block;
+  background: #000;
+  opacity: 0.5;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -891,7 +912,7 @@ body {
   margin: 40px 0 16px;
 }
 .section__text {
-  color: #c2f1ff;
+  color: #d0d0d0;
   text-align: center;
   font-size: 18px;
 }
@@ -992,24 +1013,25 @@ body {
   display: none;
 }
 
+.kv-section__sub-title {
+  width: auto;
+  height: 9.25%;
+}
 .kv-section__visual {
-  width: 476px;
-  height: 600px;
   -webkit-animation: flameWindUp 3s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
           animation: flameWindUp 3s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
 }
-.kv-section__textbox {
+.kv-section__date {
+  background: url(../images/kv_date.png);
+  width: 48.1666666667%;
+  height: 6.75%;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  font-size: 0em;
   margin: 32px auto;
   -webkit-animation: fadeUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
           animation: fadeUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
-}
-.kv-section__title {
-  color: #ffffff;
-  font-size: 2rem;
-}
-.kv-section__title:nth-child(2) {
-  font-size: 1.5rem;
-  margin-top: 24px;
 }
 .kv-section__scroll {
   -ms-flex-negative: 0;
@@ -1656,19 +1678,6 @@ body {
           transition-delay: 1000ms;
 }
 
-@media screen and (max-height: 1000px) and (min-width: 769px) {
-  .kv-section__visual {
-    width: 375px;
-    height: 490px;
-  }
-  .section__wrapper {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
-  }
-  .section__wrapper.s3-section__wrapper {
-    margin-top: -40px;
-  }
-}
 @media screen and (max-width: 1200px) and (min-width: 769px) {
   .section__logo {
     width: 100px;

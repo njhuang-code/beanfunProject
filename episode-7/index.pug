@@ -1,6 +1,7 @@
 extends _layout.pug
 
 append vars
+block append nav
 block content
   main.content
     .swiper.section-slide
@@ -14,20 +15,9 @@ block content
                 source(src='./images/video/kv_video_mb.mp4')
             .section__container
               .section__wrapper.column
+                img.kv-section__sub-title(src="./images/kv_title_sub.png", alt="")
                 .kv-section__visual
-                  img.kv-section__img(src="./images/kv_main_title.png", alt="")
-                .kv-section__textbox
-                  p.kv-section__title.text-center 
-                    span.color-primary 克隆
-                    |聖誕快樂!
-                  p.kv-section__title.text-center 首次迎來聖誕節的波拉西亞戰記
-                    br
-                    span.color-primary 克隆地區
-                    |燈塔村莊正準備著
-                    span.color-primary 聖誕節
-                    |慶祝活動
-                    br
-                    |邀請所有守護者們一同參與！
+                p.kv-section__date 2025.06.04(三) UPDATE
                 a(href="#sectionSec").kv-section__scroll
         section#sectionSec.swiper-slide
           .section.s2-section
