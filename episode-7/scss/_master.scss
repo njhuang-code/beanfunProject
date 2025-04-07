@@ -1,0 +1,104 @@
+.section {
+  &__bg {
+    &.s2-section__bg {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.kv-section {
+
+  &__visual {
+    @include size(476px,600px);
+    animation: flameWindUp 3s cubic-bezier(0.65,0,0.35,1) 1 forwards;
+  }
+
+  &__textbox {
+    margin: 32px auto;
+    animation: fadeUp 1.5s cubic-bezier(0.65,0,0.35,1) 1 forwards;
+  }
+
+  &__title {
+    color: $text03;
+    font-size: 2rem;
+    &:nth-child(2) {
+      font-size: 1.5rem;
+      margin-top: 24px;
+    }
+  }
+
+  &__scroll {
+    flex-shrink: 0;
+    @include background-contain;
+    @include size(37px,108px);
+    background-image: url(../images/kv_scrolldown.png);
+    animation: fadeUp2 2.2s forwards, float 1.3s infinite;
+  }
+
+}
+
+.s2-section {
+  &__bg {
+    background: url(../images/bg_festival.jpg);
+    @include background-cover;
+  }
+
+  &__title {
+    background-image: url(../images/s2_head_title.png);
+  }
+
+  &__heading {
+    max-width: 245px;
+    margin: 0 auto 16px;
+    text-align: center;
+  }
+
+  &__textbox {
+    margin: 16px auto;
+  }
+
+  &__gift {
+    @include size(400px,auto);
+    margin: 24px auto;
+    flex-shrink: 0;
+  }
+}
+
+.s3-section {
+  &__wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px 0;
+  }
+  &__title {
+    background-image: url(../images/s3_head_title.png);
+  }
+  &__img {
+    @include background-contain;
+    position: absolute;
+    z-index: 9;
+    &-01 {
+      @include size(398px,298px);
+      top: pct(320px);
+      left: calc(50% + #{-(690)}px);
+    }
+    &-02 {
+      @include size(327px,228px);
+      top: pct(300px);
+      right: calc(50% + #{-(625)}px);
+    }
+    &-03 {
+      @include size(353px,277px);
+      right: calc(50% + #{-(560)}px);
+      bottom: pct(120px);
+    }
+  }
+  &__info {
+    background-image: url(../images/s3_event_time.png);
+    @include background-contain;
+    @include size(500px,237px);
+    margin: 28px auto 40px;
+  }
+}

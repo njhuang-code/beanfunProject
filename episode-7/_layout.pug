@@ -1,0 +1,121 @@
+doctype html
+html(lang="zh-Hant")
+  block vars
+    - var hasSwiper = true
+    - var hasCopyright = true
+    - var header_title = '波拉西亞戰記｜全新職業「深淵放逐者」＆新世界降臨！'
+    - var author = 'Wars of Prasia'
+    - var og_title = '波拉西亞戰記｜全新職業「深淵放逐者」＆新世界降臨！'
+    - var og_image = './images/facebook_cover_1200x630.jpg'
+    - var og_url = ''
+    - var og_desc = '來自深淵的復仇者，擁抱禁忌之力的新職業「深淵放逐者」現身！全新世界開啟，豐厚福利等待探索，戰場即將迎來顛覆性的變革！'
+    - var meta_keyword = '波拉西亞戰記｜全新職業「深淵放逐者」＆新世界降臨！'
+    - var date_publish = '2025-04-07'
+  
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(http-equiv='X-UA-Compatible', content="IE=edge, Chrome=1")
+      meta(http-equiv="Pragma" content="no-cache")
+      meta(http-equiv="Expires" content="0")
+      //- mobile only
+      meta(name="HandheldFriendly" content="true")
+      meta(name="MobileOptimized" content="320")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0 , viewport-fit=cover")
+      //- meta info
+      title #{og_title ? og_title + ' | ' + author : ''}
+      meta(property='description', content=og_desc ? og_desc : '')
+      meta(property='og:title', content=og_title ? og_title + ' | ' + author : '')
+      meta(property='og:image', content=og_image ? og_image : '')
+      meta(property='og:url', content=og_url ? og_url : '')
+      meta(property='og:type', content='website')
+      meta(property='og:locale', content='zh_TW')
+      meta(property='og:site_name', content=og_title)
+      meta(name='author', content=author)
+      meta(name='copyright', content=author)
+      if meta_keyword != ''
+        meta(name='keywords', content=meta_keyword)
+      //- 標準網址
+      link(rel='canonical', href=og_url)
+      link(rel="shortcut icon", href="./images/icon/favicon.ico", type="image/x-icon")
+      //- google fonts
+      link(rel="preconnect", href="https://fonts.googleapis.com")
+      link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+      if hasSwiper
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+      link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet")
+      link(rel="stylesheet", href="./css/style.css")
+      script(src="https://tw.beanfun.com/js/GA_CodeNew.js" type="text/javascript")
+  body
+    //- block loading
+    //-   #loading 
+    //-     .loading
+    //-       .loading__content
+    //-         .loading__logo
+    //-           img(src="./images/icon/icon_logo.png", alt="")
+    //-         .loading__bar
+    //-           .loading__progress
+    //-         .loading__text.text-sm loading
+    block header
+      header.header
+        .header__container.row
+          .header__left
+            .header__logo
+              a(href="https://warsofprasia.beanfun.com/Main" target="_blank").header__logo-img.header__logo-mb
+            button.menu-slide__button
+              p.menu-slide__button-text.event-text.fw-lg 活動
+            .menu-slide
+              .menu-slide__closed
+              .menu-slide__logo.text-center
+                a(href="https://warsofprasia.beanfun.com/Main" target="_blank").header__logo-img
+                ul.menu-slide__row
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10634" target="blank").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_01.jpg", alt="")
+                      h4.text-sm 直升系統
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10884" target="blank").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_02.jpg", alt="")
+                      h4.text-sm 波拉魂養成班
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10872" target="_black").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_03.jpg", alt="")
+                      h4.text-sm 特別 WP Coupon
+                  li.menu-slide__item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10431" target="_black").menu-slide__link
+                      img.menu-slide__img.d-none-sm(src="./images/banner_04.jpg", alt="")
+                      h4.text-sm 10% 紅利回饋
+          .header__right
+            ul.header__row.row
+              li.header__item.d-none-sm
+                a.btn-game.text-md.fw-md(href="https://galaxy.beanfun.com/webapi/view/login/twp?redirect_url=https://warsofprasia.beanfun.com/Main" target="_blank") GAME START
+              li.header__item
+                a(href="https://warsofprasia.beanfun.com/Main" target="_blank").btn-game-link
+                  i.btn-game__icon.home
+              li.header__item 
+                a(href="https://www.facebook.com/warsofprasia.tw" target="_blank").btn-game-link
+                  i.btn-game__icon.fb
+              li.header__item
+                a(href="https://www.youtube.com/@user-warsofprasia" target="_blank").btn-game-link
+                  i.btn-game__icon.yt
+    block bg
+      .bg-deco
+        .bg-deco__tree.left
+        .bg-deco__tree.right
+        .bg-deco__ball-box
+          .bg-deco__ball-red
+          .bg-deco__ball-sliver
+          .bg-deco__ball-red
+          .bg-deco__ball-red
+          .bg-deco__ball-red
+          .bg-deco__ball-sliver.d-none-lg.d-block-md
+
+    block content
+    block script
+      script(src="./js/jquery-3.7.1.min.js") 
+      script(src="./js/animate.js")
+      if hasSwiper
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+      script(src="./js/main.js")
+      if hasCopyright
+        script(src="https://frontend.beanfun.com/plugins/game-footer/game-footer.js" type="text/javascript" id="game-footer" prod="波拉西亞" theme="dark")

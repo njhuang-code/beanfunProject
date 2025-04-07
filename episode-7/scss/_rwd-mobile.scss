@@ -1,0 +1,111 @@
+@media (max-width: ($mbrwd-breakpoint* 1px)) {
+
+  .section-slide {
+    min-height: auto;
+    max-height: 100%;
+    &__wrapper {
+      flex-direction: column;
+      .swiper-slide {
+        flex-direction: column;
+        height: 100vh;
+        &:nth-child(2) {
+          height: 88vh;
+        }
+        &:nth-child(3) {
+          min-height: 800px;
+        }
+      }
+    }
+  }
+
+  .kv-section {
+
+    &__visual {
+      width: pct(800px);
+      height: auto;
+      max-width: 280px;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+
+      &:nth-child(2) {
+        font-size: 1rem;
+        margin-top: 16px;
+      }
+    }
+
+    &__textbox {
+      margin: 16px auto;
+    }
+
+    &__scroll {
+      @include size(37px, 70px);
+    }
+
+  }
+
+
+  .s2-section {
+
+    &__heading {
+      max-width: 180px
+    }
+
+    &__gift {
+      @include size(325px, auto);
+      max-height: 360px;
+      margin: 16px auto;
+    }
+
+    &__textbox {
+      padding: 0 8px;
+    }
+
+  }
+
+  .s3-section {
+
+    &__wrapper {
+      padding: 0;
+    }
+    &__textbox {
+      max-width: 400px;
+      height: pct(240px);
+      margin-top: 16px;
+    }
+
+    &__imgbox {
+      display: flex;
+    }
+
+    &__img {
+      @include size(100%, auto);
+      position: initial;
+    }
+
+    &__text {
+      font-size: 1rem;
+    }
+
+    &__info {
+      @include size(100%, 150px);
+      margin: 0 auto;
+      flex-shrink: 0;
+    }
+  }
+
+  .UNI-footer .gradeArea .gradeArea__img img {
+    width: 50px;
+  }
+
+}
+
+
+@media (max-width: 540px) {
+  .s3-section {
+    &__wrapper {
+      justify-content: flex-start;
+    }
+  }
+}

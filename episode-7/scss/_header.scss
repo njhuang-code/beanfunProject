@@ -1,0 +1,142 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 112px;
+    padding: 0 24px 0 0;
+  }
+  &__logo {
+    &-img {
+      @include size(120px);
+      @include background-cover;
+      background-image: url(../images/icon/icon_logo_pc.png);
+    }
+  }
+  &__row {
+    align-items: center;
+  }
+  &__right {
+    display: flex;
+    margin-left: auto;
+    padding-top: 16px;
+  }
+  &__item {
+    margin: 0 8px;
+  }
+}
+
+.bg-deco {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+
+  &__tree {
+    background-image: url(../images/kv_img_tree.png);
+    @include background-contain;
+    @include size(423px, 165px);
+    position: absolute;
+    z-index: 9;
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+      transform: rotateY(-180deg);
+    }
+  }
+
+  &__ball {
+    &-red {
+      background: url(../images/kv_img_ball_red.png) no-repeat 0 100%/100% auto;
+      @include background-contain;
+      @include size(41px, 207px);
+      animation: bouncing-bell 3s forwards;
+      &:nth-child(1) {
+        left: pct(100px);
+        animation-delay: .4s;
+      }
+      &:nth-child(3) {
+        left: pct(300px);
+        animation-delay: .8s;
+      }
+
+      &:nth-child(4) {
+        right: pct(300px);
+        animation-delay: .5s;
+      }
+      &:nth-child(5) {
+        right: pct(100px);
+        animation-delay: .8s;
+      }
+    }
+
+    &-sliver {
+      background: url(../images/kv_img_ball_sliver.png);
+      @include background-contain;
+      @include size(48px, 290px);
+      left: pct(200px);
+      animation: bouncing-bell 3s forwards;
+      animation-delay: 1.5s;
+    }
+    &-box {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      * {
+        position: absolute;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: ($mbrwd-breakpoint* 1px)) {
+  .header {
+    &__container {
+      padding: 0 20px;
+      max-height: 60px;
+      overflow: hidden;
+    }
+    &__left {
+      @include flex-center;
+      flex-direction: row-reverse;
+      max-height: 60px;
+    }
+    &__logo {
+      max-height: 60px;
+      &-mb {
+        @include size(130px,60px);
+        background-image: url(../images/icon/icon_logo_mb.png);
+      }
+    }
+  }
+
+  .bg-deco {
+    &__tree {
+      display: none;
+    }
+    &__ball {
+      &-red {
+        @include size(20px,100px);
+        &:nth-child(1),&:nth-child(5) {
+          display: none;
+        } 
+      }
+      &-sliver {
+        @include size(20px,120px);
+        left: pct(100px);
+        &:nth-of-type(2) {
+          left: initial;
+          right: pct(100px);
+        }
+      }
+    }
+  }
+}
