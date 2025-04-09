@@ -217,7 +217,23 @@
   }
 }
 
-
+@keyframes smokeWave {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-10px, -10px) scale(1.05);
+  }
+  50% {
+    transform: translate(10px, -20px) scale(1.1);
+  }
+  75% {
+    transform: translate(-15px, -30px) scale(1.15);
+  }
+  100% {
+    transform: translate(0, -40px) scale(1.2);
+  }
+}
 
 // scrollAnimation
 

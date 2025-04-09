@@ -16,24 +16,29 @@ block content
             .section__container
               .section__wrapper.column
                 img.kv-section__sub-title(src="./images/kv_title_sub.png", alt="")
+                .kv-section__smoke
                 .kv-section__visual
+                  img.kv-section__title(src="./images/kv_title_01.png", alt="")
+                  img.kv-section__title(src="./images/kv_title_02.png", alt="")
+                  img.kv-section__title(src="./images/kv_title_03.png", alt="")
+                  img.kv-section__title(src="./images/kv_title_04.png", alt="")
+                  img.kv-section__title(src="./images/kv_title_05.png", alt="")
+                  img.kv-section__title(src="./images/kv_title_06.png", alt="")
+                  img.kv-section__title(src="./images/kv_title_07.png", alt="")
+                svg(width="0" height="0")
+                  defs
+                    filter#smokeFlow(x="0" y="0" width="100%" height="100%")
+                      feTurbulence(type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="turbulence")
+                        animate(attributeName="baseFrequency" dur="20s" values="0.01; 0.02; 0.01" repeatCount="indefinite")
+                      feDisplacementMap(in="SourceGraphic" in2="turbulence" scale="30")
                 p.kv-section__date 2025.06.04(三) UPDATE
+                button.kv-section__btn
                 a(href="#sectionSec").kv-section__scroll
         section#sectionSec.swiper-slide
           .section.s2-section
             .section__bg.s2-section__bg
             .section__container
               .section__wrapper.column
-                .section__logo.animate.animate_fadeDown
-                .s2-section__title.section__title.animate.animate_fadeDown.animate_delay100
-                ul.section__textbox.s2-section__textbox.animate.animate_fadeDown.animate_delay100
-                  li.s2-section__heading
-                    img(src="./images/s2_heading.png", alt="")
-                  li.section__text 克隆地區迎來聖誕節，燈塔村莊開始了全新裝飾！
-                  li.section__text 與雪人一起準備聖誕節慶典，參與各種精彩活動吧！
-                .s2-section__gift.animate.animate_fadeDown.animate_delay200
-                  img(src="./images/s2_img_gift.png", alt="")
-                a(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=12185" target="_blank").section__btn.animate.animate_fadeDown
         section#sectionThird.swiper-slide
           .section.s3-section
             .section__bg

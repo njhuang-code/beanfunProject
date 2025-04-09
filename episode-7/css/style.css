@@ -1015,11 +1015,116 @@ body {
 
 .kv-section__sub-title {
   width: auto;
-  height: 9.25%;
+  height: 9.5833333333%;
 }
 .kv-section__visual {
-  -webkit-animation: flameWindUp 3s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
-          animation: flameWindUp 3s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+  width: 626px;
+  height: 132px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 32px;
+}
+.kv-section__visual::before {
+  width: 100%;
+  height: 583px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: "";
+  background-image: url(../images/kv_spark.png);
+  position: absolute;
+  margin-top: -20%;
+  left: 4%;
+}
+.kv-section__visual::after {
+  width: 100%;
+  height: 583px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: "";
+  background-image: url(../images/kv_smoke3.png);
+  margin-top: -18%;
+}
+.kv-section__smoke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 626px;
+  height: 100%;
+}
+.kv-section__smoke::before, .kv-section__smoke::after {
+  z-index: 3;
+  -webkit-filter: url(#smokeFlow) blur(1px);
+          filter: url(#smokeFlow) blur(1px);
+}
+.kv-section__smoke::before {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  top: -12%;
+  left: -26%;
+  background-image: url(../images/kv_smoke1.png);
+}
+.kv-section__smoke::after {
+  width: 123%;
+  height: 100%;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  top: 9%;
+  right: -8%;
+  background-image: url(../images/kv_smoke2.png);
+}
+.kv-section__title {
+  width: auto;
+  height: 100px;
+  position: absolute;
+}
+.kv-section__title:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.kv-section__title:nth-child(2) {
+  top: -8px;
+  left: 100px;
+}
+.kv-section__title:nth-child(3) {
+  top: 30px;
+  left: 190px;
+}
+.kv-section__title:nth-child(4) {
+  top: 0;
+  left: 285px;
+}
+.kv-section__title:nth-child(5) {
+  width: auto;
+  height: 70px;
+  top: 38px;
+  left: 385px;
+}
+.kv-section__title:nth-child(6) {
+  top: -9px;
+  left: 446px;
+}
+.kv-section__title:nth-child(7) {
+  top: 5px;
+  left: 524px;
 }
 .kv-section__date {
   background: url(../images/kv_date.png);
@@ -1045,30 +1150,28 @@ body {
   -webkit-animation: fadeUp2 2.2s forwards, float 1.3s infinite;
           animation: fadeUp2 2.2s forwards, float 1.3s infinite;
 }
-
-.s2-section__bg {
-  background: url(../images/bg_festival.jpg);
+.kv-section__btn {
+  width: 120px;
+  height: 120px;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-image: url(../images/btn_play.png);
+  position: relative;
+  background-position: 50% 0;
 }
-.s2-section__title {
-  background-image: url(../images/s2_head_title.png);
+.kv-section__btn:hover {
+  background-position: 50% 100%;
 }
-.s2-section__heading {
-  max-width: 245px;
-  margin: 0 auto 16px;
-  text-align: center;
+
+.s2-section {
+  position: relative;
 }
-.s2-section__textbox {
-  margin: 16px auto;
-}
-.s2-section__gift {
-  width: 400px;
-  height: auto;
-  margin: 24px auto;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+.s2-section__bg {
+  background: url(../images/bg_weapon.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .s3-section__wrapper {
@@ -1587,6 +1690,50 @@ body {
   90% {
     -webkit-transform: translate3d(0, -4px, 0);
             transform: translate3d(0, -4px, 0);
+  }
+}
+@-webkit-keyframes smokeWave {
+  0% {
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+  }
+  25% {
+    -webkit-transform: translate(-10px, -10px) scale(1.05);
+            transform: translate(-10px, -10px) scale(1.05);
+  }
+  50% {
+    -webkit-transform: translate(10px, -20px) scale(1.1);
+            transform: translate(10px, -20px) scale(1.1);
+  }
+  75% {
+    -webkit-transform: translate(-15px, -30px) scale(1.15);
+            transform: translate(-15px, -30px) scale(1.15);
+  }
+  100% {
+    -webkit-transform: translate(0, -40px) scale(1.2);
+            transform: translate(0, -40px) scale(1.2);
+  }
+}
+@keyframes smokeWave {
+  0% {
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+  }
+  25% {
+    -webkit-transform: translate(-10px, -10px) scale(1.05);
+            transform: translate(-10px, -10px) scale(1.05);
+  }
+  50% {
+    -webkit-transform: translate(10px, -20px) scale(1.1);
+            transform: translate(10px, -20px) scale(1.1);
+  }
+  75% {
+    -webkit-transform: translate(-15px, -30px) scale(1.15);
+            transform: translate(-15px, -30px) scale(1.15);
+  }
+  100% {
+    -webkit-transform: translate(0, -40px) scale(1.2);
+            transform: translate(0, -40px) scale(1.2);
   }
 }
 .animate {

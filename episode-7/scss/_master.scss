@@ -13,11 +13,94 @@
 .kv-section {
 
   &__sub-title {
-    @include size(auto,pct(111px));
+    @include size(auto,pct(115px));
   }
 
   &__visual {
-    animation: flameWindUp 3s cubic-bezier(0.65,0,0.35,1) 1 forwards;
+    @include size(626px,132px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    &::before {
+      @include size(100%,583px);
+      @include background-cover;
+      content: '';
+      background-image: url(../images/kv_spark.png);
+      position: absolute;
+      margin-top: -20%;
+      left: 4%;
+    }
+    &::after {
+      @include size(100%,583px);
+      @include background-cover;
+      content: '';
+      background-image: url(../images/kv_smoke3.png);
+      margin-top: -18%;
+    }
+  }
+
+  &__smoke {
+    @include center;
+    @include size(626px,100%);
+    &::before,&::after {
+      z-index: 3;
+      filter: url(#smokeFlow) blur(1px);
+    }
+    &::before {
+      @include size(100%,100%);
+      @include background-contain;
+      content: '';
+      position: absolute;
+      top: -12%;
+      left: -26%;  
+      background-image: url(../images/kv_smoke1.png);
+    }
+    &::after {
+      @include size(123%,100%);
+      background-position: center 0;
+      background-repeat: no-repeat;
+      content: '';
+      position: absolute;
+      top: 9%;
+      right: -8%;
+      background-image: url(../images/kv_smoke2.png);
+    }
+  }
+
+  &__title {
+    @include size(auto,100px);
+    position: absolute;
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+    &:nth-child(2) {
+      top: -8px;
+      left: 100px;
+    }
+    &:nth-child(3) {
+      top: 30px;
+      left: 190px;
+    }
+    &:nth-child(4) {
+      top: 0;
+      left: 285px;
+    }
+    &:nth-child(5) {
+      @include size(auto,70px);
+      top: 38px;
+      left: 385px;
+    }
+    &:nth-child(6) {
+      top: -9px;
+      left: 446px;
+    }
+    &:nth-child(7) {
+      top: 5px;
+      left: 524px;
+    }
   }
 
   &__date {
@@ -37,32 +120,34 @@
     animation: fadeUp2 2.2s forwards, float 1.3s infinite;
   }
 
+  &__btn {
+    @include size (120px);
+    @include background-cover;
+    background-image: url(../images/btn_play.png);
+    position: relative;
+    background-position: 50% 0;
+
+    &:hover {
+      background-position: 50% 100%;
+    }
+  }
+
 }
 
 .s2-section {
+  position: relative;
+  // &::after {
+  //   content: '';
+  //   @include background-contain;
+  //   @include size(1091px,100%);
+  //   background-image: url(../images/s2_main_visual.png);
+  //   position: absolute;
+  //   bottom: 0;
+  // }
   &__bg {
-    background: url(../images/bg_festival.jpg);
+    background: url(../images/bg_weapon.jpg);
     @include background-cover;
-  }
 
-  &__title {
-    background-image: url(../images/s2_head_title.png);
-  }
-
-  &__heading {
-    max-width: 245px;
-    margin: 0 auto 16px;
-    text-align: center;
-  }
-
-  &__textbox {
-    margin: 16px auto;
-  }
-
-  &__gift {
-    @include size(400px,auto);
-    margin: 24px auto;
-    flex-shrink: 0;
   }
 }
 

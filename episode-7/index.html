@@ -89,8 +89,20 @@
               </div>
               <div class="section__container">
                 <div class="section__wrapper column"><img class="kv-section__sub-title" src="./images/kv_title_sub.png" alt="">
-                  <div class="kv-section__visual"></div>
-                  <p class="kv-section__date">2025.06.04(三) UPDATE</p><a class="kv-section__scroll" href="#sectionSec"></a>
+                  <div class="kv-section__smoke"></div>
+                  <div class="kv-section__visual"><img class="kv-section__title" src="./images/kv_title_01.png" alt=""><img class="kv-section__title" src="./images/kv_title_02.png" alt=""><img class="kv-section__title" src="./images/kv_title_03.png" alt=""><img class="kv-section__title" src="./images/kv_title_04.png" alt=""><img class="kv-section__title" src="./images/kv_title_05.png" alt=""><img class="kv-section__title" src="./images/kv_title_06.png" alt=""><img class="kv-section__title" src="./images/kv_title_07.png" alt=""></div>
+                  <svg width="0" height="0">
+                    <defs>
+                      <filter id="smokeFlow" x="0" y="0" width="100%" height="100%">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="turbulence">
+                          <animate attributeName="baseFrequency" dur="20s" values="0.01; 0.02; 0.01" repeatCount="indefinite"></animate>
+                        </feTurbulence>
+                        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30"></feDisplacementMap>
+                      </filter>
+                    </defs>
+                  </svg>
+                  <p class="kv-section__date">2025.06.04(三) UPDATE</p>
+                  <button class="kv-section__btn"></button><a class="kv-section__scroll" href="#sectionSec"></a>
                 </div>
               </div>
             </div>
@@ -99,16 +111,7 @@
             <div class="section s2-section">
               <div class="section__bg s2-section__bg"></div>
               <div class="section__container">
-                <div class="section__wrapper column">
-                  <div class="section__logo animate animate_fadeDown"></div>
-                  <div class="s2-section__title section__title animate animate_fadeDown animate_delay100"></div>
-                  <ul class="section__textbox s2-section__textbox animate animate_fadeDown animate_delay100">
-                    <li class="s2-section__heading"><img src="./images/s2_heading.png" alt=""></li>
-                    <li class="section__text">克隆地區迎來聖誕節，燈塔村莊開始了全新裝飾！</li>
-                    <li class="section__text">與雪人一起準備聖誕節慶典，參與各種精彩活動吧！</li>
-                  </ul>
-                  <div class="s2-section__gift animate animate_fadeDown animate_delay200"><img src="./images/s2_img_gift.png" alt=""></div><a class="section__btn animate animate_fadeDown" href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=12185" target="_blank"></a>
-                </div>
+                <div class="section__wrapper column"></div>
               </div>
             </div>
           </section>
