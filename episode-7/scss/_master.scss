@@ -136,14 +136,14 @@
 
 .s2-section {
   position: relative;
-  // &::after {
-  //   content: '';
-  //   @include background-contain;
-  //   @include size(1091px,100%);
-  //   background-image: url(../images/s2_main_visual.png);
-  //   position: absolute;
-  //   bottom: 0;
-  // }
+  &::after {
+    content: '';
+    @include background-contain;
+    @include size(1091px,100%);
+    background-image: url(../images/s2_main_visual.png);
+    position: absolute;
+    bottom: 0;
+  }
   &__bg {
     background: url(../images/bg_weapon.jpg);
     @include background-cover;

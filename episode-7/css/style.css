@@ -1167,6 +1167,17 @@ body {
 .s2-section {
   position: relative;
 }
+.s2-section::after {
+  content: "";
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 1091px;
+  height: 100%;
+  background-image: url(../images/s2_main_visual.png);
+  position: absolute;
+  bottom: 0;
+}
 .s2-section__bg {
   background: url(../images/bg_weapon.jpg);
   background-size: cover;
