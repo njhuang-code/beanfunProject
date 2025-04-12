@@ -1,4 +1,10 @@
 @media screen and (max-height: 1000px) and (min-width: 769px) {
+  .section-slide {
+    .swiper-slide {
+      height: 960px !important;
+    }
+  }
+
   .section {
     &__title {
       transform: scale(.9);
@@ -7,7 +13,7 @@
 
   .s2-section {
     .section__title {
-      margin-top: 170px;
+      margin-top: 130px;
     }
   }
 }

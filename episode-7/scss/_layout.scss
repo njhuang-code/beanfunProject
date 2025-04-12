@@ -165,7 +165,6 @@ body {
     left: 0;
     object-fit: cover;
     object-position: center;
-    transform: translateZ(0);
   }
 
   &__container {
@@ -181,13 +180,12 @@ body {
 
   &__title {
     @include size(auto,130px);
-    margin-top: 100px
+    margin-top: 150px;
   }
 
   &__btn {
     @include background-contain;
     @include size(281px,73px);
-
   }
 
 }
@@ -202,6 +200,9 @@ body {
 
 .section-slide {
   min-height: 100vh;
+  .swiper-slide {
+    height: 1080px !important;
+  }
 }
 
 @media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
