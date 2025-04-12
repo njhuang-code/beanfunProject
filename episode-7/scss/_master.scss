@@ -105,10 +105,10 @@
 
   &__date {
     background: url(../images/kv_date.png);
-    @include size(pct(578px),pct(81px));
+    @include size(578px,81px);
     @include background-contain;
     font-size: .0000000000001em;
-    margin: 32px auto;
+    margin: 16px auto 32px;
     animation: fadeUp 1.5s cubic-bezier(0.65,0,0.35,1) 1 forwards;
   }
 
@@ -134,20 +134,35 @@
 
 }
 
-.s2-section {
-  position: relative;
-  &::after {
-    content: '';
-    @include background-contain;
-    @include size(1091px,100%);
-    background-image: url(../images/s2_main_visual.png);
-    position: absolute;
-    bottom: 0;
-  }
-  &__bg {
-    background: url(../images/bg_weapon.jpg);
-    @include background-cover;
+// s2 section
+// -------------------------------------------------- 
 
+.s2-section {
+  &__bg {
+    background: url(../images/s2_bg.jpg);
+    @include background-cover;
+  }
+
+  &__imgbox {
+    @include size(1080px,750px);
+    position: relative;
+    margin-top: pct(-60px);
+
+    * {
+      position: absolute
+    }
+  }
+
+  &__img01 {
+    width: pct(427px);
+    top: pct(20px);
+    left: calc(50% + #{-(550)}px);
+  }
+
+    &__img02 {
+    width: pct(427px);
+    bottom: pct(30px);
+    right: calc(50% + #{-(430)}px);
   }
 }
 

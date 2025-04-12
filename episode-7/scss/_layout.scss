@@ -17,7 +17,7 @@ body {
 .container {
   max-width: $pc-midrwd-breakpoint + px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 48px 16px;
 }
 
 .color {
@@ -146,11 +146,6 @@ body {
   overflow: hidden;
 
   &__bg {
-    @include size(100%);
-    @include flex-center;
-    position: absolute;
-    top: 0;
-    left: 0;
     &::after {
       content: "";
       display: block;
@@ -164,14 +159,18 @@ body {
 
   &__video {
     @include size(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
     object-fit: cover;
     object-position: center;
+    transform: translateZ(0);
   }
 
   &__container {
     @include center;
-    @include size(100%);
   }
+
 
   &__wrapper {
     @include flex-center;
@@ -179,28 +178,10 @@ body {
     height: 100%;
   }
 
-  &__logo {
-    @include background-contain;
-    @include size(172px,120px);
-    flex-shrink: 0;
-    background-image: url(../images/img_head_logo.png);
-  }
-
-  &__textbox {
-    margin: 40px 0 16px;
-  }
-
-  &__text {
-    color: $text01;
-    text-align: center;
-    font-size: 18px;
-  }
 
   &__title {
-    @include background-contain;
-    @include size(580px,120px);
-    flex-shrink: 0;
-    margin-top: 24px;
+    @include size(auto,130px);
+    margin-top: 120px;
   }
 
   &__btn {
@@ -232,7 +213,6 @@ body {
 
 .section-slide {
   min-height: 100vh;
-  max-height: 100vh;
 }
 
 @media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
