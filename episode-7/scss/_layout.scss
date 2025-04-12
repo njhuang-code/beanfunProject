@@ -146,6 +146,7 @@ body {
   overflow: hidden;
 
   &__bg {
+    height: 100%;
     &::after {
       content: "";
       display: block;
@@ -178,27 +179,15 @@ body {
     height: 100%;
   }
 
-
   &__title {
     @include size(auto,130px);
-    margin-top: 120px;
+    margin-top: 100px
   }
 
   &__btn {
     @include background-contain;
-    @include size(280px,82px);
-    background-image: url(../images/s2_btn_off.png);
-    transition: .3s all;
-    flex-shrink: 0;
-    &:hover {
-      background-image: url(../images/s2_btn_active.png);
-    }
-    &.s3__btn {
-      background-image: url(../images/s3_btn_off.png);
-      &:hover {
-        background-image: url(../images/s3_btn_active.png);
-      }
-    }
+    @include size(281px,73px);
+
   }
 
 }

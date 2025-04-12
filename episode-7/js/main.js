@@ -70,7 +70,7 @@ window.addEventListener("load", function () {
     $(".UNI-footer-clone").remove();
 
     // 確保第三個 slide 存在
-    const thirdSlide = document.querySelectorAll(".swiper-slide")[2];
+    const thirdSlide = document.querySelectorAll(".swiper-slide")[3];
     if (thirdSlide && !thirdSlide.querySelector(".UNI-footer-clone")) {
       $(".UNI-footer")
         .clone()
@@ -118,9 +118,6 @@ window.addEventListener("load", function () {
   // 當窗口尺寸改變時重新檢查是否為手機版
   window.addEventListener("resize", handleMobileScroll);
 });
-
-
-
 
 
 

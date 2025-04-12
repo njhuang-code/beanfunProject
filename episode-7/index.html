@@ -77,6 +77,36 @@
     <main class="content">
       <div class="swiper section-slide">
         <div class="swiper-wrapper section-slide__wrapper">
+          <section class="swiper-slide" id="sectionMain">
+            <div class="section kv-section">
+              <div class="section__bg kv-section__bg">
+                <video class="section__video d-none-sm" autoplay loop muted playsinline>
+                  <source src="./images/video/kv_video_pc.mp4">
+                </video>
+                <video class="section__video d-none-lg d-block-sm" autoplay loop muted playsinline>
+                  <source src="./images/video/kv_video_mb.mp4">
+                </video>
+              </div>
+              <div class="section__container">
+                <div class="section__wrapper column"><img class="kv-section__sub-title" src="./images/kv_title_sub.png" alt="">
+                  <div class="kv-section__smoke"></div>
+                  <div class="kv-section__visual"><img class="kv-section__title" src="./images/kv_title_01.png" alt=""><img class="kv-section__title" src="./images/kv_title_02.png" alt=""><img class="kv-section__title" src="./images/kv_title_03.png" alt=""><img class="kv-section__title" src="./images/kv_title_04.png" alt=""><img class="kv-section__title" src="./images/kv_title_05.png" alt=""><img class="kv-section__title" src="./images/kv_title_06.png" alt=""><img class="kv-section__title" src="./images/kv_title_07.png" alt=""></div>
+                  <svg width="0" height="0">
+                    <defs>
+                      <filter id="smokeFlow" x="0" y="0" width="100%" height="100%">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="turbulence">
+                          <animate attributeName="baseFrequency" dur="20s" values="0.01; 0.02; 0.01" repeatCount="indefinite"></animate>
+                        </feTurbulence>
+                        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30"></feDisplacementMap>
+                      </filter>
+                    </defs>
+                  </svg>
+                  <div class="kv-section__date">2025.06.04(三) UPDATE</div>
+                  <button class="kv-section__btn"></button><a class="kv-section__scroll" href="#sectionSec"></a>
+                </div>
+              </div>
+            </div>
+          </section>
           <section class="swiper-slide" id="sectionSec">
             <div class="section s2-section">
               <div class="section__bg s2-section__bg">
@@ -90,30 +120,53 @@
           </section>
           <section class="swiper-slide" id="sectionThird">
             <div class="section s3-section">
-              <div class="section__bg">
-                <video class="section__video d-none-sm" autoplay loop muted playsinline>
-                  <source src="./images/video/s3_video_pc.mp4">
-                </video>
-                <video class="section__video d-none-lg d-block-sm" autoplay loop muted playsinline>
-                  <source src="./images/video/s3_video_mb.mp4">
-                </video>
-              </div>
+              <div class="section__bg s3-section__bg"></div>
               <div class="section__container">
                 <div class="section__wrapper column s3-section__wrapper">
-                  <div class="section__logo animate animate_fadeDown"></div>
-                  <div class="s3-section__title section__title section__title animate animate_fadeDown animate_delay100"></div>
-                  <ul class="section__textbox animate animate_fadeDown animate_delay100">
-                    <li class="section__text">波拉西亞戰記特別推出「白夜聖誕奇跡之旅」直播接力活動</li>
-                    <li class="section__text">邀請五位實況主與守護者們共度佳節。</li>
-                    <li class="section__text">除了介紹有趣的改版內容和聖誕資源外</li>
-                    <li class="section__text">還有聖誕特別序號「聖誕花圈、薑餅屋、雪人」，超過100抽送給你。</li>
-                  </ul>
-                  <div class="s3-section__imgbox">
-                    <div class="s3-section__img s3-section__img-01 animate animate_fadeDown animate_delay100"><img src="./images/s3_img01.png" alt=""></div>
-                    <div class="s3-section__img s3-section__img-02 animate animate_fadeDown animate_delay200"><img src="./images/s3_img02.png" alt=""></div>
-                    <div class="s3-section__img s3-section__img-03 animate animate_fadeDown animate_delay100"><img src="./images/s3_img03.png" alt=""></div>
+                  <div class="container">
+                    <div class="section__wrapper column"><img class="section__title" src="./images/s3_main_title.png" alt=""></div>
+                    <ul class="s3-section__row row">
+                      <li class="s3-section__item">
+                        <div class="vodbox">
+                          <video class="s3-section__video" autoplay loop muted playsinline>
+                            <source src="./images/video/s3_vod_01.mp4">
+                          </video>
+                        </div>
+                      </li>
+                      <li class="s3-section__item">
+                        <div class="vodbox">
+                          <video class="s3-section__video" autoplay loop muted playsinline>
+                            <source src="./images/video/s3_vod_01.mp4">
+                          </video>
+                        </div>
+                      </li>
+                      <li class="s3-section__item">
+                        <div class="vodbox">
+                          <video class="s3-section__video" autoplay loop muted playsinline>
+                            <source src="./images/video/s3_vod_01.mp4">
+                          </video>
+                        </div>
+                      </li>
+                    </ul><a class="section__btn s3-section__btn" href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20250225J/index.html"></a>
                   </div>
-                  <div class="s3-section__info section__title animate animate_fadeDown animate_delay300"></div><a class="section__btn s3__btn section__title animate animate_fadeDown" href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=12171" target="__blank"></a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="swiper-slide" id="sectionFourth">
+            <div class="section s4-section">
+              <div class="section__bg s4-section__bg">
+                <div class="section__container">
+                  <div class="section__wrapper column s4-section__wrapper">
+                    <div class="container">
+                      <div class="section__wrapper column"><img class="section__title" src="./images/s4_main_title.png" alt=""></div>
+                      <ul class="s4-section__row row">
+                        <li class="s4-section__item"></li>
+                        <li class="s4-section__item"></li>
+                        <li class="s4-section__item"></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
