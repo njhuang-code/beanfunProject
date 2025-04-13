@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
           slidesPerView: 1,
           spaceBetween: 0,
           mousewheel: true,
-          autoHeight: true,
+          autoHeight: false,
           pagination: {
             el: ".swiper-pagination",
             clickable: true,

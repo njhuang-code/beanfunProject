@@ -123,7 +123,7 @@
   }
 
   .section__container {
-    margin-top: 100px;
+    margin-top: 90px;
   }
 }
 
@@ -131,8 +131,14 @@
 // --------------------------------------------------
 .s2-section {
   &__bg {
+    @include flex-center;
+    @include size(100%, 100%);
     background: url(../images/s2_bg.jpg);
     @include background-cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
     &::after {
       content: none;
     }
@@ -141,7 +147,6 @@
   &__imgbox {
     @include size(1080px, 750px);
     position: relative;
-
     * {
       position: absolute;
     }
@@ -149,14 +154,19 @@
 
   &__img01 {
     width: pct(427px);
-    top: pct(-10px);
-    left: calc(50% + #{-(580)}px);
+    top: pct(-90px);
+    left: calc(50% + #{-(555)}px);
   }
 
   &__img02 {
     width: pct(427px);
-    bottom: pct(30px);
-    right: calc(50% + #{-(480)}px);
+    bottom: pct(120px);
+    right: calc(50% + #{-(450)}px);
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
   }
 
 }
@@ -231,6 +241,7 @@
     position: absolute;
     bottom: pct(138px);
   }
+
 }
 
 // s4 section
@@ -276,5 +287,9 @@
     &:hover {
       background: url(../images/s4_btn_active.png);
     }
+  }
+
+  .section__title {
+    margin-top: auto;
   }
 }

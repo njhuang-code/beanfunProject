@@ -848,7 +848,7 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   width: 100%;
-  height: 110%;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -905,9 +905,7 @@ body {
 
 .section-slide {
   min-height: 100vh;
-}
-.section-slide .swiper-slide {
-  height: 1080px !important;
+  height: 1080px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1113,14 +1111,29 @@ body {
   background-position: 50% 100%;
 }
 .kv-section .section__container {
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
 .s2-section__bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
   background: url(../images/s2_bg.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .s2-section__bg::after {
   content: none;
@@ -1135,13 +1148,17 @@ body {
 }
 .s2-section__img01 {
   width: 35.5833333333%;
-  top: -0.8333333333%;
-  left: calc(50% + -580px);
+  top: -7.5%;
+  left: calc(50% + -555px);
 }
 .s2-section__img02 {
   width: 35.5833333333%;
-  bottom: 2.5%;
-  right: calc(50% + -480px);
+  bottom: 10%;
+  right: calc(50% + -450px);
+}
+.s2-section .container {
+  position: relative;
+  z-index: 2;
 }
 
 .s3-section__bg {
@@ -1288,6 +1305,9 @@ body {
 }
 .s4-section__btn:hover {
   background: url(../images/s4_btn_active.png);
+}
+.s4-section .section__title {
+  margin-top: auto;
 }
 
 @-webkit-keyframes flameWind {
@@ -1899,15 +1919,31 @@ body {
 }
 
 @media screen and (max-height: 1000px) and (min-width: 769px) {
-  .section-slide .swiper-slide {
-    height: 960px !important;
+  .s2-section__bg {
+    top: 4.1666666667%;
   }
-  .section__title {
+  .s2-section__img02 {
+    bottom: 12.5%;
+  }
+  .s2-section .section__title {
+    margin-top: 200px;
+  }
+  .s3-section__row, .s4-section__row {
+    margin-top: -70px;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  .s2-section .section__title {
-    margin-top: 130px;
+  .s4-section__row {
+    height: 576px;
+    margin-top: 0;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  .s4-section .section__title {
+    margin-top: 100px;
+  }
+  .s4-section .section__btn {
+    margin-top: -30px;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: 769px) {

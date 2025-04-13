@@ -1,21 +1,41 @@
 @media screen and (max-height: 1000px) and (min-width: 769px) {
-  .section-slide {
-    .swiper-slide {
-      height: 960px !important;
+
+
+  .s2-section {
+    &__bg {
+      top: pct(50px);
+    }
+    &__img02 {
+      bottom: pct(150px);
+    }
+    .section__title {
+      margin-top: 200px;
     }
   }
 
-  .section {
-    &__title {
+  .s3-section {
+    &__row {
+      margin-top: -70px;
       transform: scale(.9);
     }
   }
 
-  .s2-section {
-    .section__title {
-      margin-top: 130px;
+  .s4-section {
+    &__row {
+      height: 576px;
+      margin-top: 0;
+      transform: scale(.85);
+    }
+    .section {
+      &__title {
+        margin-top: 100px;
+      }
+      &__btn {
+        margin-top: -30px;
+      }
     }
   }
+
 }
 
 @media screen and (max-width: 1200px) and (min-width: 769px) {
