@@ -20,6 +20,7 @@
       position: absolute;
       margin-top: -20%;
       left: 4%;
+      pointer-events: none;
     }
     &::after {
       @include size(100%, 583px);
@@ -27,6 +28,7 @@
       content: "";
       background-image: url(../images/kv_smoke3.png);
       margin-top: -18%;
+      pointer-events: none;
     }
   }
 

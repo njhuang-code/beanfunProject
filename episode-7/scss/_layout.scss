@@ -217,6 +217,41 @@ body {
     }
   }
 
+  .container {
+    padding: vw(48px) vw(16px);
+  }
+
+
+  .section {
+    &__title {
+      height: vw(130px);
+      margin-top: vw(-60px);
+    }
+    &__btn {
+      @include size(vw(281px),vw(73px));
+    }
+  }
+
+  // swiper slide third style -- set height to 100vw
+  // --------------------------------------------------
+  .section-slide {
+    .swiper-slide {
+      &.section-slide__third,&.section-slide__fourth {
+        height: 90vw;
+      }
+    }
+  }
+
+  // s2 section
+  // --------------------------------------------------
+  .s2-section {
+    .container {
+      .section__title {
+        margin-top: vw(60px);
+      }
+    }
+  }
+
 }
 
 

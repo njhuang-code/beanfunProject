@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
   let swiper = null;
 
   function handleSwiper() {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1200) {
       if (!swiper) {
         swiper = new Swiper(".section-slide", {
           direction: "vertical",
