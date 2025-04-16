@@ -201,6 +201,7 @@ body {
 .section-slide {
   min-height: 100vh;
   height: 1080px;
+
 }
 
 @media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
@@ -260,7 +261,7 @@ body {
 
   .container {
     max-width: initial;
-    padding: 0 16px;
+    padding: 0 vwm(16px);
   }
 
   .text {
@@ -290,29 +291,24 @@ body {
   }
 
   .section {
-
-    &__logo {
-      @include size(80px,70px);
-    }
-
     &__title {
-      @include size(100%,75px);
-      padding: 0 8px;
-      margin-top: 16px;
+      height: vwm(130px);
+      margin-top: vwm(-60px);
     }
-
-    &__text {
-      font-size: 16px;
-    }
-
-    &__textbox {
-      padding: 0 28px;
-      margin: 16px auto;
-    }
-
     &__btn {
-      @include size(200px,59px);
-      flex-shrink: 0;
+      @include size(vwm(351px),vwm(91px));
+    }
+  }
+
+  .section-slide {
+    .swiper-slide {
+      &.section-slide__second,
+      &.section-slide__third {
+        height: vwm(1000px);
+      }
+      &.section-slide__fourth {
+        height: vwm(1200px);
+      }
     }
   }
 }

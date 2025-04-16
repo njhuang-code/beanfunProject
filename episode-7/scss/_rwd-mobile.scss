@@ -83,17 +83,99 @@
   }
 }
 
-  .UNI-footer .gradeArea .gradeArea__img img {
-    width: 50px;
+// s2 section
+// --------------------------------------------------
+.s2-section {
+  &__bg {
+    background: url(../images/s2_bg_mb.jpg);
+    @include background-cover;
+  }
+
+  .container {
+    .section__title {
+      margin-top: vwm(60px);
+    }
+  }
+  &__visual {
+    margin-top: vwm(32px);
+  }
+  &__img {
+    @include size(vwm(1000px), vwm(736px));
   }
 
 }
 
 
-@media (max-width: 540px) {
-  .s3-section {
-    &__wrapper {
-      justify-content: flex-start;
+// s3 section
+// --------------------------------------------------
+.s3-section {
+
+  &__row {
+    background: url(../images/s3_card_mb.png);
+    @include background-cover;
+    @include size(vwm(884px), vwm(601px));
+    margin-top: vwm(12px);
+  }
+  &__item {
+    &:nth-child(1),&:nth-child(2),&:nth-child(3) {
+      background: none;
+      bottom: vwm(30px);
+      pointer-events: none;
+    }
+
+    &:nth-child(1) {
+      .vodbox {
+        left: calc((100% - vwm(135px))/2);
+      }
+    }
+
+    &:nth-child(2) {
+      .vodbox {
+        left: calc((100% - vwm(195px))/2);
+      }
+    }
+
+    &:nth-child(3) {
+      .vodbox {
+        right: calc((100% - vwm(140px))/2);
+      }
     }
   }
+  .vodbox {
+    @include size (vwm(200px), vwm(136px));
+  }
+
+}
+
+// s4 section
+// --------------------------------------------------
+.s4-section {
+  &__bg {
+    background: url(../images/s4_bg_mb.jpg);
+    @include background-cover;
+  }
+  &__row {
+    background: url(../images/s4_card_mb.png);
+    @include background-cover;
+    @include size(vwm(740px), vwm(588px));
+    margin-top: vwm(48px);
+  }
+
+  &__item {
+    &:nth-child(1),&:nth-child(2),&:nth-child(3) {
+      background: none;
+      pointer-events: none;
+    }
+  }
+  .container {
+    .section__title {
+      margin-top: vwm(-150px);
+    }
+  }
+}
+
+  .UNI-footer .gradeArea .gradeArea__img img {
+    width: 50px;
+  }
+
 }
