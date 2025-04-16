@@ -16,6 +16,13 @@
       margin-top: -70px;
       transform: scale(.9);
     }
+    .section__title {
+      margin-top: 190px;
+    }
+
+    .section__btn {
+      margin-top: 0;
+    }
   }
 
   .s4-section {
@@ -70,7 +77,11 @@
   }
 
   &__smoke {
-    @include size(vw(626px), 100%);
+    width: vw(626px);
+    &:after {
+      @include size(vw(1080px), 100%);
+      right: vw(-300px);
+    }
   }
 
   &__title {

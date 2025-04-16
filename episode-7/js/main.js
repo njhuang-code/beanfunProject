@@ -53,16 +53,44 @@ window.addEventListener("load", function () {
     });
   }
 
-  // 點擊連結後滑動到對應的 Swiper 頁面
-  $(".kv-section__scroll").click(function (event) {
-    event.preventDefault();
+// 對應 section ID -> Swiper 頁面 index
+const sectionToSlideIndex = {
+  '#sectionMain': 0,
+  '#sectionSec': 1,
+  '#sectionThird': 2,
+  '#sectionFourth': 3
+};
 
-    var target = $(this).attr("href");
+// 共用一個 function，處理滑動 + active 狀態
+function goToSection(target) {
+  const index = sectionToSlideIndex[target];
 
-    if (swiper && target === "#sectionSec") {
-      swiper.slideTo(1);
-    }
+  if (swiper && index !== undefined) {
+    swiper.slideTo(index);
+  }
+
+  // 清除舊的 active
+  $('.menu-nav__item').removeClass('active');
+
+  // 所有指向該 target 的連結所在的 li 都加上 active
+  $(`.menu-nav__name[href="${target}"]`).each(function () {
+    $(this).closest('.menu-nav__item').addClass('active');
   });
+}
+
+// 點擊主選單項目
+$('.menu-nav__name').on('click', function (e) {
+  e.preventDefault();
+  const target = $(this).attr('href');
+  goToSection(target);
+});
+
+// 點擊 .kv-section__scroll 也套用同樣邏輯
+$('.kv-section__scroll').on('click', function (e) {
+  e.preventDefault();
+  const target = $(this).attr('href');
+  goToSection(target);
+});
 
   // 處理 UNI-footer 的邏輯
   function handleFooter() {

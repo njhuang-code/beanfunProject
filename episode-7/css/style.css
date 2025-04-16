@@ -1073,13 +1073,14 @@ body {
 .kv-section__smoke::after {
   width: 123%;
   height: 100%;
-  background-position: center 0;
-  background-repeat: no-repeat;
   content: "";
   position: absolute;
   top: -20%;
-  right: -8%;
+  right: calc(50% + -500px);
   background-image: url(../images/kv_smoke2.png);
+  background-size: 100% 100%;
+  background-position: center 0;
+  background-repeat: no-repeat;
 }
 .kv-section__title {
   width: auto;
@@ -1295,7 +1296,7 @@ body {
   margin-top: 50px;
 }
 .s3-section .section__btn {
-  margin-top: 3.125vw;
+  margin-top: 24px;
 }
 .s3-section .vodbox {
   width: 296px;
@@ -1982,6 +1983,12 @@ body {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
+  .s3-section .section__title {
+    margin-top: 190px;
+  }
+  .s3-section .section__btn {
+    margin-top: 0;
+  }
   .s4-section__row {
     height: 576px;
     margin-top: 0;
@@ -2030,7 +2037,11 @@ body {
   }
   .kv-section__smoke {
     width: 52.1666666667vw;
+  }
+  .kv-section__smoke:after {
+    width: 90vw;
     height: 100%;
+    right: -25vw;
   }
   .kv-section__title {
     width: auto;
@@ -2147,7 +2158,7 @@ body {
             flex-direction: column;
   }
   .section-slide__wrapper .swiper-slide {
-    height: 156.25vw;
+    height: 169.2708333333vw;
   }
   .kv-section__sub-title {
     width: auto;
@@ -2171,6 +2182,11 @@ body {
   .kv-section__smoke {
     width: 81.5104166667vw;
     height: 100%;
+  }
+  .kv-section__smoke::after {
+    width: 140.625vw;
+    height: 100%;
+    right: -39.0625vw;
   }
   .kv-section__title {
     width: auto;
@@ -2264,6 +2280,9 @@ body {
   }
   .s3-section .section__title {
     margin-top: auto;
+  }
+  .s3-section .section__btn {
+    margin-top: 3.125vw;
   }
   .s4-section__bg {
     background: url(../images/s4_bg_mb.jpg);

@@ -51,13 +51,14 @@
     }
     &::after {
       @include size(123%, 100%);
-      background-position: center 0;
-      background-repeat: no-repeat;
       content: "";
       position: absolute;
       top: -20%;
-      right: -8%;
+      right: calc(50% + #{-(500)}px);;
       background-image: url(../images/kv_smoke2.png);
+      background-size: 100% 100%;
+      background-position: center 0;
+      background-repeat: no-repeat;
     }
   }
 
@@ -243,7 +244,7 @@
   }
 
   .section__btn {
-    margin-top: vwm(24px);
+    margin-top: 24px;
   }
 
   .vodbox {

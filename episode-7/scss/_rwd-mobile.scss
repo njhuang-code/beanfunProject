@@ -6,7 +6,7 @@
     &__wrapper {
       flex-direction: column;
       .swiper-slide {
-        height: vwm(1200px);
+        height: vwm(1300px);
       }
     }
   }
@@ -33,6 +33,11 @@
 
   &__smoke {
     @include size(vwm(626px), 100%);
+
+    &::after {
+      @include size(vwm(1080px), 100%);
+      right: vwm(-300px);
+    }
   }
 
   &__title {
@@ -147,6 +152,10 @@
 
   .section__title {
     margin-top: auto;
+  }
+
+  .section__btn {
+    margin-top: vwm(24px);
   }
 
 }
