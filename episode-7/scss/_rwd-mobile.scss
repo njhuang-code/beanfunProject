@@ -6,7 +6,7 @@
     &__wrapper {
       flex-direction: column;
       .swiper-slide {
-        height: vwm(900px);
+        height: vwm(1200px);
       }
     }
   }
@@ -143,6 +143,10 @@
   }
   .vodbox {
     @include size (vwm(200px), vwm(136px));
+  }
+
+  .section__title {
+    margin-top: auto;
   }
 
 }

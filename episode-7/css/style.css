@@ -2147,7 +2147,7 @@ body {
             flex-direction: column;
   }
   .section-slide__wrapper .swiper-slide {
-    height: 117.1875vw;
+    height: 156.25vw;
   }
   .kv-section__sub-title {
     width: auto;
@@ -2261,6 +2261,9 @@ body {
   .s3-section .vodbox {
     width: 26.0416666667vw;
     height: 17.7083333333vw;
+  }
+  .s3-section .section__title {
+    margin-top: auto;
   }
   .s4-section__bg {
     background: url(../images/s4_bg_mb.jpg);
