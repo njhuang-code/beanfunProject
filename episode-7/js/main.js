@@ -1,104 +1,88 @@
 window.addEventListener("load", function () {
   let swiper = null;
 
-  function handleSwiper() {
-    if (window.innerWidth > 1200) {
-      if (!swiper) {
-        swiper = new Swiper(".section-slide", {
-          direction: "vertical",
-          slidesPerView: 1,
-          spaceBetween: 0,
-          mousewheel: true,
-          autoHeight: false,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          on: {
-            init: function () {
-              handleSlideAnimations(this.activeIndex);
-            },
-            slideChangeTransitionStart: function () {
-              handleSlideAnimations(this.activeIndex);
-            },
-          },
-        });
-      }
-    } else {
-      if (swiper) {
-        swiper.destroy(true, true);
-        swiper = null;
-      }
-    }
-    
-    // 確保 UNI-footer 顯示在手機版和桌面版
-    handleFooter();
-  }
+  const sectionToSlideIndex = {
+    '#sectionMain': 0,
+    '#sectionSec': 1,
+    '#sectionThird': 2,
+    '#sectionFourth': 3
+  };
 
-  function handleSlideAnimations(activeIndex) {
-    const slides = document.querySelectorAll(".swiper-slide");
+  const slideIndexToSection = Object.fromEntries(
+    Object.entries(sectionToSlideIndex).map(([key, val]) => [val, key])
+  );
 
-    slides.forEach((slide, index) => {
-      const animatedElements = slide.querySelectorAll(".animate");
-
-      if (index === activeIndex) {
-        animatedElements.forEach((el) => {
-          el.classList.add("animate_active");
-        });
-      } else {
-        animatedElements.forEach((el) => {
-          el.classList.remove("animate_active");
-        });
-      }
+  function initSwiper() {
+    swiper = new Swiper(".section-slide", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 0,
+      mousewheel: true,
+      autoHeight: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      on: {
+        init(swiper) {
+          handleSlide(swiper.activeIndex);
+        },
+        slideChangeTransitionStart(swiper) {
+          handleSlide(swiper.activeIndex);
+        },
+      },
     });
   }
 
-// 對應 section ID -> Swiper 頁面 index
-const sectionToSlideIndex = {
-  '#sectionMain': 0,
-  '#sectionSec': 1,
-  '#sectionThird': 2,
-  '#sectionFourth': 3
-};
-
-// 共用一個 function，處理滑動 + active 狀態
-function goToSection(target) {
-  const index = sectionToSlideIndex[target];
-
-  if (swiper && index !== undefined) {
-    swiper.slideTo(index);
+  function destroySwiper() {
+    if (swiper) {
+      swiper.destroy(true, true);
+      swiper = null;
+    }
   }
 
-  // 清除舊的 active
-  $('.menu-nav__item').removeClass('active');
+  function handleSlide(index) {
+    handleSlideAnimations(index);
+    updateActiveNav(index);
+  }
 
-  // 所有指向該 target 的連結所在的 li 都加上 active
-  $(`.menu-nav__name[href="${target}"]`).each(function () {
-    $(this).closest('.menu-nav__item').addClass('active');
-  });
-}
+  function handleSlideAnimations(activeIndex) {
+    document.querySelectorAll(".swiper-slide").forEach((slide, i) => {
+      slide.querySelectorAll(".animate").forEach(el => {
+        el.classList.toggle("animate_active", i === activeIndex);
+      });
+    });
+  }
 
-// 點擊主選單項目
-$('.menu-nav__name').on('click', function (e) {
-  e.preventDefault();
-  const target = $(this).attr('href');
-  goToSection(target);
-});
+  function goToSection(target) {
+    const index = sectionToSlideIndex[target];
+    if (swiper && index !== undefined) {
+      swiper.slideTo(index);
+      updateActiveNav(index); // 預先更新（有時 swiper transition 會延遲）
+    }
+  }
 
-// 點擊 .kv-section__scroll 也套用同樣邏輯
-$('.kv-section__scroll').on('click', function (e) {
-  e.preventDefault();
-  const target = $(this).attr('href');
-  goToSection(target);
-});
+  function updateActiveNav(index) {
+    const sectionId = slideIndexToSection[index];
+    if (!sectionId) return;
 
-  // 處理 UNI-footer 的邏輯
+    $('.menu-nav__item').removeClass('active');
+    $(`.menu-nav__name[href="${sectionId}"]`).each(function () {
+      $(this).closest('.menu-nav__item').addClass('active');
+    });
+  }
+
+  function bindEvents() {
+    $('.menu-nav__name, .kv-section__scroll').on('click', function (e) {
+      e.preventDefault();
+      goToSection($(this).attr('href'));
+    });
+  }
+
   function handleFooter() {
-    // 移除重複的 UNI-footer
     $(".UNI-footer-clone").remove();
-
-    // 確保第三個 slide 存在
     const thirdSlide = document.querySelectorAll(".swiper-slide")[3];
+
     if (thirdSlide && !thirdSlide.querySelector(".UNI-footer-clone")) {
       $(".UNI-footer")
         .clone()
@@ -113,14 +97,23 @@ $('.kv-section__scroll').on('click', function (e) {
         });
     }
 
-    // 確保 UNI-footer 顯示
     $(".UNI-footer-clone").fadeIn();
   }
 
-  handleSwiper();
+  function handleResponsiveSwiper() {
+    if (window.innerWidth > 1200) {
+      if (!swiper) initSwiper();
+    } else {
+      destroySwiper();
+    }
+    handleFooter();
+  }
 
-  window.addEventListener("resize", handleSwiper);
+  bindEvents();
+  handleResponsiveSwiper();
+  window.addEventListener("resize", handleResponsiveSwiper);
 });
+
 
 window.addEventListener("load", function () {
   function handleMobileScroll() {
