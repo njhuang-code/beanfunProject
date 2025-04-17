@@ -148,7 +148,7 @@
   }
 
   &__imgbox {
-    @include size(1080px, 750px);
+    @include size(100%, 750px);
     position: relative;
     * {
       position: absolute;
@@ -156,15 +156,15 @@
   }
 
   &__img01 {
-    width: pct(427px);
-    top: pct(-90px);
-    left: calc(50% + #{-(555)}px);
+    width: 100%;
+    top: pct(-100px);
+    left: calc(50% + #{-(650)}px);
   }
 
   &__img02 {
-    width: pct(427px);
-    bottom: pct(120px);
-    right: calc(50% + #{-(450)}px);
+    width: 100%;
+    bottom: pct(-60px);
+    right: calc(50% + #{-(510)}px);
   }
 
   .container {

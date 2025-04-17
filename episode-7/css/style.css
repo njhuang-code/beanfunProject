@@ -1183,7 +1183,7 @@ body {
   content: none;
 }
 .s2-section__imgbox {
-  width: 1080px;
+  width: 100%;
   height: 750px;
   position: relative;
 }
@@ -1191,14 +1191,14 @@ body {
   position: absolute;
 }
 .s2-section__img01 {
-  width: 35.5833333333%;
-  top: -7.5%;
-  left: calc(50% + -555px);
+  width: 100%;
+  top: -8.3333333333%;
+  left: calc(50% + -650px);
 }
 .s2-section__img02 {
-  width: 35.5833333333%;
-  bottom: 10%;
-  right: calc(50% + -450px);
+  width: 100%;
+  bottom: -5%;
+  right: calc(50% + -510px);
 }
 .s2-section .container {
   position: relative;
