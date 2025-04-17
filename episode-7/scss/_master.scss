@@ -3,6 +3,8 @@
 .kv-section {
   &__sub-title {
     @include size(auto, pct(115px));
+    animation: flameWind 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+    transition-delay: 100ms;
   }
 
   &__visual {
@@ -68,31 +70,45 @@
     &:nth-child(1) {
       top: 0;
       left: 0;
+      animation: flameWindDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 100ms;
     }
     &:nth-child(2) {
       top: -8px;
       left: 100px;
+      animation: flameWindUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 200ms;
     }
     &:nth-child(3) {
       top: 30px;
       left: 190px;
+      animation: flameWindDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 300ms;
     }
     &:nth-child(4) {
       top: 0;
       left: 285px;
+      animation: flameWindUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 400ms;
     }
     &:nth-child(5) {
       @include size(auto, 70px);
       top: 38px;
       left: 385px;
+      animation: flameWindDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 500ms;
     }
     &:nth-child(6) {
       top: -9px;
       left: 446px;
+      animation: flameWindUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 600ms;
     }
     &:nth-child(7) {
       top: 5px;
       left: 524px;
+      animation: flameWindDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 700ms;
     }
   }
 
@@ -103,6 +119,7 @@
     font-size: 0.0000000000001em;
     margin: 16px auto 32px;
     animation: fadeUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+    transition-delay: 900ms;
   }
 
   &__scroll {
@@ -111,6 +128,7 @@
     @include size(37px, 108px);
     background-image: url(../images/kv_scrolldown.png);
     animation: fadeUp2 2.2s forwards, float 1.3s infinite;
+    transition-delay: 1000ms;
   }
 
   &__btn {
@@ -119,6 +137,7 @@
     background-image: url(../images/btn_play.png);
     position: relative;
     background-position: 50% 0;
+    animation: flameWind 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
 
     &:hover {
       background-position: 50% 100%;
@@ -148,7 +167,7 @@
   }
 
   &__imgbox {
-    @include size(100%, 750px);
+    @include size(1080px, 750px);
     position: relative;
     * {
       position: absolute;
@@ -156,15 +175,19 @@
   }
 
   &__img01 {
-    width: 100%;
+    @include size((427px), 395px);
+    background: url(../images/s2_equip_01.png);
+    @include background-cover;
     top: pct(-100px);
-    left: calc(50% + #{-(650)}px);
+    left: calc(50% + #{-(580)}px);
   }
 
   &__img02 {
-    width: 100%;
-    bottom: pct(-60px);
-    right: calc(50% + #{-(510)}px);
+    @include size(476px, 456px);
+    background: url(../images/s2_equip_02.png);
+    @include background-contain;
+    bottom: pct(10px);
+    right: calc(50% + #{-(500)}px);
   }
 
   .container {
@@ -239,9 +262,6 @@
     max-width: inherit;
   }
 
-  .section__title {
-    margin-top: 50px;
-  }
 
   .section__btn {
     margin-top: 24px;

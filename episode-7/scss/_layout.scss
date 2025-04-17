@@ -293,7 +293,7 @@ body {
   .section {
     &__title {
       height: vwm(130px);
-      margin-top: vwm(-60px);
+      margin-top: vwm(40px);
     }
     &__btn {
       @include size(vwm(351px),vwm(91px));
