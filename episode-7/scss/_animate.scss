@@ -17,7 +17,7 @@
     opacity: 0;
   }
   50% {
-    transform: translateY(0) scale(1); 
+    transform: translateY(0) scale(1);
     filter: blur(0px);
     opacity: 1;
   }
@@ -77,7 +77,6 @@
     opacity: 1;
   }
 }
-
 
 @keyframes flameWindRightCenter {
   0% {
@@ -152,7 +151,7 @@
 
 @keyframes fadeUp2 {
   0% {
-    margin-top: 70px; 
+    margin-top: 70px;
     filter: blur(10px);
     opacity: 0;
   }
@@ -165,20 +164,19 @@
 
 @keyframes float {
   0% {
-    transform: translateY(-10px)
+    transform: translateY(-10px);
   }
 
   50% {
-    transform: translateY(0px)
+    transform: translateY(0px);
   }
 
   to {
-    transform: translateY(-10px)
+    transform: translateY(-10px);
   }
 }
 
 @keyframes floatDown {
-
   0% {
     opacity: 1;
     transform: translateZ(0);
@@ -186,7 +184,7 @@
 
   40%,
   50% {
-    opacity: .3;
+    opacity: 0.3;
     transform: translate3d(0, -2px, 0);
   }
 
@@ -197,23 +195,28 @@
 }
 
 @keyframes bouncing-bell {
-    0%,20%,53%,80%,to {
-      transform: translateZ(0);
-      transition-timing-function: cubic-bezier(.215,.61,.355,1)
+  0%,
+  20%,
+  53%,
+  80%,
+  to {
+    transform: translateZ(0);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
-  40%,43% {
-      transform: translate3d(0,-30px,0);
-      transition-timing-function: cubic-bezier(.755,.05,.855,.06)
+  40%,
+  43% {
+    transform: translate3d(0, -30px, 0);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
   }
 
   70% {
-      transform: translate3d(0,-15px,0);
-      transition-timing-function: cubic-bezier(.755,.05,.855,.06)
+    transform: translate3d(0, -15px, 0);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
   }
 
   90% {
-      transform: translate3d(0,-4px,0)
+    transform: translate3d(0, -4px, 0);
   }
 }
 
@@ -237,94 +240,95 @@
 
 // scrollAnimation
 
-.animate {
-  animation-duration: 1000ms;
-  animation-fill-mode: forwards;
+@media (min-width: ($mbrwd-breakpoint* 1px)) {
+  .animate {
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
 
-  &_fadeIn {
-    opacity: 0;
+    &_fadeIn {
+      opacity: 0;
+    }
+
+    &_fadeUp {
+      opacity: 0;
+      transform: translate(0, -50px);
+    }
+
+    &_fadeDown {
+      opacity: 0;
+      transform: translate(0, 50px);
+    }
+
+    &_fadeLeft {
+      opacity: 0;
+      transform: translate(-50px, 0);
+    }
+
+    &_fadeRight {
+      opacity: 0;
+      transform: translate(50px, 0);
+    }
+
+    &_maskLeft {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+
+    &_maskRight {
+      clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+
+    &_maskUp {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    &_maskDown {
+      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+
+    &_active {
+      opacity: unset;
+      transform: unset;
+      transition: all 1000ms;
+    }
+
+    &_delay100 {
+      transition-delay: 100ms;
+    }
+
+    &_delay200 {
+      transition-delay: 200ms;
+    }
+
+    &_delay300 {
+      transition-delay: 300ms;
+    }
+
+    &_delay400 {
+      transition-delay: 400ms;
+    }
+
+    &_delay500 {
+      transition-delay: 500ms;
+    }
+
+    &_delay600 {
+      transition-delay: 600ms;
+    }
+
+    &_delay700 {
+      transition-delay: 700ms;
+    }
+
+    &_delay800 {
+      transition-delay: 800ms;
+    }
+
+    &_delay900 {
+      transition-delay: 900ms;
+    }
+
+    &_delay1000 {
+      transition-delay: 1000ms;
+    }
   }
-
-  &_fadeUp {
-    opacity: 0;
-    transform: translate(0, -50px);
-  }
-
-  &_fadeDown {
-    opacity: 0;
-    transform: translate(0, 50px);
-  }
-
-  &_fadeLeft {
-    opacity: 0;
-    transform: translate(-50px, 0);
-  }
-
-  &_fadeRight {
-    opacity: 0;
-    transform: translate(50px, 0);
-  }
-
-  &_maskLeft {
-    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  }
-
-  &_maskRight {
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  }
-
-  &_maskUp {
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-
-  &_maskDown {
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-  }
-
-  &_active {
-    opacity: unset;
-    transform: unset;
-    transition: all 1000ms;
-  }
-
-  &_delay100 {
-    transition-delay: 100ms;
-  }
-
-  &_delay200 {
-    transition-delay: 200ms;
-  }
-
-  &_delay300 {
-    transition-delay: 300ms;
-  }
-
-  &_delay400 {
-    transition-delay: 400ms;
-  }
-
-  &_delay500 {
-    transition-delay: 500ms;
-  }
-
-  &_delay600 {
-    transition-delay: 600ms;
-  }
-
-  &_delay700 {
-    transition-delay: 700ms;
-  }
-
-  &_delay800 {
-    transition-delay: 800ms;
-  }
-
-  &_delay900 {
-    transition-delay: 900ms;
-  }
-
-  &_delay1000 {
-    transition-delay: 1000ms;
-  }
-
 }

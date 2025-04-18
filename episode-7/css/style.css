@@ -2068,95 +2068,96 @@ body {
             transform: translate(0, -40px) scale(1.2);
   }
 }
-.animate {
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+@media (min-width: 768px) {
+  .animate {
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .animate_fadeIn {
+    opacity: 0;
+  }
+  .animate_fadeUp {
+    opacity: 0;
+    -webkit-transform: translate(0, -50px);
+            transform: translate(0, -50px);
+  }
+  .animate_fadeDown {
+    opacity: 0;
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  .animate_fadeLeft {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 0);
+            transform: translate(-50px, 0);
+  }
+  .animate_fadeRight {
+    opacity: 0;
+    -webkit-transform: translate(50px, 0);
+            transform: translate(50px, 0);
+  }
+  .animate_maskLeft {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  .animate_maskRight {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  .animate_maskUp {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .animate_maskDown {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+  .animate_active {
+    opacity: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-transition: all 1000ms;
+    transition: all 1000ms;
+  }
+  .animate_delay100 {
+    -webkit-transition-delay: 100ms;
+            transition-delay: 100ms;
+  }
+  .animate_delay200 {
+    -webkit-transition-delay: 200ms;
+            transition-delay: 200ms;
+  }
+  .animate_delay300 {
+    -webkit-transition-delay: 300ms;
+            transition-delay: 300ms;
+  }
+  .animate_delay400 {
+    -webkit-transition-delay: 400ms;
+            transition-delay: 400ms;
+  }
+  .animate_delay500 {
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
+  }
+  .animate_delay600 {
+    -webkit-transition-delay: 600ms;
+            transition-delay: 600ms;
+  }
+  .animate_delay700 {
+    -webkit-transition-delay: 700ms;
+            transition-delay: 700ms;
+  }
+  .animate_delay800 {
+    -webkit-transition-delay: 800ms;
+            transition-delay: 800ms;
+  }
+  .animate_delay900 {
+    -webkit-transition-delay: 900ms;
+            transition-delay: 900ms;
+  }
+  .animate_delay1000 {
+    -webkit-transition-delay: 1000ms;
+            transition-delay: 1000ms;
+  }
 }
-.animate_fadeIn {
-  opacity: 0;
-}
-.animate_fadeUp {
-  opacity: 0;
-  -webkit-transform: translate(0, -50px);
-          transform: translate(0, -50px);
-}
-.animate_fadeDown {
-  opacity: 0;
-  -webkit-transform: translate(0, 50px);
-          transform: translate(0, 50px);
-}
-.animate_fadeLeft {
-  opacity: 0;
-  -webkit-transform: translate(-50px, 0);
-          transform: translate(-50px, 0);
-}
-.animate_fadeRight {
-  opacity: 0;
-  -webkit-transform: translate(50px, 0);
-          transform: translate(50px, 0);
-}
-.animate_maskLeft {
-  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-.animate_maskRight {
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-}
-.animate_maskUp {
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-.animate_maskDown {
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-}
-.animate_active {
-  opacity: unset;
-  -webkit-transform: unset;
-          transform: unset;
-  -webkit-transition: all 1000ms;
-  transition: all 1000ms;
-}
-.animate_delay100 {
-  -webkit-transition-delay: 100ms;
-          transition-delay: 100ms;
-}
-.animate_delay200 {
-  -webkit-transition-delay: 200ms;
-          transition-delay: 200ms;
-}
-.animate_delay300 {
-  -webkit-transition-delay: 300ms;
-          transition-delay: 300ms;
-}
-.animate_delay400 {
-  -webkit-transition-delay: 400ms;
-          transition-delay: 400ms;
-}
-.animate_delay500 {
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms;
-}
-.animate_delay600 {
-  -webkit-transition-delay: 600ms;
-          transition-delay: 600ms;
-}
-.animate_delay700 {
-  -webkit-transition-delay: 700ms;
-          transition-delay: 700ms;
-}
-.animate_delay800 {
-  -webkit-transition-delay: 800ms;
-          transition-delay: 800ms;
-}
-.animate_delay900 {
-  -webkit-transition-delay: 900ms;
-          transition-delay: 900ms;
-}
-.animate_delay1000 {
-  -webkit-transition-delay: 1000ms;
-          transition-delay: 1000ms;
-}
-
 @media screen and (max-height: 1000px) and (min-width: 769px) {
   .section__title {
     margin-top: 120;
