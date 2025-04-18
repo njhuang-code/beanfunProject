@@ -197,4 +197,12 @@
       }
     }
   }
+  .device__row {
+    .menu-slide__link {
+      &::before,
+      &::after {
+        display: block;
+      }
+    }
+  }
 }

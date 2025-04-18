@@ -47,15 +47,23 @@ html(lang="zh-Hant")
       link(rel="stylesheet", href="./css/style.css")
       script(src="https://tw.beanfun.com/js/GA_CodeNew.js" type="text/javascript")
   body
-    //- block loading
-    //-   #loading 
-    //-     .loading
-    //-       .loading__content
-    //-         .loading__logo
-    //-           img(src="./images/icon/icon_logo.png", alt="")
-    //-         .loading__bar
-    //-           .loading__progress
-    //-         .loading__text.text-sm loading
+    block loading
+      #loading 
+        .loading
+          .loading__content
+            .loading__logo
+              img(src="./images/icon/icon_logo.png", alt="")
+            .loading__bar
+              .loading__progress
+            .loading__text.text-sm loading
+    block lightbox
+      #fade.lightbox__black-overlay
+      .lightbox
+        .lightbox__container
+          .lightbox__inner
+            button.lightbox__closed
+            .lightbox__video-box
+              iframe.lightbox__video(src="https://www.youtube.com/embed/MndyC9lBAkc?mute=1&amp;autoplay=0&amp;loop=1&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
     block header
       header.header
         .header__container.row

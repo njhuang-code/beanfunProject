@@ -79,6 +79,37 @@ window.addEventListener("load", function () {
     });
   }
 
+  // 播放影音彈窗
+  $('.kv-section__btn').click(function(e) {
+    e.preventDefault();
+    
+    $('.lightbox__black-overlay').fadeIn(300, function() {
+      $(this).addClass('toggle__trigger');
+    });
+    
+    $('.lightbox').fadeIn(300, function() {
+      $(this).addClass('toggle__trigger');
+    });
+
+    var $iframe = $('.lightbox__video');
+    var src = $iframe.attr('src');
+
+    $iframe.attr('src', src.replace('autoplay=0', 'autoplay=1'));
+  });
+
+
+  $('.lightbox__closed, .lightbox__black-overlay').click(function(e) {
+    e.preventDefault();
+    
+    $('.lightbox').removeClass('toggle__trigger').fadeOut(300);
+    $('.lightbox__black-overlay').removeClass('toggle__trigger').fadeOut(300);
+
+    var $iframe = $('.lightbox__video');
+    var src = $iframe.attr('src');
+
+    $iframe.attr('src', src.replace('autoplay=1', 'autoplay=0'));
+  });
+
   function handleFooter() {
     $(".UNI-footer-clone").remove();
     const thirdSlide = document.querySelectorAll(".swiper-slide")[3];
@@ -142,20 +173,20 @@ window.addEventListener("load", function () {
 
 
 
-// // laoding 畫面
-// document.addEventListener("DOMContentLoaded", function() {
-//   var progressBar = document.querySelector('.loading__progress');
+// laoding 畫面
+document.addEventListener("DOMContentLoaded", function() {
+  var progressBar = document.querySelector('.loading__progress');
 
-//   // 設定進度條寬度
-//   setTimeout(function() {
-//     progressBar.style.width = '100%';
-//   }, 100);
+  // 設定進度條寬度
+  setTimeout(function() {
+    progressBar.style.width = '100%';
+  }, 100);
 
-//   // 載入完成隱藏畫面
-//   setTimeout(function() {
-//     document.getElementById('loading').style.display = 'none';
-//   }, 600);
-// });
+  // 載入完成隱藏畫面
+  setTimeout(function() {
+    document.getElementById('loading').style.display = 'none';
+  }, 600);
+});
 
 
 $('.menu-slide__button, .menu-slide__closed').click(function() {
