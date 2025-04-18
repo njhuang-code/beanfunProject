@@ -717,7 +717,10 @@ button {
   .menu-slide__link::before, .menu-slide__link::after {
     display: none;
   }
-  .device__row .menu-slide__link::before, .device__row .menu-slide__link::after {
+  .device__row .menu-slide__item:last-child {
+    display: none;
+  }
+  .device__row .menu-slide__link::before {
     display: block;
   }
 }

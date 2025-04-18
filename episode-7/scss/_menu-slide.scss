@@ -198,9 +198,13 @@
     }
   }
   .device__row {
+    .menu-slide__item {
+      &:last-child {
+        display: none;
+      }
+    }
     .menu-slide__link {
-      &::before,
-      &::after {
+      &::before {
         display: block;
       }
     }
