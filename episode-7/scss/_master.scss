@@ -186,7 +186,7 @@
     @include size(476px, 456px);
     background: url(../images/s2_equip_02.png);
     @include background-contain;
-    bottom: pct(10px);
+    bottom: pct(70px);
     right: calc(50% + #{-(500)}px);
   }
 
