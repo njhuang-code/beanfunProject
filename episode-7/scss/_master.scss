@@ -144,9 +144,6 @@
     }
   }
 
-  .section__container {
-    margin-top: 90px;
-  }
 }
 
 // s2 section
@@ -267,6 +264,10 @@
     margin-top: 24px;
   }
 
+  .section__title {
+    margin-top: auto;
+  }
+
   .vodbox {
     @include size (296px, 171px);
     position: absolute;
@@ -321,6 +322,6 @@
   }
 
   .section__title {
-    margin-top: auto;
+    margin-top: pct(-100px);
   }
 }

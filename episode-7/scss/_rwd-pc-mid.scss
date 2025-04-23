@@ -1,24 +1,22 @@
 @media screen and (max-height: 1000px) and (min-width: 769px) {
 
   .section__title {
-    margin-top: 120;
+    margin-top: 120px;
   }
   .s2-section {
-    &__bg {
-      top: pct(50px);
-    }
 
     &__img01 {
-      top: pct(-130px);
-      left: calc(50% + #{-(580)}px);
+      top: pct(-120px);
+      left: calc(50% + #{-(500)}px);
     }
 
     &__img02 {
-      bottom: pct(50px);
+      right: calc(50% + #{-(450)}px);
+      bottom: pct(100px);
     }
 
     .section__title {
-      margin-top: 180px;
+      margin-top: pct(150px);
     }
   }
 
@@ -29,7 +27,7 @@
     }
 
     .section__btn {
-      margin-top: 0;
+      margin-top: -30px;
     }
   }
 
@@ -39,13 +37,8 @@
       margin-top: 0;
       transform: scale(.85);
     }
-    .section {
-      &__title {
-        margin-top: 100px;
-      }
-      &__btn {
-        margin-top: -30px;
-      }
+    .section__btn {
+      margin-top: -30px;
     }
   }
 

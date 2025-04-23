@@ -186,6 +186,7 @@ body {
   &__btn {
     @include background-contain;
     @include size(281px,73px);
+    cursor: not-allowed;
   }
 
 }
@@ -199,9 +200,9 @@ body {
 // swiper 套件
 
 .section-slide {
+  height: 100vh;
   min-height: 100vh;
-  height: 1080px;
-
+  max-height: 100vh;
 }
 
 @media screen and (max-width: ($pc-midrwd-breakpoint* 1px)) {
