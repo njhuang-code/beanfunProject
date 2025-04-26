@@ -1140,8 +1140,8 @@ body {
     margin-top: 5.2083333333vw;
   }
   .section__btn {
-    width: 45.703125vw;
-    height: 11.8489583333vw;
+    width: 36.5885416667vw;
+    height: 9.5052083333vw;
   }
   .section-slide .swiper-slide.section-slide__second, .section-slide .swiper-slide.section-slide__third {
     height: 130.2083333333vw;
@@ -1338,8 +1338,10 @@ body {
   -webkit-animation: flameWind 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
           animation: flameWind 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
 }
-.kv-section__btn:hover {
-  background-position: 50% 100%;
+@media (any-hover: hover) {
+  .kv-section__btn:hover {
+    background-position: 50% 100%;
+  }
 }
 
 .s2-section__bg {
@@ -1480,8 +1482,13 @@ body {
   background-repeat: no-repeat;
   margin: auto;
 }
-.s3-section__btn:hover, .s4-section__btn:hover {
-  background: url(../images/s3_btn_active.png);
+@media (any-hover: hover) {
+  .s3-section__btn:hover, .s4-section__btn:hover {
+    background: url(../images/s3_btn_active.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
 }
 .s3-section .container {
   max-width: inherit;
@@ -1547,8 +1554,13 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-.s4-section__btn:hover {
-  background: url(../images/s4_btn_active.png);
+@media (any-hover: hover) {
+  .s4-section__btn:hover {
+    background: url(../images/s4_btn_active.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
 }
 .s4-section .section__title {
   margin-top: -8.3333333333%;

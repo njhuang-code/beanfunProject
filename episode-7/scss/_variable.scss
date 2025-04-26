@@ -112,3 +112,9 @@ $mbrwd-breakpoint: 768;
   width: $w;
   height: $h;
 }
+
+@mixin hover-only {
+  @media (any-hover: hover) {
+    @content;
+  }
+}

@@ -138,9 +138,11 @@
     position: relative;
     background-position: 50% 0;
     animation: flameWind 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
-
-    &:hover {
-      background-position: 50% 100%;
+    
+    @include hover-only {
+      &:hover {
+        background-position: 50% 100%;
+      }
     }
   }
 
@@ -250,8 +252,12 @@
     background: url(../images/s3_btn_default.png);
     @include background-cover;
     margin: auto;
-    &:hover {
-      background: url(../images/s3_btn_active.png);
+
+    @include hover-only {
+      &:hover {
+        background: url(../images/s3_btn_active.png);
+        @include background-cover;
+      }
     }
   }
 
@@ -316,8 +322,12 @@
     @extend .s3-section__btn;
     background: url(../images/s4_btn_default.png);
     @include background-cover;
-    &:hover {
-      background: url(../images/s4_btn_active.png);
+
+    @include hover-only {
+      &:hover {
+        background: url(../images/s4_btn_active.png);
+        @include background-cover;
+      }
     }
   }
 
