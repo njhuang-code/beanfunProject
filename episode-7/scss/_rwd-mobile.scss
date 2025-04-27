@@ -88,11 +88,11 @@
   }
 }
 
-// s2 section
+// s4 section
 // --------------------------------------------------
-.s2-section {
+.s4-section {
   &__bg {
-    background: url(../images/s2_bg_mb.jpg);
+    background: url(../images/s4_bg_mb.jpg);
     @include background-cover;
   }
 
@@ -111,12 +111,12 @@
 }
 
 
-// s3 section
+// s5 section
 // --------------------------------------------------
-.s3-section {
+.s5-section {
 
   &__row {
-    background: url(../images/s3_card_mb.png);
+    background: url(../images/s5_card_mb.png);
     @include background-cover;
     @include size(vwm(884px), vwm(601px));
     margin-top: vwm(12px);
@@ -160,15 +160,15 @@
 
 }
 
-// s4 section
+// s6 section
 // --------------------------------------------------
-.s4-section {
+.s6-section {
   &__bg {
-    background: url(../images/s4_bg_mb.jpg);
+    background: url(../images/s6_bg_mb.jpg);
     @include background-cover;
   }
   &__row {
-    background: url(../images/s4_card_mb.png);
+    background: url(../images/s6_card_mb.png);
     @include background-cover;
     @include size(vwm(740px), vwm(588px));
     margin-top: vwm(48px);

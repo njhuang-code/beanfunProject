@@ -3,7 +3,7 @@
   .section__title {
     margin-top: 120px;
   }
-  .s2-section {
+  .s4-section {
 
     &__img01 {
       top: pct(-120px);
@@ -20,7 +20,7 @@
     }
   }
 
-  .s3-section {
+  .s5-section {
     &__row {
       margin-top: -70px;
       transform: scale(.85);
@@ -31,7 +31,7 @@
     }
   }
 
-  .s4-section {
+  .s6-section {
     &__row {
       height: 576px;
       margin-top: 0;
@@ -133,9 +133,9 @@
   }
 }
 
-// s2 section
+// s4 section
 // --------------------------------------------------
-.s2-section {
+.s4-section {
   &__bg {
     top: 0
   }
@@ -158,9 +158,9 @@
 
 }
 
-// s3 section
+// s5 section
 // --------------------------------------------------
-.s3-section {
+.s5-section {
   &__row {
     @include size(vw(1265px), vw(672px));
     margin-top: vw(-48px);
@@ -191,9 +191,9 @@
 
 }
 
-// s4 section
+// s6 section
 // --------------------------------------------------
-.s4-section {
+.s6-section {
   &__row {
     @include size(vw(1070px), vw(672px));
     margin-top: vw(-76px);

@@ -148,13 +148,13 @@
 
 }
 
-// s2 section
+// s4 section
 // --------------------------------------------------
-.s2-section {
+.s4-section {
   &__bg {
     @include flex-center;
     @include size(100%, 100%);
-    background: url(../images/s2_bg.jpg);
+    background: url(../images/s4_bg.jpg);
     @include background-cover;
     position: absolute;
     top: 0;
@@ -175,7 +175,7 @@
 
   &__img01 {
     @include size((427px), 395px);
-    background: url(../images/s2_equip_01.png);
+    background: url(../images/s4_equip_01.png);
     @include background-cover;
     top: pct(-100px);
     left: calc(50% + #{-(580)}px);
@@ -183,7 +183,7 @@
 
   &__img02 {
     @include size(476px, 456px);
-    background: url(../images/s2_equip_02.png);
+    background: url(../images/s4_equip_02.png);
     @include background-contain;
     bottom: pct(70px);
     right: calc(50% + #{-(500)}px);
@@ -196,11 +196,11 @@
 
 }
 
-// s3 section
+// s5 section
 // --------------------------------------------------
-.s3-section {
+.s5-section {
   &__bg {
-    background: url(../images/s3_bg.jpg);
+    background: url(../images/s5_bg.jpg);
     @include background-cover;
   }
   &__row {
@@ -216,7 +216,7 @@
     flex-shrink: 0;
     position: absolute;
     &:nth-child(1) {
-      background: url(../images/s3_card_01.png);
+      background: url(../images/s5_card_01.png);
       @include background-cover;
       left: 0;
       .vodbox {
@@ -225,7 +225,7 @@
     }
     &:nth-child(2) {
       @include size(381px, 608px);
-      background: url(../images/s3_card_02.png);
+      background: url(../images/s5_card_02.png);
       @include background-cover;
       .vodbox {
         left: calc((100% - 305px)/2);
@@ -233,7 +233,7 @@
       }
     }
     &:nth-child(3) {
-      background: url(../images/s3_card_03.png);
+      background: url(../images/s5_card_03.png);
       @include background-cover;
       right: 0;
       .vodbox {
@@ -249,13 +249,13 @@
 
   &__btn {
     @include flex-center;
-    background: url(../images/s3_btn_default.png);
+    background: url(../images/s5_btn_default.png);
     @include background-cover;
     margin: auto;
 
     @include hover-only {
       &:hover {
-        background: url(../images/s3_btn_active.png);
+        background: url(../images/s5_btn_active.png);
         @include background-cover;
       }
     }
@@ -282,11 +282,11 @@
 
 }
 
-// s4 section
+// s6 section
 // --------------------------------------------------
-.s4-section {
+.s6-section {
     &__bg {
-    background: url(../images/s4_bg.jpg);
+    background: url(../images/s6_bg.jpg);
     @include background-cover;
     background-position: initial;
     &::after {
@@ -294,7 +294,7 @@
     }
   }
   &__row {
-    @extend .s3-section__row;
+    @extend .s5-section__row;
     @include size(1070px, 672px);
     margin-top: -76px;
   }
@@ -304,28 +304,28 @@
     flex-shrink: 0;
     position: absolute;
     &:nth-child(1) {
-      background: url(../images/s4_card_01.png);
+      background: url(../images/s6_card_01.png);
       @include background-cover;
       left: 0;
     }
     &:nth-child(2) {
-      background: url(../images/s4_card_02.png);
+      background: url(../images/s6_card_02.png);
       @include background-cover;
     }
     &:nth-child(3) {
-      background: url(../images/s4_card_03.png);
+      background: url(../images/s6_card_03.png);
       @include background-cover;
       right: 0;
     }
   }
   &__btn {
-    @extend .s3-section__btn;
-    background: url(../images/s4_btn_default.png);
+    @extend .s5-section__btn;
+    background: url(../images/s6_btn_default.png);
     @include background-cover;
 
     @include hover-only {
       &:hover {
-        background: url(../images/s4_btn_active.png);
+        background: url(../images/s6_btn_active.png);
         @include background-cover;
       }
     }
