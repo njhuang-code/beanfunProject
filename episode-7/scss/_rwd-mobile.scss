@@ -88,6 +88,38 @@
   }
 }
 
+// s2 section
+// --------------------------------------------------
+.s2-section {
+  &__sub-title {
+    margin-top: vwm(-32px);
+    text-shadow: vwm(2px) 0 vwm(4px) rgba(0, 0, 0, .5);
+    font-size: vwm(32px);
+  }
+  &__iframe-container {
+    margin: vwm(24px) auto;
+  }
+  &__link {
+    &::after {
+      @include size(vwm(545px), vwm(229px));
+    }
+  }
+  &__link-text {
+    top: calc((100% - vwm(102px)) / 2);
+    font-size: vwm(28px);
+  }
+
+  .section__container {
+    width: 90%;
+  }
+
+  .section__title {
+    @include flex-center;
+    height: vwm(180px);
+  }
+
+}
+
 // s4 section
 // --------------------------------------------------
 .s4-section {

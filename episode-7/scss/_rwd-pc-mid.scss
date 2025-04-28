@@ -133,6 +133,28 @@
   }
 }
 
+// s2 section
+// --------------------------------------------------
+.s2-section {
+  &__sub-title {
+    text-shadow: vw(2px) 0 vw(4px) rgba(0, 0, 0, .5);
+    font-size: vw(20px);
+  }
+  &__iframe-container {
+    margin: vw(24px) auto;
+  }
+  &__link {
+    &::after {
+      @include size(vw(545px), vw(229px));
+    }
+  }
+  &__link-text {
+    top: calc((100% - vw(102px)) / 2);
+    font-size: vw(20px);
+  }
+
+}
+
 // s4 section
 // --------------------------------------------------
 .s4-section {

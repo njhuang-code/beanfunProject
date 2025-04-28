@@ -6,35 +6,50 @@ block content
   main.content
     .swiper.section-slide
       .swiper-wrapper.section-slide__wrapper
-        section#sectionMain.swiper-slide
-          .section.kv-section
-            .section__bg.kv-section__bg
+        //- section#sectionMain.swiper-slide
+        //-   .section.kv-section
+        //-     .section__bg.kv-section__bg
+        //-       video.section__video.d-none-sm(autoplay loop muted playsinline)
+        //-         source(src='./images/video/kv_video_pc.mp4')
+        //-       video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
+        //-         source(src='./images/video/kv_video_mb.mp4')
+        //-     .section__container
+        //-       .section__wrapper.column
+        //-         img.kv-section__sub-title(src="./images/kv_title_sub.png", alt="")
+        //-         .kv-section__smoke
+        //-         .kv-section__visual
+        //-           img.kv-section__title(src="./images/kv_title_01.png", alt="")
+        //-           img.kv-section__title(src="./images/kv_title_02.png", alt="")
+        //-           img.kv-section__title(src="./images/kv_title_03.png", alt="")
+        //-           img.kv-section__title(src="./images/kv_title_04.png", alt="")
+        //-           img.kv-section__title(src="./images/kv_title_05.png", alt="")
+        //-           img.kv-section__title(src="./images/kv_title_06.png", alt="")
+        //-           img.kv-section__title(src="./images/kv_title_07.png", alt="")
+        //-         svg(width="0" height="0")
+        //-           defs
+        //-             filter#smokeFlow(x="0" y="0" width="100%" height="100%")
+        //-               feTurbulence(type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="turbulence")
+        //-                 animate(attributeName="baseFrequency" dur="20s" values="0.01; 0.02; 0.01" repeatCount="indefinite")
+        //-               feDisplacementMap(in="SourceGraphic" in2="turbulence" scale="30")
+        //-         .kv-section__date 2025.06.11(三) UPDATE
+        //-         button.kv-section__btn
+        //-         a(href="#sectionSec").kv-section__scroll
+        section#sectionSec.swiper-slide
+          .section.s2-section
+            .section__bg.s2-section__bg
               video.section__video.d-none-sm(autoplay loop muted playsinline)
-                source(src='./images/video/kv_video_pc.mp4')
+                source(src='./images/video/s2_video_pc.mp4')
               video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
-                source(src='./images/video/kv_video_mb.mp4')
+                source(src='./images/video/s2_video_mb.mp4')
             .section__container
               .section__wrapper.column
-                img.kv-section__sub-title(src="./images/kv_title_sub.png", alt="")
-                .kv-section__smoke
-                .kv-section__visual
-                  img.kv-section__title(src="./images/kv_title_01.png", alt="")
-                  img.kv-section__title(src="./images/kv_title_02.png", alt="")
-                  img.kv-section__title(src="./images/kv_title_03.png", alt="")
-                  img.kv-section__title(src="./images/kv_title_04.png", alt="")
-                  img.kv-section__title(src="./images/kv_title_05.png", alt="")
-                  img.kv-section__title(src="./images/kv_title_06.png", alt="")
-                  img.kv-section__title(src="./images/kv_title_07.png", alt="")
-                svg(width="0" height="0")
-                  defs
-                    filter#smokeFlow(x="0" y="0" width="100%" height="100%")
-                      feTurbulence(type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="turbulence")
-                        animate(attributeName="baseFrequency" dur="20s" values="0.01; 0.02; 0.01" repeatCount="indefinite")
-                      feDisplacementMap(in="SourceGraphic" in2="turbulence" scale="30")
-                .kv-section__date 2025.06.04(三) UPDATE
-                button.kv-section__btn
-                a(href="#sectionSec").kv-section__scroll
-        section#sectionSec.swiper-slide.section-slide__second
+                img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s2_main_title.png", alt="")
+                p.s2-section__sub-title 改版發表
+                .s2-section__iframe-container
+                  iframe.s2-section__iframe(src="https://www.youtube.com/embed/Nkf6ebc95Y0?mute=1&amp;autoplay=0&amp;loop=1&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                a.s2-section__link(href="")
+                  span.s2-section__link-text 直播內容
+        section#sectionFourth.swiper-slide.section-slide__second
           .section.s4-section
             .section__bg.s4-section__bg
               .section__container
@@ -45,7 +60,7 @@ block content
                     .s4-section__img02.animate.animate_fadeDown.animate_delay300
                   .s4-section__visual.d-none-lg.d-block-sm
                     img.s4-section__img(src="./images/s4_visual_mb.png", alt="")
-        section#sectionThird.swiper-slide.section-slide__third
+        section#sectionFifth.swiper-slide.section-slide__third
           .section.s5-section
             .section__bg.s5-section__bg
             .section__container
@@ -67,7 +82,7 @@ block content
                           video.s5-section__video(autoplay loop muted playsinline)
                             source(src='./images/video/s5_vod_03.mp4')
                     a.section__btn.s5-section__btn.animate.animate_fadeIn.animate_delay400(href="javascript:void(0);")
-        section#sectionFourth.swiper-slide.section-slide__fourth
+        section#sectionSixth.swiper-slide.section-slide__fourth
           .section.s6-section
             .section__bg.s6-section__bg
               .section__container
