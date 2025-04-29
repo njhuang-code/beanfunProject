@@ -1387,14 +1387,14 @@ body {
   left: calc(50% + -580px);
 }
 .s2-section__img02 {
-  width: 476px;
-  height: 456px;
+  width: 400px;
+  height: 350px;
   background: url(../images/s2_equip_02.png);
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  bottom: 5.8333333333%;
-  right: calc(50% + -500px);
+  bottom: 16.6666666667%;
+  right: calc(50% + -480px);
 }
 .s2-section .container {
   position: relative;
@@ -2185,7 +2185,7 @@ body {
   }
   .s2-section__img02 {
     right: calc(50% + -450px);
-    bottom: 8.3333333333%;
+    bottom: 16.6666666667%;
   }
   .s2-section .section__title {
     margin-top: 12.5%;
@@ -2310,8 +2310,8 @@ body {
     left: 4.1666666667vw;
   }
   .s2-section__img02 {
-    width: 39.6666666667vw;
-    height: 38vw;
+    width: 33.3333333333vw;
+    height: 29.1666666667vw;
     bottom: 12.5vw;
     right: 7.5vw;
   }
