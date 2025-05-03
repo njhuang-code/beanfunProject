@@ -180,6 +180,12 @@
     top: 0;
     left: 0;
   }
+  &__msg {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    @include size(100%);
+  }
   &__link {
     position: relative;
     display: inline-block;
@@ -201,14 +207,14 @@
     left: 0;
     color: #ffe345;
     font-size: 20px;
-    &::after {
-      content: "";
-      @include size(16px, 24px);
-      background: url(../images/s2_arrow.png);
-      @include background-cover;
-      position: absolute;
-      right: 0;
-    }
+  }
+
+  &__arrow {
+    @include size(16px, 24px);
+    background: url(../images/s2_arrow.png);
+    @include background-cover;
+    margin-left: 8px;
+    margin-bottom: -4px;
   }
 
   .section__title {

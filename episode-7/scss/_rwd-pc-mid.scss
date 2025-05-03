@@ -153,6 +153,13 @@
     font-size: vw(20px);
   }
 
+    &__arrow {
+    @include size(vw(16px), vw(24px));
+    margin-left: vw(8px);
+    margin-bottom: vw(-4px);
+  }
+
+
 }
 
 // s4 section

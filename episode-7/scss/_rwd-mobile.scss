@@ -109,6 +109,13 @@
     font-size: vwm(28px);
   }
 
+    &__arrow {
+    @include size(vwm(16px), vwm(24px));
+    margin-left: vwm(8px);
+    margin-bottom: vwm(-4px);
+  }
+
+
   .section__container {
     width: 90%;
   }
