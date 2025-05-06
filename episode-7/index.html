@@ -87,12 +87,43 @@
           <li class="menu-nav__item nav__sub"><a class="menu-nav__name text-sm" href="#sectionFourth">武器/特化裝備</a></li>
           <li class="menu-nav__item nav__sub"><a class="menu-nav__name text-sm" href="#sectionFifth">姿態</a></li>
           <li class="menu-nav__item"><a class="menu-nav__name text-md" href="#sectionSixth">新世界：賽爾齊歐</a></li>
+          <li class="menu-nav__item"><a class="menu-nav__name text-md" href="#sectionSeventh">職業變更</a></li>
         </ul>
       </nav>
     </div>
     <main class="content">
       <div class="swiper section-slide">
         <div class="swiper-wrapper section-slide__wrapper">
+          <section class="swiper-slide" id="sectionMain">
+            <div class="section kv-section">
+              <div class="section__bg kv-section__bg">
+                <video class="section__video d-none-sm" autoplay loop muted playsinline>
+                  <source src="./images/video/kv_video_pc.mp4">
+                </video>
+                <video class="section__video d-none-lg d-block-sm" autoplay loop muted playsinline>
+                  <source src="./images/video/kv_video_mb.mp4">
+                </video>
+              </div>
+              <div class="section__container">
+                <div class="section__wrapper column"><img class="kv-section__sub-title" src="./images/kv_title_sub.png" alt="">
+                  <div class="kv-section__smoke"></div>
+                  <div class="kv-section__visual"><img class="kv-section__title" src="./images/kv_title_01.png" alt=""><img class="kv-section__title" src="./images/kv_title_02.png" alt=""><img class="kv-section__title" src="./images/kv_title_03.png" alt=""><img class="kv-section__title" src="./images/kv_title_04.png" alt=""><img class="kv-section__title" src="./images/kv_title_05.png" alt=""><img class="kv-section__title" src="./images/kv_title_06.png" alt=""><img class="kv-section__title" src="./images/kv_title_07.png" alt=""></div>
+                  <svg width="0" height="0">
+                    <defs>
+                      <filter id="smokeFlow" x="0" y="0" width="100%" height="100%">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="turbulence">
+                          <animate attributeName="baseFrequency" dur="20s" values="0.01; 0.02; 0.01" repeatCount="indefinite"></animate>
+                        </feTurbulence>
+                        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30"></feDisplacementMap>
+                      </filter>
+                    </defs>
+                  </svg>
+                  <div class="kv-section__date">2025.06.11(三) UPDATE</div>
+                  <button class="kv-section__btn"></button><a class="kv-section__scroll" href="#sectionSec"></a>
+                </div>
+              </div>
+            </div>
+          </section>
           <section class="swiper-slide" id="sectionSec">
             <div class="section s2-section">
               <div class="section__bg s2-section__bg">
@@ -114,7 +145,7 @@
               </div>
             </div>
           </section>
-          <section class="swiper-slide section-slide__second" id="sectionFourth">
+          <section class="swiper-slide section-slide-fourth" id="sectionFourth">
             <div class="section s4-section">
               <div class="section__bg s4-section__bg">
                 <div class="section__container">
@@ -129,7 +160,7 @@
               </div>
             </div>
           </section>
-          <section class="swiper-slide section-slide__third" id="sectionFifth">
+          <section class="swiper-slide section-slide-fifth" id="sectionFifth">
             <div class="section s5-section">
               <div class="section__bg s5-section__bg"></div>
               <div class="section__container">
@@ -165,7 +196,7 @@
               </div>
             </div>
           </section>
-          <section class="swiper-slide section-slide__fourth" id="sectionSixth">
+          <section class="swiper-slide section-slide-sixth" id="sectionSixth">
             <div class="section s6-section">
               <div class="section__bg s6-section__bg">
                 <div class="section__container">
@@ -177,6 +208,22 @@
                           <li class="s6-section__item animate animate_fadeIn animate_delay400"></li>
                           <li class="s6-section__item animate animate_fadeRight animate_delay300"></li>
                         </ul><a class="section__btn s6-section__btn animate animate_fadeIn animate_delay400" href="javascript:void(0);"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="swiper-slide section-slide-seventh" id="sectionSeventh">
+            <div class="section s7-section">
+              <div class="section__bg s7-section__bg">
+                <div class="section__container">
+                  <div class="section__wrapper column s7-section__wrapper">
+                    <div class="container">
+                      <div class="section__wrapper column"><img class="section__title animate animate_fadeUp animate_delay100" src="./images/s7_main_title.png" alt="">
+                        <p class="s7-section__msg"> <span class="s7-section__msg-sub">透過職業變更</span>體驗解放的深淵之力。<br>如果想回到原本的職業，您可以使用<span class="s7-section__msg-sub">職業變更</span>返回功能。</p>
+                        <div class="s7-section__card"></div>
                       </div>
                     </div>
                   </div>

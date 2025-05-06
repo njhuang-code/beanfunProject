@@ -234,11 +234,11 @@ body {
     }
   }
 
-  // swiper slide third style -- set height to 100vw
+  // swiper slide fifth style -- set height to 100vw
   // --------------------------------------------------
   .section-slide {
     .swiper-slide {
-      &.section-slide__third,&.section-slide__fourth {
+      &.section-slide-fifth,&.section-slide__sixth {
         height: 90vw;
       }
     }
@@ -293,7 +293,7 @@ body {
 
   .section {
     &__title {
-      height: vwm(130px);
+      height: vwm(180px);
       margin-top: vwm(40px);
     }
     &__btn {
@@ -303,11 +303,12 @@ body {
 
   .section-slide {
     .swiper-slide {
-      &.section-slide__second,
-      &.section-slide__third {
+      &.section-slide-fourth,
+      &.section-slide-fifth,
+      &.section-slide-seventh {
         height: vwm(1000px);
       }
-      &.section-slide__fourth {
+      &.section-slide-sixth {
         height: vwm(1200px);
       }
     }

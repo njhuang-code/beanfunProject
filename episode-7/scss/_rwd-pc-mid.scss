@@ -238,4 +238,25 @@
   }
 }
 
+// s7 section
+// --------------------------------------------------
+.s7-section {
+  &__msg {
+    margin-top: vw(24px);
+    font-size: vw(18px);
+  }
+
+  &__card {
+    background: url(../images/s7_card.png);
+    @include background-cover;
+    @include size(vw(803px), vw(579px));
+    margin-left: vw(200px);
+  }
+
+  .section__title {
+    margin-top: vw(130px);
+  }
+
+}
+
 }

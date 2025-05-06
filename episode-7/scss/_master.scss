@@ -409,3 +409,33 @@
     margin-top: pct(-100px);
   }
 }
+
+// s7 section
+// --------------------------------------------------
+.s7-section {
+  &__bg {
+    @extend .s4-section__bg;
+    background: url(../images/s7_bg.jpg);
+    @include background-cover;
+    &::after {
+      content: none;
+    }
+  }
+  &__msg {
+    margin-top: 24px;
+    color: #e7b592;
+    font-size: 18px;
+    text-align: center;
+    &-sub {
+      color: #ffce82;
+    }
+  }
+
+  &__card {
+    @include size(803px, 579px);
+    background: url(../images/s7_card.png);
+    @include background-cover;
+    margin-left: 200px;
+  }
+
+}
