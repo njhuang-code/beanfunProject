@@ -8,7 +8,7 @@ block content
       .swiper-wrapper.section-slide__wrapper
         section#sectionMain.swiper-slide
           .section.kv-section
-            .section__bg.kv-section__bg
+            .kv-section__bg
               video.section__video.d-none-sm(autoplay loop muted playsinline)
                 source(src='./images/video/kv_video_pc.mp4')
               video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
@@ -36,7 +36,7 @@ block content
                 a(href="#sectionSec").kv-section__scroll
         section#sectionSec.swiper-slide
           .section.s2-section
-            .section__bg.s2-section__bg
+            .s2-section__bg
               video.section__video.d-none-sm(autoplay loop muted playsinline)
                 source(src='./images/video/s2_video_pc.mp4')
               video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
@@ -105,12 +105,42 @@ block content
                   .container
                     .section__wrapper.column
                       img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s7_main_title.png", alt="")
-                      p.s7-section__msg 
-                        span.s7-section__msg-sub 透過職業變更
+                      p.section__msg 
+                        span.section__msg-sub 透過職業變更
                         |體驗解放的深淵之力。
                         br 
                         |如果想回到原本的職業，您可以使用
-                        span.s7-section__msg-sub 職業變更
+                        span.section__msg-sub 職業變更
                         |返回功能。
                       .s7-section__card
+        section#sectionEighth.swiper-slide.section-slide-eighth
+          .section.s8-section
+            .section__bg.s8-section__bg
+              .section__container
+                .section__wrapper.column.s8-section__wrapper
+                  .container
+                    .section__wrapper.column
+                      img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s8_main_title.png", alt="")
+                      p.section__msg 
+                        span.section__msg-sub 快速成長至等級 66！
+                        br 
+                        |僅透過主線任務即可輕鬆體驗爆發性的成長
+                      ul.s8-section__row.row
+                        li.s8-section__item.animate.animate_fadeLeft.animate_delay200
+                        li.s8-section__item.animate.animate_fadeRight.animate_delay200
+        section#sectionNinth.swiper-slide.section-slide-ninth
+          .section.s9-section
+            .section__bg.s9-section__bg
+              .section__container
+                .section__wrapper.column.s9-section__wrapper
+                  .container
+                    .section__wrapper.column
+                      img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s9_main_title.png", alt="")
+                      p.section__msg 
+                        |首領討伐戰將更新為’首領副本’
+                        br 
+                        span.section__msg-sub 擊殺Boss，即有機會可獲得傳說裝備碎片、傳說亞奎
+                        |及其他角色成長的輔助道具。
+                      .s9-section__content
+
 

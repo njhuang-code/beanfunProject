@@ -1,8 +1,5 @@
 @media screen and (max-height: 1000px) and (min-width: 769px) {
 
-  .section__title {
-    margin-top: 120px;
-  }
   .s4-section {
 
     &__img01 {
@@ -39,6 +36,13 @@
     }
     .section__btn {
       margin-top: -30px;
+    }
+  }
+
+  .s8-section {
+    &__row {
+      transform: scale(0.85);
+      margin-top: pct(-130px);
     }
   }
 
@@ -241,10 +245,7 @@
 // s7 section
 // --------------------------------------------------
 .s7-section {
-  &__msg {
-    margin-top: vw(24px);
-    font-size: vw(18px);
-  }
+
 
   &__card {
     background: url(../images/s7_card.png);
@@ -255,6 +256,32 @@
 
   .section__title {
     margin-top: vw(130px);
+  }
+
+}
+
+// s8 section
+// --------------------------------------------------
+.s8-section {
+  &__row {
+    @extend .section__row;
+    @include size(vw(1070px), vw(672px));
+    margin-top: vw(-76px);
+  }
+
+  &__item {
+    @include size(vw(544px), vw(576px));
+  }
+
+}
+
+// s9 section
+// --------------------------------------------------
+.s9-section {
+
+  &__content {
+    @include size(vw(1000px), vw(680px));
+    margin-top: vw(-50px);
   }
 
 }

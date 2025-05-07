@@ -1,6 +1,17 @@
 // kv visual
 // --------------------------------------------------
 .kv-section {
+  &__bg {
+      &::after {
+      content: "";
+      display: block;
+      background: #000;
+      opacity: 0.5;
+      @include background-cover;
+      @include size(100%,100%);
+      @include center;
+    }
+  }
   &__sub-title {
     @include size(auto, pct(115px));
     animation: flameWind 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
@@ -151,6 +162,17 @@
 // s2 section
 // --------------------------------------------------
 .s2-section {
+  &__bg {
+      &::after {
+      content: "";
+      display: block;
+      background: #000;
+      opacity: 0.5;
+      @include background-cover;
+      @include size(100%,100%);
+      @include center;
+    }
+  }
   &__sub-title {
     color: #e92351;
     text-shadow: 2px 0 4px rgba(0, 0, 0, .5);
@@ -217,26 +239,14 @@
     margin-bottom: -4px;
   }
 
-  .section__title {
-    margin-top: auto;
-  }
 }
 
 // s4 section
 // --------------------------------------------------
 .s4-section {
   &__bg {
-    @include flex-center;
-    @include size(100%, 100%);
     background: url(../images/s4_bg.jpg);
     @include background-cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    &::after {
-      content: none;
-    }
   }
 
   &__imgbox {
@@ -268,6 +278,10 @@
     z-index: 2;
   }
 
+  .section__title {
+    margin-top: pct(150px);
+  }
+
 }
 
 // s5 section
@@ -278,11 +292,8 @@
     @include background-cover;
   }
   &__row {
+    @extend .section__row;
     @include size(1265px, 672px);
-    position: relative;
-    align-items: flex-end;
-    justify-content: center;
-    flex-wrap: nowrap;
     margin-top: -48px;
   }
   &__item {
@@ -362,13 +373,9 @@
     &__bg {
     background: url(../images/s6_bg.jpg);
     @include background-cover;
-    background-position: initial;
-    &::after {
-      content: none;
-    }
   }
   &__row {
-    @extend .s5-section__row;
+    @extend .section__row;
     @include size(1070px, 672px);
     margin-top: -76px;
   }
@@ -405,31 +412,16 @@
     }
   }
 
-  .section__title {
-    margin-top: pct(-100px);
-  }
 }
 
 // s7 section
 // --------------------------------------------------
 .s7-section {
   &__bg {
-    @extend .s4-section__bg;
     background: url(../images/s7_bg.jpg);
     @include background-cover;
-    &::after {
-      content: none;
-    }
   }
-  &__msg {
-    margin-top: 24px;
-    color: #e7b592;
-    font-size: 18px;
-    text-align: center;
-    &-sub {
-      color: #ffce82;
-    }
-  }
+
 
   &__card {
     @include size(803px, 579px);
@@ -438,4 +430,58 @@
     margin-left: 200px;
   }
 
+}
+
+// s8 section
+// --------------------------------------------------
+.s8-section {
+  &__bg {
+    background: url(../images/s8_bg.jpg);
+    @include background-cover;
+  }
+  &__row {
+    @extend .section__row;
+    @include size(1070px, 672px);
+    margin-top: pct(-76px);
+  }
+
+  &__item {
+    @include size(544px, 576px);
+    flex-shrink: 0;
+    position: absolute;
+    &:nth-child(1) {
+      background: url(../images/s8_card_01.png);
+      @include background-cover;
+      left: 0;
+    }
+    &:nth-child(2) {
+      background: url(../images/s8_card_02.png);
+      @include background-cover;
+      right: 0;
+    }
+  }
+}
+
+// s9 section
+// --------------------------------------------------
+.s9-section {
+    &__bg {
+    background: url(../images/s9_bg.jpg);
+    @include background-cover;
+  }
+
+  &__content {
+    @include size(1000px, 680px);
+    flex-shrink: 0;
+    background: url(../images/s9_card.png);
+    @include background-cover;
+    margin-top: pct(-50px);
+  }
+
+  .section__msg {
+    color: #a9d0ff;
+    &-sub {
+      color: #69adff;
+    }
+  }
 }

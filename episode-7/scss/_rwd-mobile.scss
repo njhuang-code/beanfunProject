@@ -226,10 +226,6 @@
   }
 }
 
-  .UNI-footer .gradeArea .gradeArea__img img {
-    width: 50px;
-  }
-
 // s7 section
 // --------------------------------------------------
 .s7-section {
@@ -237,11 +233,7 @@
     background: url(../images/s7_bg_mb.jpg);
     @include background-cover;
   }
-  
-  &__msg {
-    margin-top: vwm(48px);
-    font-size: vwm(30px);
-  }
+
 
   &__card {
     background: url(../images/s7_card.png);
@@ -253,6 +245,57 @@
   .section__title {
     margin-top: auto;
   }
+
+}
+
+
+// s8 section
+// --------------------------------------------------
+.s8-section {
+  &__row {
+    background: url(../images/s8_card_mb.png);
+    @include background-cover;
+    @include size(vwm(720px), vwm(500px));
+    margin-top: vwm(48px);
+  }
+
+  &__item {
+    &:nth-child(1),&:nth-child(2) {
+      background: none;
+      pointer-events: none;
+    }
+  }
+
+  .section__title {
+    margin-top: vwm(-120px);
+  }
+
+}
+
+
+// s9 section
+// --------------------------------------------------
+.s9-section {
+
+  &__content {
+    @include size(vwm(1418px), vwm(1289px));
+    background: url(../images/s9_card_mb.png);
+    @include background-cover;
+  }
+
+  .section__title {
+    margin-top: vwm(-100px);
+  }
+  
+  .section__msg {
+    width: vwm(700px);
+  }
+
+}
+
+
+.UNI-footer .gradeArea .gradeArea__img img {
+  width: 50px;
 }
 
 }
