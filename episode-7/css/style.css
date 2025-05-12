@@ -1501,6 +1501,34 @@ body {
   margin-bottom: -4px;
 }
 
+.s3-section__bg {
+  background: url(../images/s3_bg.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.s3-section__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.s3-section__row:nth-child(1) .s3-section__item:nth-of-type(1) {
+  background: url(../images/s3_card_01.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 516px;
+  height: 438px;
+}
+.s3-section__row:nth-child(1) .s3-section__item:nth-child(2) {
+  background: url(../images/s3_card_02.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 503px;
+  height: 438px;
+}
+
 .s4-section__bg {
   background: url(../images/s4_bg.jpg);
   background-size: cover;
