@@ -257,7 +257,8 @@ body {
       &.section-slide-fifth,
       &.section-slide-sixth,
       &.section-slide-eighth,
-      &.section-slide-ninth {
+      &.section-slide-ninth,
+      &.section-slide-tenth {
         height: 90vw;
       }
     }
@@ -337,6 +338,9 @@ body {
       }
       &.section-slide-ninth {
         height: vwm(2000px);
+      }
+      &.section-slide-tenth {
+        height: vwm(2500px);
       }
     }
   }

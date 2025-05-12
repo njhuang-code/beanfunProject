@@ -46,6 +46,12 @@
     }
   }
 
+  .s10-section {
+    &__content {
+      transform: scale(0.95);
+    }
+  }
+
 }
 
 @media (max-width: ($pc-midrwd-breakpoint* 1px)) {
@@ -284,6 +290,14 @@
     margin-top: vw(-50px);
   }
 
+}
+
+// s10 section
+// --------------------------------------------------
+.s10-section {
+  &__content {
+    @include size(vw(900px),vw(550px));
+  }
 }
 
 }

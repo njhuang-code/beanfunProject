@@ -135,16 +135,18 @@
     @include background-cover;
   }
 
-  .container {
-    .section__title {
-      margin-top: vwm(60px);
-    }
-  }
   &__visual {
     margin-top: vwm(32px);
   }
+  
   &__img {
     @include size(vwm(1000px), vwm(736px));
+  }
+
+    .section__container {
+    .section__title {
+      margin-top: vwm(60px);
+    }
   }
 
 }
@@ -278,7 +280,7 @@
 .s9-section {
 
   &__content {
-    @include size(vwm(1418px), vwm(1289px));
+    @include size(vwm(1600px), vwm(1400px));
     background: url(../images/s9_card_mb.png);
     @include background-cover;
   }
@@ -291,6 +293,17 @@
     width: vwm(700px);
   }
 
+}
+
+// s10 section
+// --------------------------------------------------
+.s10-section {
+  &__content {
+    @include size(vwm(860px),vwm(1920px));
+  }
+  .section__title {
+    margin-top: vwm(-100px);
+  }
 }
 
 

@@ -1125,7 +1125,7 @@ body {
     margin-top: 2vw;
     font-size: 1.5vw;
   }
-  .section-slide .swiper-slide.section-slide-fifth, .section-slide .swiper-slide.section-slide-sixth, .section-slide .swiper-slide.section-slide-eighth, .section-slide .swiper-slide.section-slide-ninth {
+  .section-slide .swiper-slide.section-slide-fifth, .section-slide .swiper-slide.section-slide-sixth, .section-slide .swiper-slide.section-slide-eighth, .section-slide .swiper-slide.section-slide-ninth, .section-slide .swiper-slide.section-slide-tenth {
     height: 90vw;
   }
   .s4-section .container .section__title {
@@ -1172,6 +1172,9 @@ body {
   }
   .section-slide .swiper-slide.section-slide-ninth {
     height: 260.4166666667vw;
+  }
+  .section-slide .swiper-slide.section-slide-tenth {
+    height: 325.5208333333vw;
   }
 }
 .kv-section__bg::after {
@@ -1760,6 +1763,17 @@ body {
 }
 .s9-section .section__msg-sub {
   color: #69adff;
+}
+
+.s10-section__bg {
+  background: url(../images/s10_bg.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.s10-section__content {
+  width: 900px;
+  height: 550px;
 }
 
 @-webkit-keyframes flameWind {
@@ -2405,6 +2419,10 @@ body {
             transform: scale(0.85);
     margin-top: -10.8333333333%;
   }
+  .s10-section__content {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
 }
 @media (max-width: 1200px) {
   .section-slide {
@@ -2598,6 +2616,10 @@ body {
     height: 56.6666666667vw;
     margin-top: -4.1666666667vw;
   }
+  .s10-section__content {
+    width: 75vw;
+    height: 45.8333333333vw;
+  }
 }
 @media (max-width: 768px) {
   .section-slide {
@@ -2731,15 +2753,15 @@ body {
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
-  .s4-section .container .section__title {
-    margin-top: 7.8125vw;
-  }
   .s4-section__visual {
     margin-top: 4.1666666667vw;
   }
   .s4-section__img {
     width: 130.2083333333vw;
     height: 95.8333333333vw;
+  }
+  .s4-section .section__container .section__title {
+    margin-top: 7.8125vw;
   }
   .s5-section__row {
     background: url(../images/s5_card_mb.png);
@@ -2831,8 +2853,8 @@ body {
     margin-top: -15.625vw;
   }
   .s9-section__content {
-    width: 184.6354166667vw;
-    height: 167.8385416667vw;
+    width: 208.3333333333vw;
+    height: 182.2916666667vw;
     background: url(../images/s9_card_mb.png);
     background-size: cover;
     background-position: 50% 50%;
@@ -2843,6 +2865,13 @@ body {
   }
   .s9-section .section__msg {
     width: 91.1458333333vw;
+  }
+  .s10-section__content {
+    width: 111.9791666667vw;
+    height: 250vw;
+  }
+  .s10-section .section__title {
+    margin-top: -13.0208333333vw;
   }
   .UNI-footer .gradeArea .gradeArea__img img {
     width: 50px;

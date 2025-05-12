@@ -465,7 +465,7 @@
 // s9 section
 // --------------------------------------------------
 .s9-section {
-    &__bg {
+  &__bg {
     background: url(../images/s9_bg.jpg);
     @include background-cover;
   }
@@ -483,5 +483,17 @@
     &-sub {
       color: #69adff;
     }
+  }
+}
+
+// s10 section
+// --------------------------------------------------
+.s10-section {
+  &__bg {
+    background: url(../images/s10_bg.jpg);
+    @include background-cover;
+  }
+  &__content {
+    @include size(900px,550px);
   }
 }
