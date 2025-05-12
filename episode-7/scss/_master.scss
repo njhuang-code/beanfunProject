@@ -285,7 +285,7 @@
   }
 
   &__img01 {
-    @include size((427px), 395px);
+    @include size(427px, 395px);
     background: url(../images/s4_equip_01.png);
     @include background-cover;
     top: pct(-100px);
@@ -293,11 +293,11 @@
   }
 
   &__img02 {
-    @include size(476px, 456px);
+    @include size(400px, 350px);
     background: url(../images/s4_equip_02.png);
     @include background-contain;
-    bottom: pct(70px);
-    right: calc(50% + #{-(500)}px);
+    bottom: pct(200px);
+    right: calc(50% + #{-(480)}px);
   }
 
   .container {

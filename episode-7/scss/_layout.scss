@@ -200,6 +200,17 @@ body {
     cursor: not-allowed;
   }
 
+  &__flow {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 999;
+    @include size(120px, auto);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .7);
+  }
+
 }
 
 .UNI-footer {
@@ -247,6 +258,12 @@ body {
     &__msg {
       margin-top: vw(24px);
       font-size: vw(18px);
+    }
+      &__flow {
+      bottom: vw(10px);
+      left: vw(10px);
+      @include size(vw(120px), auto);
+      border-radius: vw(12px);
     }
   }
 
@@ -322,6 +339,12 @@ body {
     &__msg {
       margin-top: vwm(48px);
       font-size: vwm(30px);
+    }
+    &__flow {
+      bottom: vwm(80px);
+      left: vwm(10px);
+      @include size(vwm(185px), auto);
+      border-radius: vwm(12px);
     }
   }
 

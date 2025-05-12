@@ -343,6 +343,9 @@ button {
 .menu-nav__item:last-child {
   margin: 16px 0 0;
 }
+.menu-nav__item.item__sub {
+  margin-bottom: 0;
+}
 .menu-nav__item.nav__sub {
   margin-right: 24px;
   margin-bottom: 0;
@@ -352,6 +355,9 @@ button {
   background: none;
   margin-left: 0;
   color: rgba(208, 208, 208, 0.8156862745);
+}
+.menu-nav__item.nav__sub:nth-child(5) {
+  margin-bottom: 16px;
 }
 .menu-nav__name {
   display: inline-block;
@@ -1092,6 +1098,18 @@ body {
   height: 73px;
   cursor: not-allowed;
 }
+.section__flow {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 999;
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
 
 .UNI-footer.dark {
   display: none;
@@ -1124,6 +1142,13 @@ body {
   .section__msg {
     margin-top: 2vw;
     font-size: 1.5vw;
+  }
+  .section__flow {
+    bottom: 0.8333333333vw;
+    left: 0.8333333333vw;
+    width: 10vw;
+    height: auto;
+    border-radius: 1vw;
   }
   .section-slide .swiper-slide.section-slide-fifth, .section-slide .swiper-slide.section-slide-sixth, .section-slide .swiper-slide.section-slide-eighth, .section-slide .swiper-slide.section-slide-ninth, .section-slide .swiper-slide.section-slide-tenth {
     height: 90vw;
@@ -1163,6 +1188,13 @@ body {
   .section__msg {
     margin-top: 6.25vw;
     font-size: 3.90625vw;
+  }
+  .section__flow {
+    bottom: 10.4166666667vw;
+    left: 1.3020833333vw;
+    width: 24.0885416667vw;
+    height: auto;
+    border-radius: 1.5625vw;
   }
   .section-slide .swiper-slide.section-slide-fourth, .section-slide .swiper-slide.section-slide-fifth, .section-slide .swiper-slide.section-slide-seventh {
     height: 130.2083333333vw;
@@ -1554,14 +1586,14 @@ body {
   left: calc(50% + -580px);
 }
 .s4-section__img02 {
-  width: 476px;
-  height: 456px;
+  width: 400px;
+  height: 350px;
   background: url(../images/s4_equip_02.png);
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  bottom: 5.8333333333%;
-  right: calc(50% + -500px);
+  bottom: 16.6666666667%;
+  right: calc(50% + -480px);
 }
 .s4-section .container {
   position: relative;
@@ -2420,7 +2452,7 @@ body {
   }
   .s4-section__img02 {
     right: calc(50% + -450px);
-    bottom: 8.3333333333%;
+    bottom: 16.6666666667%;
   }
   .s4-section .section__title {
     margin-top: 12.5%;
@@ -2575,8 +2607,8 @@ body {
     left: 4.1666666667vw;
   }
   .s4-section__img02 {
-    width: 39.6666666667vw;
-    height: 38vw;
+    width: 33.3333333333vw;
+    height: 29.1666666667vw;
     bottom: 12.5vw;
     right: 7.5vw;
   }

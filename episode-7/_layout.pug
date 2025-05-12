@@ -63,7 +63,7 @@ html(lang="zh-Hant")
           .lightbox__inner
             button.lightbox__closed
             .lightbox__video-box
-              iframe.lightbox__video(src="https://www.youtube.com/embed/Nkf6ebc95Y0?mute=1&amp;autoplay=0&amp;loop=1&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+              iframe.lightbox__video(src="https://www.youtube.com/embed/qFToCr74NYE?mute=1&amp;autoplay=0&amp;loop=1&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
     block header
       header.header
         .header__container.row
@@ -121,7 +121,7 @@ html(lang="zh-Hant")
               a(href="#sectionMain").menu-nav__name.text-md EP.4 : 吞噬黑暗的存在
             li.menu-nav__item
               a(href="#sectionSec").menu-nav__name.text-md 改版發表
-            li.menu-nav__item
+            li.menu-nav__item.item__sub
               a(href="#sectionFourth").menu-nav__name.text-md 新職業 : 深淵放逐者
             li.menu-nav__item.nav__sub
               a(href="#sectionFourth").menu-nav__name.text-sm 武器/特化裝備
@@ -131,7 +131,7 @@ html(lang="zh-Hant")
               a(href="#sectionSixth").menu-nav__name.text-md 新世界：賽爾齊歐
             li.menu-nav__item
               a(href="#sectionSeventh").menu-nav__name.text-md 職業變更
-            li.menu-nav__item
+            li.menu-nav__item.item__sub
               a(href="#sectionEighth").menu-nav__name.text-md 更新：成長結構
             li.menu-nav__item.nav__sub
               a(href="#sectionEighth").menu-nav__name.text-sm 任務更新
@@ -139,6 +139,9 @@ html(lang="zh-Hant")
               a(href="#sectionNinth").menu-nav__name.text-sm 首領副本
             li.menu-nav__item
               a(href="#sectionTenth").menu-nav__name.text-md 新增：超越系統
+    block flow
+      a.section__flow(href="#")
+        img(src="./images/img_flow.jpg", alt="")
     block content
     block script
       script(src="./js/jquery-3.7.1.min.js") 

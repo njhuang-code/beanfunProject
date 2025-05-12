@@ -41,6 +41,10 @@
       margin: 16px 0 0;
     }
 
+    &.item__sub {
+      margin-bottom: 0;
+    }
+
     &.nav__sub {
       margin-right: 24px;
       margin-bottom: 0;
@@ -49,9 +53,12 @@
         background: none;
         margin-left: 0;
         color: $navTextDefault;
-        
+      }
+      &:nth-child(5) {
+        margin-bottom: 16px;
       }
     }
+    
   }
 
   &__name {

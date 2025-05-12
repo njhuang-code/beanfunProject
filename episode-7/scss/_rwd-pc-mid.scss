@@ -9,7 +9,7 @@
 
     &__img02 {
       right: calc(50% + #{-(450)}px);
-      bottom: pct(100px);
+      bottom: pct(200px);
     }
 
     .section__title {
@@ -190,7 +190,7 @@
   }
 
   &__img02 {
-    @include size(vw(476px), vw(456px));
+    @include size(vw(400px), vw(350px));
     bottom: vw(150px);
     right: vw(90px);
   }
