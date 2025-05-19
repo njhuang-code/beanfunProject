@@ -94,7 +94,7 @@
   &__sub-title {
     margin-top: vwm(-32px);
     text-shadow: vwm(2px) 0 vwm(4px) rgba(0, 0, 0, .5);
-    font-size: vwm(32px);
+    font-size: vwm(36px);
   }
   &__iframe-container {
     margin: vwm(24px) auto;
@@ -126,6 +126,20 @@
   }
 
 }
+
+
+// s3 section
+// --------------------------------------------------
+.s3-section {
+
+  &__row {
+    flex-wrap: wrap;
+  }
+  &__item {
+    @include size(vwm(700px));
+  }
+}
+
 
 // s4 section
 // --------------------------------------------------
@@ -234,18 +248,20 @@
   &__bg {
     background: url(../images/s7_bg_mb.jpg);
     @include background-cover;
+    background-position: 30% 50%;
   }
 
 
   &__card {
-    background: url(../images/s7_card.png);
+    background: url(../images/s7_card_mb.png);
     @include background-cover;
-    @include size(vwm(803px), vwm(579px));
+    @include size(vwm(900px), vwm(660px));
+    margin-top: vwm(150px);
     margin-left: 0;
   }
 
   .section__title {
-    margin-top: auto;
+    margin-top: vwm(-100px);
   }
 
 }
@@ -257,7 +273,7 @@
   &__row {
     background: url(../images/s8_card_mb.png);
     @include background-cover;
-    @include size(vwm(720px), vwm(500px));
+    @include size(vwm(750px), vwm(500px));
     margin-top: vwm(48px);
   }
 
@@ -290,7 +306,7 @@
   }
   
   .section__msg {
-    width: vwm(700px);
+    width: vwm(750px);
   }
 
 }
@@ -299,7 +315,7 @@
 // --------------------------------------------------
 .s10-section {
   &__content {
-    @include size(vwm(860px),vwm(1920px));
+    @include size(vwm(800px),vwm(1920px));
   }
   .section__title {
     margin-top: vwm(-100px);

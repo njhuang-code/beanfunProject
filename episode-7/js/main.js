@@ -4,13 +4,14 @@ window.addEventListener("load", function () {
   const sectionToSlideIndex = {
     '#sectionMain': 0,
     '#sectionSec': 1,
-    '#sectionFourth': 2,
-    '#sectionFifth': 3,
-    '#sectionSixth': 4,
-    '#sectionSeventh': 5,
-    '#sectionEighth': 6,
-    '#sectionNinth': 7,
-    '#sectionTenth': 8,
+    '#sectionThird': 2,
+    '#sectionFourth': 3,
+    '#sectionFifth': 4,
+    '#sectionSixth': 5,
+    '#sectionSeventh': 6,
+    '#sectionEighth': 7,
+    '#sectionNinth': 8,
+    '#sectionTenth': 9,
   };
 
   const slideIndexToSection = Object.fromEntries(
@@ -117,7 +118,7 @@ window.addEventListener("load", function () {
 
   function handleFooter() {
     $(".UNI-footer-clone").remove();
-    const thirdSlide = document.querySelectorAll(".swiper-slide")[8];
+    const thirdSlide = document.querySelectorAll(".swiper-slide")[10];
 
     if (thirdSlide && !thirdSlide.querySelector(".UNI-footer-clone")) {
       $(".UNI-footer")

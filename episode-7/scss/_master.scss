@@ -174,9 +174,10 @@
     }
   }
   &__sub-title {
+    margin-top: pct(-32px);
     color: #e92351;
     text-shadow: 2px 0 4px rgba(0, 0, 0, .5);
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: .2em;
   }
   &__iframe-container {
@@ -208,36 +209,42 @@
     align-items: center;
     @include size(100%);
   }
-  &__link {
-    position: relative;
-    display: inline-block;
-    @include size(100%);
-    &::after {
-      @include flex-center;
-      @include size(545px, 229px);
-      margin: 0 auto;
-      content: "";
-      background: url(../images/s2_ribbon.png);
-      @include background-contain;
-    }
-  }
-  &__link-text {
-    @include flex-center;
-    @include size(100%, auto);
-    position: absolute;
-    top: calc((100% - 102px) / 2);
-    left: 0;
-    color: #ffe345;
-    font-size: 20px;
+
+  .section__title {
+    height: 150px;
   }
 
-  &__arrow {
-    @include size(16px, 24px);
-    background: url(../images/s2_arrow.png);
-    @include background-cover;
-    margin-left: 8px;
-    margin-bottom: -4px;
-  }
+  // --------------------------------------------- ver0528 直播連結 ribbon
+  // &__link {
+  //   position: relative;
+  //   display: inline-block;
+  //   @include size(100%);
+  //   &::after {
+  //     @include flex-center;
+  //     @include size(545px, 229px);
+  //     margin: 0 auto;
+  //     content: "";
+  //     background: url(../images/s2_ribbon.png);
+  //     @include background-contain;
+  //   }
+  // }
+  // &__link-text {
+  //   @include flex-center;
+  //   @include size(100%, auto);
+  //   position: absolute;
+  //   top: calc((100% - 102px) / 2);
+  //   left: 0;
+  //   color: #ffe345;
+  //   font-size: 20px;
+  // }
+
+  // &__arrow {
+  //   @include size(16px, 24px);
+  //   background: url(../images/s2_arrow.png);
+  //   @include background-cover;
+  //   margin-left: 8px;
+  //   margin-bottom: -4px;
+  // }
 
 }
 
@@ -250,20 +257,23 @@
     @include background-cover;
   }
   &__row {
-    display: flex;
+    @include flex-center;
+  }
+  &__item {
+    @include size(420px, 380px);
+    flex: 0 0 auto;
+    flex-shrink: 0;
     &:nth-child(1) {
-      .s3-section__item {
-        &:nth-of-type(1) {
-          background: url(../images/s3_card_01.png);
-          @include background-cover;
-          @include size((516px),(438px))
-        }
-        &:nth-child(2) {
-          background: url(../images/s3_card_02.png);
-          @include background-cover;
-          @include size((503px),(438px))
-        }
-      }
+      background: url(../images/s3_card_01.png);
+      @include background-contain;
+    }
+    &:nth-child(2) {
+      background: url(../images/s3_card_02.png);
+      @include background-contain;
+    }
+    &:nth-child(3) {
+      background: url(../images/s3_card_03.png);
+      @include background-contain;
     }
   }
 }
@@ -522,5 +532,8 @@
   }
   &__content {
     @include size(900px,550px);
+  }
+  .section__title {
+    margin-top: -60px;
   }
 }

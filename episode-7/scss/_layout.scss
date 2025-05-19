@@ -197,7 +197,6 @@ body {
   &__btn {
     @include background-contain;
     @include size(281px,73px);
-    cursor: not-allowed;
   }
 
   &__flow {
@@ -271,6 +270,7 @@ body {
   // --------------------------------------------------
   .section-slide {
     .swiper-slide {
+      &.section-slide-second,
       &.section-slide-fifth,
       &.section-slide-sixth,
       &.section-slide-eighth,
@@ -338,7 +338,7 @@ body {
     }
     &__msg {
       margin-top: vwm(48px);
-      font-size: vwm(30px);
+      font-size: vwm(32px);
     }
     &__flow {
       bottom: vwm(80px);
@@ -350,17 +350,23 @@ body {
 
   .section-slide {
     .swiper-slide {
+      &.section-slide-second,
       &.section-slide-fourth,
-      &.section-slide-fifth,
-      &.section-slide-seventh {
+      &.section-slide-fifth {
         height: vwm(1000px);
       }
       &.section-slide-sixth,
       &.section-slide-eighth {
         height: vwm(1200px);
       }
+      &.section-slide-seventh {
+        height: vwm(1500px);
+      }
       &.section-slide-ninth {
         height: vwm(2000px);
+      }
+      &.section-slide-third {
+        height: vwm(2400px);
       }
       &.section-slide-tenth {
         height: vwm(2500px);

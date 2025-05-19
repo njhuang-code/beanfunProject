@@ -44,26 +44,37 @@ block content
             .section__container
               .section__wrapper.column
                 img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s2_main_title.png", alt="")
-                p.s2-section__sub-title.animate.animate_fadeDown.animate_delay200  改版發表
+                p.s2-section__sub-title.animate.animate_fadeDown.animate_delay200  EP.4 總監到你家 改版發表
                 .s2-section__iframe-container.animate.animate_fadeLeft.animate_delay200
                   iframe.s2-section__iframe(src="https://www.youtube.com/embed/Nkf6ebc95Y0?mute=1&amp;autoplay=0&amp;loop=1&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                a.s2-section__link.animate.animate_fadeDown.animate_delay300(href="")
-                  .s2-section__msg
-                    span.s2-section__link-text 直播內容
-                      i.s2-section__arrow
-        //- section#sectionThird.swiper-slide
-        //-   .section.s3-section
-        //-     .section__bg.s3-section__bg
-        //-       .section__container
-        //-         .section__wrapper.column
-        //-           img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s3_main_title.png", alt="")
-        //-           ul.s3-section__row
-        //-             li.s3-section__item
-        //-             li.s3-section__item
-        //-           ul.s3-section__row
-        //-             li.s3-section__item
-        //-             li.s3-section__item
-        //-             li.s3-section__item
+                //- ver0528 直播連結 ribbon
+                //- a.s2-section__link.animate.animate_fadeDown.animate_delay300(href="")
+                //-   .s2-section__msg
+                //-     span.s2-section__link-text 直播內容
+                //-       i.s2-section__arrow
+        section#sectionSec.swiper-slide.section-slide-second
+          .section.s2-section
+            .s2-section__bg
+              video.section__video.d-none-sm(autoplay loop muted playsinline)
+                source(src='./images/video/s2_video_pc.mp4')
+              video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
+                source(src='./images/video/s2_video_mb.mp4')
+            .section__container
+              .section__wrapper.column
+                img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s2_main_title.png", alt="")
+                p.s2-section__sub-title.animate.animate_fadeDown.animate_delay200  EP.4 總監到你家 改版發表
+                .s2-section__iframe-container.animate.animate_fadeLeft.animate_delay200
+                  img.s2-section__iframe(src="./images/s2_cover_iframe.png", alt="")
+        section#sectionThird.swiper-slide.section-slide-third
+          .section.s3-section
+            .section__bg.s3-section__bg
+              .section__container
+                .section__wrapper.column
+                  img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s3_main_title.png", alt="")
+                  ul.s3-section__row
+                    li.s3-section__item
+                    li.s3-section__item
+                    li.s3-section__item
         section#sectionFourth.swiper-slide.section-slide-fourth
           .section.s4-section
             .section__bg.s4-section__bg
@@ -119,12 +130,13 @@ block content
                     .section__wrapper.column
                       img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s7_main_title.png", alt="")
                       p.section__msg.animate.animate_fadeDown.animate_delay200 
-                        span.section__msg-sub 透過職業變更
-                        |體驗解放的深淵之力。
-                        br 
-                        |如果想回到原本的職業，您可以使用
+                        |透過
                         span.section__msg-sub 職業變更
-                        |返回功能。
+                        |免費體驗深淵放逐者
+                        br 
+                        |使用
+                        span.section__msg-sub 職業變更返回功能
+                        |即可回復為原本職業
                       .s7-section__card.animate.animate_fadeIn.animate_delay300
         section#sectionEighth.swiper-slide.section-slide-eighth
           .section.s8-section
@@ -134,10 +146,7 @@ block content
                   .container
                     .section__wrapper.column
                       img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s8_main_title.png", alt="")
-                      p.section__msg.animate.animate_fadeDown.animate_delay200 
-                        span.section__msg-sub 快速成長至等級 66！
-                        br 
-                        |僅透過主線任務即可輕鬆體驗爆發性的成長
+                      p.section__msg.animate.animate_fadeDown.animate_delay200 快速成長至等級66！輕鬆體驗爆發性的成長
                       ul.s8-section__row.row
                         li.s8-section__item.animate.animate_fadeLeft.animate_delay200
                         li.s8-section__item.animate.animate_fadeRight.animate_delay200
@@ -149,11 +158,9 @@ block content
                   .container
                     .section__wrapper.column
                       img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s9_main_title.png", alt="")
-                      p.section__msg.animate.animate_fadeDown.animate_delay200
-                        |首領討伐戰將更新為’首領副本’
+                      p.section__msg.animate.animte_fadeDown.animate_delay200 首領討伐戰將更新為「首領團戰」
                         br 
-                        span.section__msg-sub 擊殺Boss，即有機會可獲得傳說裝備碎片、傳說亞奎
-                        |及其他角色成長的輔助道具。
+                        span.section__msg-sub 擊殺 Boss 即有機會獲得傳說亞奎、裝備碎片及其他道具
                       .s9-section__content.animate.animate_fadeIn.animate_delay300
         section#sectionTenth.swiper-slide.section-slide-tenth
           .section.s10-section
