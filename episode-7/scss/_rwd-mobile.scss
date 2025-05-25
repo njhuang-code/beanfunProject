@@ -93,11 +93,15 @@
 .s2-section {
   &__sub-title {
     margin-top: vwm(-32px);
-    text-shadow: vwm(2px) 0 vwm(4px) rgba(0, 0, 0, .5);
     font-size: vwm(36px);
+    border-radius: vwm(8px);
+    padding: vwm(4px) vwm(16px);
   }
   &__iframe-container {
     margin: vwm(24px) auto;
+    &.cover {
+      @include size(vwm(600px));
+    }
   }
   &__link {
     &::after {
@@ -137,6 +141,10 @@
   }
   &__item {
     @include size(vwm(700px));
+  }
+  .section__title {
+    height: vwm(60px);
+    margin-bottom: vwm(32px);
   }
 }
 
@@ -313,14 +321,14 @@
 
 // s10 section
 // --------------------------------------------------
-.s10-section {
-  &__content {
-    @include size(vwm(800px),vwm(1920px));
-  }
-  .section__title {
-    margin-top: vwm(-100px);
-  }
-}
+// .s10-section {
+//   &__content {
+//     @include size(vwm(800px),vwm(1920px));
+//   }
+//   .section__title {
+//     margin-top: vwm(-100px);
+//   }
+// }
 
 
 .UNI-footer .gradeArea .gradeArea__img img {

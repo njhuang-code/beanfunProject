@@ -176,9 +176,11 @@
   &__sub-title {
     margin-top: pct(-32px);
     color: #e92351;
-    text-shadow: 2px 0 4px rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .9);
     font-size: 24px;
     letter-spacing: .2em;
+    border-radius: 8px;
+    padding: 4px 16px;
   }
   &__iframe-container {
     position: relative;
@@ -187,14 +189,20 @@
     height: 0;
     overflow: hidden;
     margin: 24px auto;
-    &::after {
-      @include size(100%);
-      content: "";
-      background: url(../images/s2_iframe_border.png);
-      @include background-cover;
-      position: absolute;
-      top: 0;
-      left: 0;
+    &:not(.cover) {
+      &::after {
+        @include size(100%);
+        content: "";
+        background: url(../images/s2_iframe_border.png);
+        @include background-cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &.cover {
+      @include size(600px);
+      padding-bottom: 0;
     }
   }
   &__iframe {
@@ -275,6 +283,10 @@
       background: url(../images/s3_card_03.png);
       @include background-contain;
     }
+  }
+  .section__title {
+    height: 60px;
+    margin-bottom: 32px;
   }
 }
 
@@ -508,7 +520,7 @@
   }
 
   &__content {
-    @include size(1000px, 680px);
+    @include size(1000px, 600px);
     flex-shrink: 0;
     background: url(../images/s9_card.png);
     @include background-cover;
@@ -521,19 +533,23 @@
       color: #69adff;
     }
   }
+
+  .section__title {
+    margin-top: pct(-32px);
+  }
 }
 
 // s10 section
 // --------------------------------------------------
-.s10-section {
-  &__bg {
-    background: url(../images/s10_bg.jpg);
-    @include background-cover;
-  }
-  &__content {
-    @include size(900px,550px);
-  }
-  .section__title {
-    margin-top: -60px;
-  }
-}
+// .s10-section {
+//   &__bg {
+//     background: url(../images/s10_bg.jpg);
+//     @include background-cover;
+//   }
+//   &__content {
+//     @include size(900px,550px);
+//   }
+//   .section__title {
+//     margin-top: -60px;
+//   }
+// }

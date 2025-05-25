@@ -52,19 +52,19 @@ block content
                 //-   .s2-section__msg
                 //-     span.s2-section__link-text 直播內容
                 //-       i.s2-section__arrow
-        section#sectionSec.swiper-slide.section-slide-second
-          .section.s2-section
-            .s2-section__bg
-              video.section__video.d-none-sm(autoplay loop muted playsinline)
-                source(src='./images/video/s2_video_pc.mp4')
-              video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
-                source(src='./images/video/s2_video_mb.mp4')
-            .section__container
-              .section__wrapper.column
-                img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s2_main_title.png", alt="")
-                p.s2-section__sub-title.animate.animate_fadeDown.animate_delay200  EP.4 總監到你家 改版發表
-                .s2-section__iframe-container.animate.animate_fadeLeft.animate_delay200
-                  img.s2-section__iframe(src="./images/s2_cover_iframe.png", alt="")
+        //- section#sectionSec.swiper-slide.section-slide-second
+        //-   .section.s2-section
+        //-     .s2-section__bg
+        //-       video.section__video.d-none-sm(autoplay loop muted playsinline)
+        //-         source(src='./images/video/s2_video_pc.mp4')
+        //-       video.section__video.d-none-lg.d-block-sm(autoplay loop muted playsinline)
+        //-         source(src='./images/video/s2_video_mb.mp4')
+        //-     .section__container
+        //-       .section__wrapper.column
+        //-         img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s2_main_title.png", alt="")
+        //-         p.s2-section__sub-title.animate.animate_fadeDown.animate_delay200  EP.4 改版發表
+        //-         .s2-section__iframe-container.cover.animate.animate_fadeLeft.animate_delay200
+        //-           img.s2-section__cover(src="./images/s2_cover_iframe.png", alt="")
         section#sectionThird.swiper-slide.section-slide-third
           .section.s3-section
             .section__bg.s3-section__bg
@@ -107,7 +107,7 @@ block content
                         .vodbox
                           video.s5-section__video(autoplay loop muted playsinline)
                             source(src='./images/video/s5_vod_03.mp4')
-                    a.section__btn.s5-section__btn.animate.animate_fadeIn.animate_delay400(href="javascript:void(0);")
+                    a.section__btn.s5-section__btn.animate.animate_fadeIn.animate_delay400(href="https://warsofprasia.beanfun.com/Career" target="_blank")
         section#sectionSixth.swiper-slide.section-slide-sixth
           .section.s6-section
             .section__bg.s6-section__bg
@@ -120,7 +120,7 @@ block content
                         li.s6-section__item.animate.animate_fadeLeft.animate_delay200
                         li.s6-section__item.animate.animate_fadeIn.animate_delay400
                         li.s6-section__item.animate.animate_fadeRight.animate_delay300
-                      a.section__btn.s6-section__btn.animate.animate_fadeIn.animate_delay400(href="javascript:void(0);")
+                      a.section__btn.s6-section__btn.animate.animate_fadeIn.animate_delay400(href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=12880" target="_blank")
         section#sectionSeventh.swiper-slide.section-slide-seventh
           .section.s7-section
             .section__bg.s7-section__bg
@@ -146,7 +146,7 @@ block content
                   .container
                     .section__wrapper.column
                       img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s8_main_title.png", alt="")
-                      p.section__msg.animate.animate_fadeDown.animate_delay200 快速成長至等級66！輕鬆體驗爆發性的成長
+                      p.section__msg.animate.animate_fadeDown.animate_delay200 派系/主線任務全面更新，史詩劇情帶你速飆 66 等！
                       ul.s8-section__row.row
                         li.s8-section__item.animate.animate_fadeLeft.animate_delay200
                         li.s8-section__item.animate.animate_fadeRight.animate_delay200
@@ -158,18 +158,20 @@ block content
                   .container
                     .section__wrapper.column
                       img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s9_main_title.png", alt="")
-                      p.section__msg.animate.animte_fadeDown.animate_delay200 首領討伐戰將更新為「首領團戰」
+                      p.section__msg.animate.animte_fadeDown.animate_delay200 首領討伐戰將改版為「首領團戰」
                         br 
-                        span.section__msg-sub 擊殺 Boss 即有機會獲得傳說亞奎、裝備碎片及其他道具
+                        |無論何時何地都能挑戰首領
+                        br
+                        |來獲得傳說裝備碎片、傳說亞奎殘片，及成長所需貨幣！
                       .s9-section__content.animate.animate_fadeIn.animate_delay300
-        section#sectionTenth.swiper-slide.section-slide-tenth
-          .section.s10-section
-            .section__bg.s10-section__bg
-              .section__container
-                .section__wrapper.column.s10-section__wrapper
-                  .container
-                    .section__wrapper.column
-                      img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s10_main_title.png", alt="")
-                      picture.s10-section__content.animate.animate_fadeIn.animate_delay200
-                        source(srcset="./images/s10_card_mb.png" media="(max-width: 768px)")
-                        img(src="./images/s10_card.png" alt="Responsive Image")
+        //- section#sectionTenth.swiper-slide.section-slide-tenth
+        //-   .section.s10-section
+        //-     .section__bg.s10-section__bg
+        //-       .section__container
+        //-         .section__wrapper.column.s10-section__wrapper
+        //-           .container
+        //-             .section__wrapper.column
+        //-               img.section__title.animate.animate_fadeUp.animate_delay100(src="./images/s10_main_title.png", alt="")
+        //-               picture.s10-section__content.animate.animate_fadeIn.animate_delay200
+        //-                 source(srcset="./images/s10_card_mb.png" media="(max-width: 768px)")
+        //-                 img(src="./images/s10_card.png" alt="Responsive Image")

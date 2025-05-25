@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
     '#sectionSeventh': 6,
     '#sectionEighth': 7,
     '#sectionNinth': 8,
-    '#sectionTenth': 9,
+    // '#sectionTenth': 9,
   };
 
   const slideIndexToSection = Object.fromEntries(
@@ -118,7 +118,7 @@ window.addEventListener("load", function () {
 
   function handleFooter() {
     $(".UNI-footer-clone").remove();
-    const thirdSlide = document.querySelectorAll(".swiper-slide")[10];
+    const thirdSlide = document.querySelectorAll(".swiper-slide")[8];
 
     if (thirdSlide && !thirdSlide.querySelector(".UNI-footer-clone")) {
       $(".UNI-footer")

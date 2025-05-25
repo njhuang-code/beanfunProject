@@ -37,10 +37,6 @@
       transition: .4s ease, transform .9s cubic-bezier(.33,1,.68,1);
     }
 
-    &:last-child {
-      margin: 16px 0 0;
-    }
-
     &.item__sub {
       margin-bottom: 0;
     }
@@ -53,9 +49,6 @@
         background: none;
         margin-left: 0;
         color: $navTextDefault;
-      }
-      &:nth-child(5) {
-        margin-bottom: 16px;
       }
     }
     
