@@ -148,7 +148,6 @@
 .s2-section {
   &__sub-title {
     font-size: vw(24px);
-    border-radius: vw(8px);
     padding: vw(4px) vw(16px);
   }
   &__iframe-container {
@@ -184,7 +183,7 @@
     @include size(vw(380px), vw(300px));
   }
   .section__title {
-    height: vw(60px);
+    height: vw(80px);
     margin-bottom: vw(32px);
   }
 }

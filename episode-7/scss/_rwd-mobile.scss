@@ -94,7 +94,6 @@
   &__sub-title {
     margin-top: vwm(-32px);
     font-size: vwm(36px);
-    border-radius: vwm(8px);
     padding: vwm(4px) vwm(16px);
   }
   &__iframe-container {
@@ -143,7 +142,7 @@
     @include size(vwm(700px));
   }
   .section__title {
-    height: vwm(60px);
+    height: vwm(80px);
     margin-bottom: vwm(32px);
   }
 }
