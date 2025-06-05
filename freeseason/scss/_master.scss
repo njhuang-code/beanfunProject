@@ -1,0 +1,234 @@
+body {
+  background: $backgroundDarkB1;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.section-tab {
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 4px;
+  width: $pc-midrwd-breakpoint + px;
+  .section-tab-item {
+    @include size(pct(361px),pct(75px));
+    margin-top: pct(100px);
+    padding: pct(24px) 0;
+    color: rgba(255, 255, 255, .5);
+    font-size: 28px;
+    text-align: center;
+    background: #045D7F;
+    &.is-active {
+      background: #0396D7;
+      color: $text03;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+}
+
+.section-tab-content {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+  @include size(100%, 100%);
+  border: 3.5px solid #0396D7;
+  padding: pct(40px) 0;
+  .section-tab-msg {
+    margin-bottom: pct(40px);
+    color: #CECECE;
+    font-size: 24px;
+    text-align: center;
+    .section-tab-msg-name {
+      background: linear-gradient(to right, #09F3FF 0%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+  .section-tab-img {
+    @include flex-center;
+    @include size(pct(997px), pct(558px));
+  }
+}
+
+.container {
+  max-width: ($pc-midrwd-breakpoint) + px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  @include flex-column;
+}
+
+.tab {
+  @include size(100%, pct(133px));
+  position: absolute;
+  bottom: calc((pct(-133px) / 2));
+  z-index: 2;
+  background: url(../images/kv_menu_lef.png);
+  @include background-cover;
+  .tab-row {
+    @include size(100%, 100%);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .tab-item {
+    flex: 0 0 auto;
+    width: 50%;
+    height: 100%;
+    text-align: center
+  }
+  .tab-link {
+    display: inline-block;
+    @include size(100%, 100%);
+    color: transparent;
+  }
+}
+
+
+// -----kv visual
+// --------------------------------------------------
+
+.kv-section-bg {
+  @include size(100%, 100%);
+  position: absolute;
+  background: url(../images/kv_visual.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.kv-section-visual {
+  background: url(../images/kv_main_title.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include size(pct(1000px), pct(733px));
+  @include center;
+}
+
+// -----s2 section
+// --------------------------------------------------
+
+.s2-section {
+  background: url(../images/s2_bg.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: pct(100px);
+  .container {
+    padding-top: pct(72px);
+  }
+
+  .s2-section-title-top {
+    @include size(pct(651px), pct(221px));
+    @include flex-center;
+  }
+
+  .s2-section-visual-top {
+    @include size(pct(812px), pct(802px));
+    margin-top: pct(-120px);
+  }
+
+  .s2-section-title-bottom {
+    @include size(pct(903.86px), pct(167.67px));
+    margin-top: pct(-80px);
+    
+  }
+
+  .s2-section-visual-bottom {
+    @include size(pct(1920px), pct(888px));
+    margin-top: pct(-250px);
+    pointer-events: none;
+  }
+
+  .s2-section-npc-bottom {
+    background: url(../images/s2_msg_bottom.png);
+    @include size(pct(1124px), 303px);
+    @include background-cover;
+    margin-top: pct(-300px);
+  }
+
+}
+
+// -----s3 section
+// --------------------------------------------------
+
+.s3-section {
+  margin-top: pct(-10px);
+  padding: pct(48px) 0;
+  background: url(../images/s3_bg.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  .s3-section-title-top {
+    @include size(pct(803px), pct(230px));
+  }
+  .s3-section-bottom {
+    margin-top : pct(150px);
+    &.column {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .s3-section-title-bottom {
+      @include size(auto, pct(267.01px));
+    }
+    .s3-section-row {
+      @include size(100%);
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .s3-section-item {
+      position: relative;
+      flex: 0 0 50%;
+      margin-top: pct(50px);
+      &:nth-child(1) {
+        @include size(553.74px, 457.54px);
+        background: url(../images/s3_box_left.png);
+        @include background-cover;
+        .s3-section-btn {
+          position: absolute;
+          bottom: 63px;
+          background: url(../images/s3_button_left.png);
+          @include background-contain;
+          @include size(100%, 83px);
+        }
+      }
+      &:nth-child(2) {
+        @include size(553.74px, 457.54px);
+        background: url(../images/s3_box_right.png);
+        @include background-cover;
+        .s3-section-btn {
+          position: absolute;
+          bottom: 63px;
+          background: url(../images/s3_button_right.png);
+          @include background-contain;
+          @include size(100%, 83px);
+        }
+      }
+    }
+    .s3-section-msg-bottom {
+      @include size(pct(981.33px), pct(193.87px));
+      margin-top: pct(64px);
+    }
+  }
+}

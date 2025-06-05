@@ -1,0 +1,45 @@
+extends _layout.pug
+
+append vars
+block content
+  main.content
+    section.section
+      .kv-section-bg
+      .kv-section-visual
+    nav.tab
+      ul.tab-row.row
+        li.tab-item
+          a(href="javascript:;").tab-link 為你的成長應援
+            br
+            |閃耀旅程
+        li.tab-item
+          a(href="javascript:;").tab-link 為你的成長應援
+            br
+            |閃耀旅程
+    section.section.s2-section
+      .container.column
+        img.s2-section-title-top(src="./images/s2_title_top.png", alt="")
+        img.s2-section-visual-top(src="./images/s2_visual_top.png", alt="")
+        img.s2-section-title-bottom(src="./images/s2_title_bottom.png", alt="")
+        img.s2-section-visual-bottom(src="./images/s2_visual_bottom.png", alt="")
+        .s2-section-npc-bottom
+    section.section.s3-section
+      .container.column
+        img.s3-section-title-top(src="./images/s3_title_top.png", alt="")
+        ul.section-tab.row 
+          li.section-tab-item.is-active 租借服務
+          li.section-tab-item 免費支援服務
+          li.section-tab-item 限制擴充服務
+        .section-tab-content
+          p.section-tab-msg 向
+            span.section-tab-msg-name 借管理人薩夏
+            |搭話租借豐富道具
+          img.section-tab-img(src="./images/s3_tab01_content.png", alt="")
+        .s3-section-bottom.column
+          img.s3-section-title-bottom(src="./images/s3_title_bottom.png", alt="")
+          ul.s3-section-row.row
+            li.s3-section-item
+              button.s3-section-btn
+            li.s3-section-item
+              button.s3-section-btn
+          img.s3-section-msg-bottom(src="./images/s3_msg_bottom.png", alt="")
