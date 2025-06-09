@@ -102,133 +102,376 @@ body {
   }
 }
 
-
-// -----kv visual
-// --------------------------------------------------
-
-.kv-section-bg {
-  @include size(100%, 100%);
-  position: absolute;
-  background: url(../images/kv_visual.jpg);
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.kv-section-visual {
-  background: url(../images/kv_main_title.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  @include size(pct(1000px), pct(733px));
-  @include center;
-}
-
-// -----s2 section
-// --------------------------------------------------
-
-.s2-section {
-  background: url(../images/s2_bg.jpg);
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-bottom: pct(100px);
-  .container {
-    padding-top: pct(72px);
-  }
-
-  .s2-section-title-top {
-    @include size(pct(651px), pct(221px));
-    @include flex-center;
-  }
-
-  .s2-section-visual-top {
-    @include size(pct(812px), pct(802px));
-    margin-top: pct(-120px);
-  }
-
-  .s2-section-title-bottom {
-    @include size(pct(903.86px), pct(167.67px));
-    margin-top: pct(-80px);
-    
-  }
-
-  .s2-section-visual-bottom {
-    @include size(pct(1920px), pct(888px));
-    margin-top: pct(-250px);
-    pointer-events: none;
-  }
-
-  .s2-section-npc-bottom {
-    background: url(../images/s2_msg_bottom.png);
-    @include size(pct(1124px), 303px);
-    @include background-cover;
-    margin-top: pct(-300px);
-  }
-
-}
-
-// -----s3 section
-// --------------------------------------------------
-
-.s3-section {
-  margin-top: pct(-10px);
-  padding: pct(48px) 0;
-  background: url(../images/s3_bg.jpg);
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
+  // -----kv visual
+  // --------------------------------------------------
   
-  .s3-section-title-top {
-    @include size(pct(803px), pct(230px));
+  .kv-section-bg {
+    @include size(100%, 100%);
+    position: absolute;
+    background: url(../images/kv_visual.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .s3-section-bottom {
-    margin-top : pct(150px);
-    &.column {
-      justify-content: center;
-      align-items: center;
-    }
+  
+  .kv-section-visual {
+    background: url(../images/kv_main_title.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include size(pct(1000px), pct(733px));
+    @include center;
+  }
 
-    .s3-section-title-bottom {
-      @include size(auto, pct(267.01px));
+  
+  // -----s2 section
+  // --------------------------------------------------
+  
+  .s2-section {
+    background: url(../images/s2_bg.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: pct(100px);
+    .container {
+      padding-top: pct(72px);
     }
-    .s3-section-row {
-      @include size(100%);
-      justify-content: space-between;
-      align-items: flex-start;
+  
+    .s2-section-title-top {
+      @include size(pct(651px), pct(221px));
+      @include flex-center;
     }
-    .s3-section-item {
-      position: relative;
-      flex: 0 0 50%;
-      margin-top: pct(50px);
-      &:nth-child(1) {
-        @include size(553.74px, 457.54px);
-        background: url(../images/s3_box_left.png);
-        @include background-cover;
-        .s3-section-btn {
-          position: absolute;
-          bottom: 63px;
-          background: url(../images/s3_button_left.png);
-          @include background-contain;
-          @include size(100%, 83px);
+  
+    .s2-section-visual-top {
+      @include size(pct(812px), pct(802px));
+      margin-top: pct(-120px);
+    }
+  
+    .s2-section-title-bottom {
+      @include size(pct(903.86px), pct(167.67px));
+      margin-top: pct(-80px);
+      
+    }
+  
+    .s2-section-visual-bottom {
+      @include size(pct(1920px), pct(888px));
+      margin-top: pct(-250px);
+      pointer-events: none;
+    }
+  
+    .s2-section-npc-bottom {
+      background: url(../images/s2_msg_bottom.png);
+      @include size(pct(1124px), 303px);
+      @include background-cover;
+      margin-top: pct(-300px);
+    }
+  
+  }
+  
+  // -----s3 section
+  // --------------------------------------------------
+  
+  .s3-section {
+    margin-top: pct(-10px);
+    padding: pct(48px) 0 pct(150px);
+    background: url(../images/s3_bg.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    .s3-section-title-top {
+      @include size(pct(803px), pct(230px));
+    }
+    .s3-section-bottom {
+      margin-top : pct(150px);
+      &.column {
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .s3-section-title-bottom {
+        @include size(auto, pct(267.01px));
+      }
+      .s3-section-row {
+        @include size(100%);
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .s3-section-item {
+        position: relative;
+        flex: 0 0 50%;
+        margin-top: pct(50px);
+        &:nth-child(1) {
+          @include size(553.74px, 457.54px);
+          background: url(../images/s3_box_left.png);
+          @include background-cover;
+          .s3-section-btn {
+            position: absolute;
+            bottom: 63px;
+            background: url(../images/s3_button_left.png);
+            @include background-contain;
+            @include size(100%, 83px);
+          }
         }
+        &:nth-child(2) {
+          @include size(553.74px, 457.54px);
+          background: url(../images/s3_box_right.png);
+          @include background-cover;
+          .s3-section-btn {
+            position: absolute;
+            bottom: 63px;
+            background: url(../images/s3_button_right.png);
+            @include background-contain;
+            @include size(100%, 83px);
+          }
+        }
+      }
+      .s3-section-msg-bottom {
+        @include size(pct(981.33px), pct(193.87px));
+        margin-top: pct(64px);
+      }
+    }
+  }
+  
+  
+  // -----s4 section
+  // --------------------------------------------------
+  
+  .s4-section {
+    padding: pct(48px) 0 pct(150px);
+    background: url(../images/s4_bg.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    .s4-section-title-top {
+      @include size(pct(1095.14px), pct(99.53px));
+    }
+  
+    .s4-section-visual-top {
+      @include size(pct(842.86px), pct(842.86px));
+    }
+  
+    .s4-section-msg-top {
+      @include size(pct(1205px), pct(87px));
+    }
+  
+    .s4-section-bottom {
+      margin-top: pct(300px);
+  
+      .section-tab {
+        gap: 0;
+      }
+  
+      .section-tab-item {
+        flex: 0 0 calc((100% / 4) - 4px);
+      }
+    }
+  }
+  
+  // -----s5 section
+  // --------------------------------------------------
+  
+  .s5-section {
+    padding: pct(48px) 0 pct(50px);
+    background: url(../images/s5_bg.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    .s5-section-title {
+      @include size(pct(501.31px), pct(274.98px));
+    }
+  
+    .s5-section-msg {
+      @include size(pct(919.96px), pct(95.79px));
+      margin-top: pct(70px);
+    }
+  
+    .s5-section-text {
+      color: #878484;
+      font-size: 1rem;
+      margin-top: 1.25rem;
+    }
+  
+    .s5-section-vod {
+      position: relative;
+      @include size(1291.71px, 758.29px);
+      justify-content: space-between;
+      margin-top: pct(150px);
+  
+      video {
+        @include size(100%);
+      }
+  
+      .s5-section-bg {
+        @include size(1291.71px, 548.1px);
+        position: absolute;
+        top: pct(-100px);
+        background: url(../images/s5_star.png);
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        
+      }
+    }
+  
+    .s5-section-vod01 {
+      position: relative;
+      background: url(../images/s5_vod01.png);
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include size(585.78px, 616px);
+      flex: 0 0 calc(50% - 24px);
+  
+      .s5-vod {
+        width: 100%;
+        height: 406px;
+        position: absolute;
+        top: 126px;
+        left: 0;
+      }
+    
+    }
+  
+    .s5-section-vod02 {
+      position: relative;
+      background: url(../images/s5_vod02.png);
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include size(585.78px, 616px);
+      flex: 0 0 calc(50% - 24px);
+      margin-top: pct(135px);
+  
+      .s5-vod {
+        width: 100%;
+        height: 406px;
+        position: absolute;
+        top: 131px;
+        left: 0;
+      }
+    }
+  
+    .s5-section-row {
+      align-items: flex-end;
+      .s5-vodbox {
+        position: relative;
+        @include size(pct(350px), pct(250.54px));
+      }
+      .s5-vod {
+        width: 100%;
+        height: 76.5%;
+        position: absolute;
+        top: 3px;
+        left: 0px;
+  
+        video {
+          @include size(100%);
+        }
+      }
+    }
+    
+    .s5-section-card {
+      &:nth-child(1) {
+        @include size(pct(466.25px), pct(376.48px));
+        margin-right: pct(18px);
       }
       &:nth-child(2) {
-        @include size(553.74px, 457.54px);
-        background: url(../images/s3_box_right.png);
+        @include size(pct(201.68px), pct(321.03px));
+        margin-right: pct(50px);
+      }
+    }
+  
+    .s5-section-card04 {
+      @include size(pct(586.63px), pct(420.99px));
+      margin-top: 70px;
+    }
+  
+    .s5-section-card05 {
+      @include size(pct(1099.32px), pct(343.35px));
+    }
+  }
+
+
+  .right-table-container {
+    // -----s2 section
+    // --------------------------------------------------
+    .s2-section {
+      .s2-section-title-top {
+        @include size(pct(651px), pct(255.66px));
+      }
+
+      .s2-section-visual-top {
+        @include size(pct(705px), pct(638.37px));
+        margin-top: pct(0px);
+      }
+
+      .s2-section-visual-bottom {
+        @include size(pct(525.62px), pct(372.92px));
+        margin-top: pct(60px);
+        pointer-events: none;
+      }
+
+      .s2-section-npc-bottom {
+        background: url(../images/s2_msg_bottom_r.png);
+        @include size(pct(1124px), 303px);
         @include background-cover;
-        .s3-section-btn {
-          position: absolute;
-          bottom: 63px;
-          background: url(../images/s3_button_right.png);
-          @include background-contain;
-          @include size(100%, 83px);
+        margin-top: 0;
+      }
+    }
+
+    // -----s3 section
+    // --------------------------------------------------
+    .s3-section {
+      .s3-section-title-top {
+        @include size(pct(501.31px), pct(151px));
+        margin-top: pct(175px);
+      }
+      .s3-section-card {
+        @include size(100%, pct(979.2px));
+        margin-top: pct(100px);
+      }
+
+      .s3-section-center {
+        justify-content: center;
+        align-items: center;
+        margin-top: pct(200px);
+
+        .s3-section-title-center {
+          @include size(pct(629.31px), pct(152.8px));
+        }
+
+        .s3-section-msg-center {
+          @include size(pct(1128.31px), pct(275.26px));
+        }
+
+        .s3-section-card-center {
+          @include size(pct(1091.2px), pct(1300.29px));
+        }
+      }
+
+      .s3-section-bottom {
+        .s3-section-card01-bottom {
+          margin-bottom: pct(40px);
+        }
+        .s3-section-card02-bottom {
+          position: relative;
+          width:100%;
+          height: 100%;
+          .s3-section-btn {
+            display: inline-block;
+            background: url(../images/s3_button_r.png);
+            @include background-contain;
+            @include size(254px, 116px);
+            position: absolute;
+            top: calc((100% - 116px) / 2);
+            right: 0;;
+
+          }
         }
       }
     }
-    .s3-section-msg-bottom {
-      @include size(pct(981.33px), pct(193.87px));
-      margin-top: pct(64px);
-    }
   }
-}
