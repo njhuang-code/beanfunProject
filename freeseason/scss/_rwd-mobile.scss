@@ -1,7 +1,39 @@
 @media (max-width: ($mbrwd-breakpoint* 1px)) {
 
+  .section-tab {
+    gap: vwm(4px);
+    width: 100%;
+    flex-wrap: nowrap;
+    .section-tab-item {
+      @include size(vwm(361px), auto);
+      margin-top: vwm(100px);
+      padding: vwm(24px) 0;
+      font-size: vwm(32px);
+      &.is-active {
+        font-size: vwm(36px);
+        height: vwm(120px);
+        @include flex-center
+      }
+    }
+  }
+  
+  .section-tab-content {
+    border: vwm(3.5px) solid #0396D7;
+    padding: vwm(40px) 0;
+    .section-tab-msg {
+      margin-bottom: vwm(40px);
+      font-size: vwm(32px);
+      text-align: center;
+      .section-tab-msg-name {
+        font-size: vwm(36px);
+      }
+    }
+    .section-tab-img {
+      @include size(90%, 100%);
+    }
+  }
 
-// -----s2 section
+  // -----s2 section
   // --------------------------------------------------
   .s2-section {
     padding-bottom: vwm(100px);
@@ -11,7 +43,7 @@
     }
 
     .s2-section-title-top {
-      @include size(vwm(651px), vwm(221px));
+      @include size(vwm(813.75px), vwm(276.25px));
     }
 
     .s2-section-visual-top {
@@ -20,20 +52,207 @@
     }
 
     .s2-section-title-bottom {
-      @include size(vwm(903.86px), vwm(167.67px));
+      @include size(vwm(1129.825px), vwm(209.5875px));
       margin-top: vwm(-80px);
     }
 
     .s2-section-visual-bottom {
-      @include size(vwm(900px), pct(444px));
+      @include size(vwm(1100px), pct(444px));
       margin-top: vwm(-100px);
     }
 
     .s2-section-npc-bottom {
-      @include size(vwm(1124px),vwm(303px));
-      margin-top: vwm(-300px);
+      background: url(../images/s2_msg_bottom_M.png);
+      @include background-contain;
+      @include size(vwm(700px),vwm(300px));
+      margin-top: vwm(-200px);
     }
   }
+
+  // -----s3 section
+  // --------------------------------------------------
+  .s3-section {
+    padding: vwm(48px) 0 vwm(150px);
+
+    .s3-section-title-top {
+      @include size(100%, vwm(330px));
+    }
+
+    .s3-section-bottom {
+      margin-top : vwm(150px);
+
+      .s3-section-title-bottom {
+        @include size(vwm(780.6375px) , vwm(333.7625px));
+      }
+
+      .s3-section-item {
+        margin-top: vwm(30px);
+        flex: 0 0 100%;
+        &:nth-child(1) {
+          @include size(vwm(692.175px), vwm(571.925px));
+          @include background-contain;
+          .s3-section-btn {
+            bottom: vwm(63px);
+            @include size(100%, vwm(103.75px));
+          }
+        }
+        &:nth-child(2) {
+          @include size(vwm(692.175px), vwm(571.925px));
+          @include background-contain;
+          .s3-section-btn {
+            bottom: vwm(63px);
+            @include size(100%, vwm(103.75px));
+          }
+        }
+      }
+
+      .s3-section-msg-bottom {
+        @include size(vwm(981.33px), vwm(193.87px));
+        margin-top: vwm(64px);
+      }
+    }
+  }
+
+  // -----s4 section
+  // --------------------------------------------------
+  .s4-section {
+    padding: vwm(48px) 0 vwm(150px);
+
+    .s4-section-title-top {
+      @include size(vwm(1368.14px), vwm(124.53px));
+    }
+      
+    .s4-section-visual-top {
+      @include size(100%);
+      margin-top: vwm(-100px);
+    }
+  
+    .s4-section-msg-top {
+      @include size(70%);
+    }
+  
+    .s4-section-bottom {
+      margin-top: vwm(300px);
+
+      .s4-section-title-bottom {
+        @include size(100%, vwm(400px));
+      }
+  
+      .section-tab-item {
+        flex: 0 0 calc((100% / 4) - vwm(4px));
+        width: 100%;
+        height: vwm(140px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        word-break: break-all;
+
+        &.is-active {
+          height: vwm(160px);
+        }
+      }
+
+      .section-tab {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  // -----s5 section
+  // --------------------------------------------------
+
+  .s5-section {
+    padding: vwm(48px) 0 vwm(50px);
+  
+    .s5-section-title {
+      @include size(100%, vwm(480px));
+    }
+  
+    .s5-section-msg {
+      @include size(vwm(730px), vwm(80px));
+      margin-top: vwm(70px);
+    }
+  
+    .s5-section-text {
+      font-size: vwm(28px);
+      margin-top: vwm(40px);
+    }
+  
+    .s5-section-vod {
+      @include size(vwm(1291.71px), auto);
+      margin-top: vwm(150px);
+      gap: vwm(32px);
+  
+      .s5-section-bg {
+        @include size(vwm(1291.71px), vwm(548.1px));
+        top: vw(-100px);
+      }
+    }
+  
+    .s5-section-vod01 {
+      @include size(100%, vwm(616px));
+      flex: 0 0 100%;
+  
+      .s5-vod {
+        height: vwm(406px);
+        top: vwm(126px);
+      }
+    
+    }
+  
+    .s5-section-vod02 {
+      @include size(vwm(585.78px), vwm(616px));
+      flex: 0 0 calc(50% - vwm(24px));
+      margin-top: 0;
+  
+      .s5-vod {
+        height: vwm(406px);
+        top: vwm(131px);
+      }
+    }
+  
+    .s5-section-row {
+      .s5-vod {
+        top: vwm(3px);
+      }
+    }
+
+    .s5-section-row {
+      flex-direction: column;
+      justify-content: center;
+      gap: vwm(30px);
+      .s5-vodbox {
+        @include size(65%, auto);
+      }
+      .s5-vod {
+        @include size(calc(100% - vwm(10px)) , auto);
+        top: vwm(6px);
+        left: vwm(3px);
+      }
+    }
+
+    .s5-section-card {
+      &:nth-child(1) {
+        @include size(100%, vwm(600px));
+        margin-right: 0;
+      }
+      &:nth-child(2) {
+        @include size(40%, vwm(480px));
+        margin-right: 0;
+      }
+    }
+
+    .s5-section-card04 {
+      @include size(90%, auto);
+      margin-top: vwm(50px);
+    }
+  
+    .s5-section-card05 {
+      @include size(50% , auto);
+      margin-top: vwm(50px);
+    }
+  }
+
 
 
 }

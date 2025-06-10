@@ -4,6 +4,7 @@
 
 @media (max-width: ($pc-midrwd-breakpoint* 1px)) {
 
+
   .section-tab {
     gap: vw(4px);
     width: 100%;
@@ -32,6 +33,11 @@
     .section-tab-img {
       @include size(vw(997px), vw(558px));
     }
+  }
+
+  .tab {
+    @include size(100%, vw(133px));
+    bottom: calc((vw(-133px) / 2));
   }
   
   // -----s2 section

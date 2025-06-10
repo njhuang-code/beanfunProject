@@ -35,20 +35,18 @@ block content
             p.section-tab-msg 向
               span.section-tab-msg-name 借管理人薩夏
               |搭話租借豐富道具
-            img.section-tab-img(src="./images/s3_tab01_content.png", alt="")
-          .s3-section-bottom.column
-            img.s3-section-title-bottom(src="./images/s3_title_bottom.png", alt="")
-            ul.s3-section-row.row
-              li.s3-section-item
-                button.s3-section-btn
-              li.s3-section-item
-                button.s3-section-btn
-            img.s3-section-msg-bottom(src="./images/s3_msg_bottom.png", alt="")
+            picture
+              source(srcset="./images/s3_tab01_content_M.png" media="(max-width: 768px)" type="image/png")
+              img.section-tab-img(src="./images/s3_tab01_content.png", alt="")
       section.section.s4-section
         .container.column
           img.s4-section-title-top(src="./images/s4_title_top.png", alt="")
-          img.s4-section-visual-top(src="./images/s4_main_visual.png", alt="")
-          img.s4-section-msg-top(src="./images/s4_msg_top.png", alt="")
+          picture
+            source(srcset="./images/s4_main_visual_M.png" media="(max-width: 768px)" type="image/png")
+            img.s4-section-visual-top(src="./images/s4_main_visual.png", alt="")
+          picture
+            source(srcset="./images/s4_msg_top_M.png" media="(max-width: 768px)" type="image/png")
+            img.s4-section-msg-top(src="./images/s4_msg_top.png", alt="")
           .s4-section-bottom
             img.s4-section-title-bottom(src="./images/s4_title_bottom.png", alt="")
             ul.section-tab.row 
@@ -57,7 +55,9 @@ block content
               li.section-tab-item 協作精神(寵物/戰鬥)
               li.section-tab-item 適應力(高級成長)
             .section-tab-content
-              img.section-tab-img(src="./images/s4_tab01_content.png", alt="")
+              picture
+                source(srcset="./images/s4_tab01_content_M.png" media="(max-width: 768px)" type="image/png")
+                img.section-tab-img(src="./images/s4_tab01_content.png", alt="")
       section.section.s5-section
         .container.column
           img.s5-section-title(src="./images/s5_title.png", alt="")
@@ -82,7 +82,9 @@ block content
                 video(autoplay loop muted playsinline)
                     source(src='./images/video/s5_vod03.mp4')
           img.s5-section-card04(src="./images/s5_card04.png", alt="")
-          img.s5-section-card05(src="./images/s5_card05.png", alt="")
+          picture 
+            source(srcset="./images/s5_card05_M.png" media="(max-width: 768px)" type="image/png")
+            img.s5-section-card05(src="./images/s5_card05.png", alt="")
     .right-table-container(style="display: none")
       section.section.s2-section
         .container.column

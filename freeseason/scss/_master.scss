@@ -12,6 +12,9 @@ body {
     justify-content: center;
     align-items: center;
   }
+  picture {
+    @include flex-center;
+  }
 }
 
 .section-tab {
@@ -43,6 +46,7 @@ body {
   @include size(100%, 100%);
   border: 3.5px solid #0396D7;
   padding: pct(40px) 0;
+  
   .section-tab-msg {
     margin-bottom: pct(40px);
     color: #CECECE;
