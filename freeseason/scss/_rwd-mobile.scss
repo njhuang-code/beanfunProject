@@ -1,8 +1,39 @@
 @media (max-width: ($mbrwd-breakpoint* 1px)) {
 
 
- // kv visual
-// --------------------------------------------------
+// -----s2 section
+  // --------------------------------------------------
+  .s2-section {
+    padding-bottom: vwm(100px);
+
+    .container {
+      padding-top: vwm(200px);
+    }
+
+    .s2-section-title-top {
+      @include size(vwm(651px), vwm(221px));
+    }
+
+    .s2-section-visual-top {
+      @include size(vwm(812px), vwm(802px));
+      margin-top: vwm(-120px);
+    }
+
+    .s2-section-title-bottom {
+      @include size(vwm(903.86px), vwm(167.67px));
+      margin-top: vwm(-80px);
+    }
+
+    .s2-section-visual-bottom {
+      @include size(vwm(900px), pct(444px));
+      margin-top: vwm(-100px);
+    }
+
+    .s2-section-npc-bottom {
+      @include size(vwm(1124px),vwm(303px));
+      margin-top: vwm(-300px);
+    }
+  }
 
 
 }
