@@ -36,6 +36,14 @@ body {
       font-size: 32px;
       font-weight: bold;
     }
+    &:not(:nth-child(1)) {
+      &.is-active {
+        background: #3F65CF;
+        .section-tab-text {
+          display: inline-block;
+        }
+      }
+    }
   }
 }
 
@@ -46,7 +54,8 @@ body {
   @include size(100%, 100%);
   border: 3.5px solid #0396D7;
   padding: pct(40px) 0;
-  
+  display: none;
+
   .section-tab-msg {
     margin-bottom: pct(40px);
     color: #CECECE;
@@ -81,12 +90,18 @@ body {
 }
 
 .tab {
-  @include size(100%, pct(133px));
+  @include size(100%, 133px);
   position: absolute;
-  bottom: calc((pct(-133px) / 2));
+  top: -65px;
   z-index: 2;
-  background: url(../images/kv_menu_lef.png);
-  @include background-cover;
+  &.img-1 {
+    background: url(../images/kv_menu_left.png);
+    @include background-cover;
+  }
+  &.img-2 {
+    background: url(../images/kv_menu_right.png);
+    @include background-cover;
+  }
   .tab-row {
     @include size(100%, 100%);
     margin: auto;
@@ -106,25 +121,17 @@ body {
   }
 }
 
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
   // -----kv visual
   // --------------------------------------------------
   
   .kv-section-bg {
     @include size(100%, 100%);
-    position: absolute;
-    background: url(../images/kv_visual.jpg);
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .kv-section-visual {
-    background: url(../images/kv_main_title.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    @include size(pct(1000px), pct(733px));
-    @include center;
   }
 
   
@@ -306,6 +313,7 @@ body {
   
       video {
         @include size(100%);
+        object-fit: cover;
       }
   
       .s5-section-bg {
@@ -331,11 +339,12 @@ body {
       flex: 0 0 calc(50% - 24px);
   
       .s5-vod {
-        width: 100%;
-        height: 406px;
+        width: 512px;
+        height: 392px;
         position: absolute;
         top: 126px;
-        left: 0;
+        left: calc((100% - 512px) / 2);
+        overflow: hidden;
       }
     
     }
@@ -351,11 +360,12 @@ body {
       margin-top: pct(135px);
   
       .s5-vod {
-        width: 100%;
-        height: 406px;
+        width: 512px;
+        height: 392px;
         position: absolute;
-        top: 131px;
-        left: 0;
+        top: 126px;
+        left: calc((100% - 512px) / 2);
+        overflow: hidden;
       }
     }
   
@@ -379,14 +389,8 @@ body {
     }
     
     .s5-section-card {
-      &:nth-child(1) {
-        @include size(pct(466.25px), pct(376.48px));
-        margin-right: pct(18px);
-      }
-      &:nth-child(2) {
-        @include size(pct(201.68px), pct(321.03px));
-        margin-right: pct(50px);
-      }
+      @include size(pct(1197.24px), pct(289.14px));
+      margin-top: pct(60px);
     }
   
     .s5-section-card04 {
@@ -400,6 +404,7 @@ body {
   }
 
   .left-table-container {
+    display: none;
     .s2-section-visual-top {
       margin-left: pct(50px);
     }
@@ -407,6 +412,7 @@ body {
 
 
   .right-table-container {
+    display: none;
     // -----s2 section
     // --------------------------------------------------
     .s2-section {
@@ -477,6 +483,10 @@ body {
       .s3-section-bottom {
         margin-top: pct(328px);
 
+        .s3-section-title-bottom {
+          @include size(100% , pct(267.01px));
+        }
+
         .s3-section-card01-bottom {
           margin-bottom: pct(40px);
         }
@@ -486,7 +496,7 @@ body {
           height: 100%;
           .s3-section-btn {
             display: inline-block;
-            background: url(../images/s3_button_r.png);
+            background: url(../images/s3_button_R.png);
             @include background-contain;
             @include size(254px, 116px);
             position: absolute;
@@ -501,7 +511,6 @@ body {
     // -----s4 section
     // --------------------------------------------------
     .s4-section {
-      padding-top: pct(284px);
       background: url(../images/s4_bg_R.jpg);
       background-position: top;
       background-size: cover;
@@ -517,18 +526,20 @@ body {
       .s4-section-card-bottom {
         position: relative;
         @include size(100%, 824.8px);
-        background: url(../images/s4_card_bottom_R.png);
-        @include background-cover;
       }
 
       .s4-section-card-row  {
         .s4-section-card-item {
           @include size(pct(669.6px), 410.62px);
-          position: absolute;
-          left: calc((100% - 669.6px) / 2);
-          bottom: pct(80px);
-          
+          // position: absolute;
+          // left: calc((100% - 669.6px) / 2);
+          // bottom: pct(80px);
         }
+      }
+
+      .swiper {
+        width: 50%;
+        margin-top: pct(-430px);
       }
     }
   }
