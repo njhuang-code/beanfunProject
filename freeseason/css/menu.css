@@ -49,6 +49,7 @@
   background-image: url(../images/menu/side_nav_btn_home.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  cursor: pointer;
 }
 
 .side_nav .btn_box {
@@ -64,7 +65,8 @@
 
 .side_nav .btn_box.ss li {
   height: 99px;
-  background-size: auto 99px !important
+  background-size: auto 99px !important;
+  cursor: pointer;
 }
 
 .side_nav .btn_box.ss li .btn_span {
@@ -118,17 +120,23 @@
 }
 
 .side_nav .btn_box.ss li:nth-child(2) {
-  background-image: url(../images/menu/menu_02_hover.png);
+  background-image: url(../images/menu/menu_02.png);
   background-repeat: no-repeat;
 }
 
+.side_nav .btn_box.ss li:nth-child(2) .btn_span:before {
+  background-image: url(../images/menu/menu_02.png);
+  background-repeat: no-repeat;
+}
+
+.side_nav .btn_box.ss li:nth-child(2):hover,
 .side_nav .btn_box.ss li:nth-child(2) .btn_span:before {
   background-image: url(../images/menu/menu_02_hover.png);
   background-repeat: no-repeat;
 }
 
 .side_nav .btn_box.ss li:nth-child(3) {
-  background-image: url(../images/menu/menu_03.png);
+  background-image: url(../images/menu/menu_03_hover.png);
   background-repeat: no-repeat;
 }
 
@@ -230,6 +238,7 @@
   background-image: url(../images/menu/side_nav_btn_on.png);
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 
 .side_nav.hide {
@@ -239,6 +248,7 @@
 .side_nav.hide .btn_toggle {
   background-position: right 0;
   background-image: url(../images/menu/side_nav_btn_off.png);
+  cursor: pointer;
 }
 
 .mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical,

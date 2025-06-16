@@ -1,4 +1,24 @@
 $(document).ready(function () {
+  $('.btn_box.ss li.open').on('click', function () {
+    const link = $(this).find('a').attr('href');
+    if (link) {
+      window.location.href = link;
+    }
+  });
+
+  $('.btn_home').on('click', function () {
+    const link = $(this).find('a').attr('href');
+    if (link) {
+      window.location.href = link;
+    }
+  });
+  
+  $('.btn_toggle').on('click', (event) => {
+    event.preventDefault();
+    $('.side_nav').toggleClass('hide');
+  });
+
+
   $('.section-tab-group').each(function () {
     const $group = $(this); 
 
@@ -97,8 +117,3 @@ const swiper = new Swiper('.swiper', {
     });
 });
 
-
-$('.btn_toggle').on('click', (event) => {
-  event.preventDefault();
-  $('.side_nav').toggleClass('hide');
-});
