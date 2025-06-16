@@ -154,12 +154,20 @@ body {
   font-size: 28px;
   text-align: center;
   background: #045D7F;
+  cursor: pointer;
+}
+.section-tab .section-tab-item *:hover {
+  background: #0396D7;
 }
 .section-tab .section-tab-item.is-active {
   background: #0396D7;
   color: #ffffff;
   font-size: 32px;
   font-weight: bold;
+}
+.section-tab .section-tab-item:not(:nth-child(1)):hover {
+  background: #3F65CF;
+  color: #fff;
 }
 .section-tab .section-tab-item:not(:nth-child(1)).is-active {
   background: #3F65CF;

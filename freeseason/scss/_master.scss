@@ -30,6 +30,10 @@ body {
     font-size: 28px;
     text-align: center;
     background: #045D7F;
+    cursor: pointer;
+    *:hover {
+      background: #0396D7;
+    }
     &.is-active {
       background: #0396D7;
       color: $text03;
@@ -37,6 +41,10 @@ body {
       font-weight: bold;
     }
     &:not(:nth-child(1)) {
+      &:hover {
+        background: #3F65CF;
+        color: #fff;
+      }
       &.is-active {
         background: #3F65CF;
         .section-tab-text {
