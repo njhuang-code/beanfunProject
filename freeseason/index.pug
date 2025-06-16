@@ -4,6 +4,8 @@ append vars
 block content
   main
     section
+      a.logo(href="https://mabinogi.beanfun.com/Main")
+        img(src="./images/logo.png", alt="")
       .kv-section-bg
         img.kv-section-visual(src="./images/kv_visual.jpg", alt="")
 
@@ -18,6 +20,39 @@ block content
               a(href="javascript:;").tab-link 為你的成長應援
                 br
                 |閃耀旅程
+      #sideNav.side_nav
+        .swrap.mCustomScrollbar._mCS_1.mCS-autoHide.mCS_no_scrollbar(style="overflow: visible")
+          #mCSB_1.mCustomScrollBox.mCS-minimal-dark.mCSB_vertical.mCSB_outside(tabindex="0", style="max-height: none")
+            #mCSB_1_container.mCSB_container.mCS_y_hidden.mCS_no_scrollbar_y(style="position: relative; top: 0; left: 0", dir="ltr")
+              .btn_home
+                a(href="https://mabinogi.beanfun.com/Main")
+                  span.btn_span
+              ul.btn_box.ss
+                li.open
+                  a(href="https://tw.hicdn.beanfun.com/beanfun/promo/Mabi/20250619J-shield/index.html")
+                    span.btn_span
+                li.open.on
+                  a(href="https://tw.hicdn.beanfun.com/beanfun/promo/Mabi/20250619J-spear/index.html")
+                    span.btn_span
+                li.open
+                  a(href="https://tw.hicdn.beanfun.com/beanfun/promo/Mabi/20250619J-freeseason/index.html")
+                    span.btn_span
+                li.open
+                  a(href="https://mabinogi-event.beanfun.com/Anniversary20th")
+                    span.btn_span
+                li.open
+                  a(href="https://bean.fun/Mabi_202507_Event")
+                    span.btn_span
+          #mCSB_1_scrollbar_vertical.mCSB_scrollTools.mCSB_1_scrollbar.mCS-minimal-dark.mCSB_scrollTools_vertical(style="display: none")
+            .mCSB_draggerContainer
+              #mCSB_1_dragger_vertical.mCSB_dragger(style="position: absolute; min-height: 50px; height: 0px; top: 0px")
+                .mCSB_dragger_bar(style="line-height: 50px")
+              .mCSB_draggerRail
+        .btn_toggle
+          a(href="#")
+            span.btn_span
+
+      .black-overlay(style="display: none;")
       .left-table-container
         section.section.s2-section
           .container.column
@@ -35,7 +70,7 @@ block content
               li.section-tab-item 限制擴充服務
             .section-tab-content
               p.section-tab-msg 向
-                span.section-tab-msg-name 借管理人薩夏
+                span.section-tab-msg-name 租借管理人薩夏
                 |搭話租借豐富道具
               picture
                 source(srcset="./images/s3_tab01_content_M.png" media="(max-width: 768px)" type="image/png")
@@ -50,6 +85,14 @@ block content
               picture
                 source(srcset="./images/s3_tab03_content_M.png" media="(max-width: 768px)" type="image/png")
                 img.section-tab-img(src="./images/s3_tab03_content.png", alt="")
+            .s3-section-bottom.column
+              img.s3-section-title-bottom(src="./images/s3_title_bottom.png", alt="")
+              ul.s3-section-row.row#linkPop
+                li.s3-section-item
+                  button.s3-section-btn(data-target="#popup1")
+                li.s3-section-item
+                  button.s3-section-btn(data-target="#popup2")
+              img.s3-section-msg-bottom(src="./images/s3_msg_bottom.png", alt="")
         section.section.s4-section
           .container.column
             img.s4-section-title-top(src="./images/s4_title_top.png", alt="")
@@ -106,6 +149,20 @@ block content
             picture 
               source(srcset="./images/s5_card05_M.png" media="(max-width: 768px)" type="image/png")
               img.s5-section-card05(src="./images/s5_card05.png", alt="")
+        .popup#popup1(style="display: none;")
+          .popup-page
+            .closed
+              img(src="./images/icon-X.png", alt="")
+            picture
+              source(srcset="./images/pop_01_M.png" media="(max-width: 768px)" type="image/png")
+              img.pop01(src="./images/pop_01.png", alt="")
+        .popup#popup2(style="display: none;")
+          .popup-page
+            .closed
+              img(src="./images/icon-X.png", alt="")
+            picture
+              source(srcset="./images/pop_02_M.png" media="(max-width: 768px)" type="image/png")
+              img.pop01(src="./images/pop_02.png", alt="")
       .right-table-container
           section.section.s2-section
             .container.column
@@ -147,19 +204,46 @@ block content
                   source(srcset="./images/s4_card_bottom_R_M.png" media="(max-width: 768px)" type="image/png")
                   img.s4-section-card-bottom(src="./images/s4_card_bottom_R.png", alt="")
                   
-                .s4-section-card-row.swiper
-                  ul.swiper-wrapper
-                    li.s4-section-card-item.swiper-slide
-                      picture
-                        source(srcset="./images/s4_slide_card01_M.png" media="(max-width: 768px)" type="image/png")
-                        img(src="./images/s4_slide_card01.png", alt="")
-                    li.s4-section-card-item.swiper-slide
-                      picture
-                        source(srcset="./images/s4_slide_card01_M.png" media="(max-width: 768px)" type="image/png")
-                        img(src="./images/s4_slide_card01.png", alt="")
-                    li.s4-section-card-item.swiper-slide
-                      picture
-                        source(srcset="./images/s4_slide_card01_M.png" media="(max-width: 768px)" type="image/png")
-                        img(src="./images/s4_slide_card01.png", alt="")
+                .s4-section-card-row 
+                  .swiper
+                    ul.swiper-wrapper
+                      li.s4-section-card-item.swiper-slide
+                        picture
+                          source(srcset="./images/s4_slide_card01_M.png" media="(max-width: 768px)" type="image/png")
+                          img(src="./images/s4_slide_card01.png", alt="")
+                      li.s4-section-card-item.swiper-slide
+                        picture
+                          source(srcset="./images/s4_slide_card02_M.png" media="(max-width: 768px)" type="image/png")
+                          img(src="./images/s4_slide_card02.png", alt="")
+                      li.s4-section-card-item.swiper-slide
+                        picture
+                          source(srcset="./images/s4_slide_card03_M.png" media="(max-width: 768px)" type="image/png")
+                          img(src="./images/s4_slide_card03.png", alt="")
+                      li.s4-section-card-item.swiper-slide
+                        picture
+                          source(srcset="./images/s4_slide_card04_M.png" media="(max-width: 768px)" type="image/png")
+                          img(src="./images/s4_slide_card04.png", alt="")
+                      li.s4-section-card-item.swiper-slide
+                        picture
+                          source(srcset="./images/s4_slide_card05_M.png" media="(max-width: 768px)" type="image/png")
+                          img(src="./images/s4_slide_card05.png", alt="")
+                      li.s4-section-card-item.swiper-slide
+                        picture
+                          source(srcset="./images/s4_slide_card06_M.png" media="(max-width: 768px)" type="image/png")
+                          img(src="./images/s4_slide_card06.png", alt="")
+                      li.s4-section-card-item.swiper-slide
+                        picture
+                          source(srcset="./images/s4_slide_card07_M.png" media="(max-width: 768px)" type="image/png")
+                          img(src="./images/s4_slide_card07.png", alt="")
+                      li.s4-section-card-item.swiper-slide
+                        picture
+                          source(srcset="./images/s4_slide_card08_M.png" media="(max-width: 768px)" type="image/png")
+                          img(src="./images/s4_slide_card08.png", alt="")
+                      li.s4-section-card-item.swiper-slide
+                        picture
+                          source(srcset="./images/s4_slide_card09_M.png" media="(max-width: 768px)" type="image/png")
+                          img(src="./images/s4_slide_card09.png", alt="")
+                  .swiper-button-next
+                  .swiper-button-prev
   #gotop
       a.gotop(href="#")

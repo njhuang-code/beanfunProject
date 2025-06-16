@@ -39,6 +39,19 @@
     @include size(100%, vw(133px));
     top: vw(-50px);
   }
+
+  .gotop {
+    @include size(vw(100px));
+    bottom: vw(20px);
+    right: vw(20px);
+  }
+
+  .logo {
+    width: vw(142px);
+    top: vw(20px);
+    left: vw(20px);
+  }
+
   
   // -----s2 section
   // --------------------------------------------------
@@ -303,6 +316,21 @@
         .s4-section-card-item {
           @include size(vw(669.6px), vw(410.62px));
         }
+        .swiper-button-next {
+          @include size(vw(68.53px), vw(116px));
+          right: vw(100px);
+        }
+        .swiper-button-prev {
+          @include size(vw(68.53px), vw(116px));
+          left: vw(100px);
+        }
+      }
+
+      
+      .swiper {
+        @include size(vw(669.6px), vw(410.62px));
+        bottom: vw(60px);
+        left: calc((100% - vw(669.6px)) / 2);
       }
     }
   }

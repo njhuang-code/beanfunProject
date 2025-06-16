@@ -127,11 +127,74 @@ body {
   height: 100%;
 }
 
+.gotop {
+  background: url(../images/gotop.png);
+  @include background-cover;
+  @include size(100px);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.black-overlay {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 3;
+  -moz-opacity: 0.8;
+  opacity: .90;
+  filter: alpha(opacity=80);
+  display: block;
+}
+
+.popup {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: block;
+
+  .closed {
+    @include size(32.45px);
+    cursor: pointer;
+  }
+
+  .popup-page {
+    @include flex-center;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .pop01 {
+    @include flex-center;;
+    max-width: 1094.4px;
+    margin: auto;
+    width: 100%;
+  }
+}
+
   // -----kv visual
   // --------------------------------------------------
   
   .kv-section-bg {
     @include size(100%, 100%);
+  }
+
+  .logo {
+    display: inline-block;
+    width: 142px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
   }
 
   
@@ -531,15 +594,28 @@ body {
       .s4-section-card-row  {
         .s4-section-card-item {
           @include size(pct(669.6px), 410.62px);
-          // position: absolute;
-          // left: calc((100% - 669.6px) / 2);
-          // bottom: pct(80px);
+        }
+        .swiper-button-next {
+          background: url(../images/s4_slide_arrow_next.png);
+          @include size(68.53px, 116px);
+          @include background-cover;
+          right: 100px;
+          top: 62%;
+        }
+        .swiper-button-prev {
+          background: url(../images/s4_slide_arrow_prev.png);
+          @include size(68.53px, 116px);
+          @include background-cover;
+          left: 100px;
+          top: 62%;
         }
       }
 
       .swiper {
-        width: 50%;
-        margin-top: pct(-430px);
+        @include size(669.6px, 410.62px);
+        position: absolute;
+        bottom: pct(80px);
+        left: calc((100% - 669.6px) / 2);
       }
     }
   }

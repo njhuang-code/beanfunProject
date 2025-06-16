@@ -1,5 +1,17 @@
 @media (max-width: ($mbrwd-breakpoint* 1px)) {
 
+  .gotop {
+    @include size(vwm(100px));
+    bottom: vwm(20px);
+    right: vwm(20px);
+  }
+
+  .logo {
+    width: vwm(142px);
+    top: vwm(20px);
+    left: vwm(20px);
+  }
+
   .section-tab {
     gap: vwm(4px);
     width: 100%;
@@ -82,7 +94,7 @@
       margin-top : vwm(150px);
 
       .s3-section-title-bottom {
-        @include size(vwm(780.6375px) , vwm(333.7625px));
+        @include size(vwm(780.6375px) , vwm(333px));
       }
 
       .s3-section-item {
@@ -92,16 +104,16 @@
           @include size(vwm(692.175px), vwm(571.925px));
           @include background-contain;
           .s3-section-btn {
-            bottom: vwm(63px);
-            @include size(100%, vwm(103.75px));
+            bottom: vwm(50px);
+            @include size(100%, vwm(103.75px * 1.5));
           }
         }
         &:nth-child(2) {
           @include size(vwm(692.175px), vwm(571.925px));
           @include background-contain;
           .s3-section-btn {
-            bottom: vwm(63px);
-            @include size(100%, vwm(103.75px));
+            bottom: vwm(50px);
+            @include size(100%, vwm(103.75px * 1.5));
           }
         }
       }
@@ -135,7 +147,7 @@
       margin-top: vwm(300px);
 
       .s4-section-title-bottom {
-        @include size(100%, vwm(400px));
+        @include size(100%, vwm(330px));
       }
   
       .section-tab-item {
@@ -165,7 +177,7 @@
     padding: vwm(48px) 0 vwm(50px);
   
     .s5-section-title {
-      @include size(100%, vwm(480px));
+      @include size(100%, vwm(430px));
     }
   
     .s5-section-msg {
@@ -237,12 +249,12 @@
     }
 
     .s5-section-card04 {
-      @include size(90%, auto);
+      @include size(98%, auto);
       margin-top: vwm(50px);
     }
   
     .s5-section-card05 {
-      @include size(50% , auto);
+      @include size(70% , auto);
       margin-top: vwm(50px);
     }
   }
@@ -288,7 +300,7 @@
         margin-top: vwm(105px);
       }
       .s3-section-card {
-        @include size(100%);
+        @include size(98% , 100%);
         margin-top: vwm(100px);
       }
 
@@ -339,7 +351,7 @@
         margin-bottom: vwm(30px);
       }
       .s4-section-card-top {
-        @include size(vwm(323.95px * 2), vwm(266.9px * 2));
+        @include size(vwm(323.95px * 2), vwm(260.9px * 2));
         margin-bottom: vwm(34px);
       }
       .s4-section-card-bottom {
@@ -349,9 +361,22 @@
       .s4-section-card-row  {
         .s4-section-card-item {
           @include size(vwm(247px * 2), vwm(357px * 2));
-          left: calc((100% - vwm(247px * 2)) / 2);
-          bottom: vwm(80px);
         }
+        .swiper-button-next {
+          @include size(vwm(68.53px), vwm(116px));
+          top: 61%;
+          right: vwm(18px);
+        }
+        .swiper-button-prev {
+          @include size(vwm(68.53px), vwm(116px));
+          top: 61%;
+          left: vwm(18px);
+        }
+      }
+      .swiper {
+        @include size(vwm(247px * 2), vwm(357px * 2));
+        bottom: vwm(80px);
+        left: calc((100% - vwm(247px * 2)) / 2);
       }
     }
   }
