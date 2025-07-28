@@ -1,0 +1,54 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+
+  .logo {
+    @include size(120px);
+    @include background-cover;
+    background-image: url(../images/icon/icon_logo_pc.png);
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 112px;
+    padding: 0 24px 0 0;
+  }
+
+  .header-row {
+    align-items: center;
+  }
+
+  .header-right {
+    display: flex;
+    margin-left: auto;
+    padding-top: 16px;
+  }
+
+  .header-item {
+    margin: 0 8px;
+  }
+}
+
+@media screen and (max-width: ($mbrwd-breakpoint* 1px)) {
+  .header {
+    .header-container {
+      max-height: 60px;
+      overflow: hidden;
+    }
+  
+    .header-left {
+      @include flex-center;
+      flex-direction: row-reverse;
+      max-height: 60px;
+    }
+
+    .mb-logo {
+      @include size(130px, 60px);
+      background-image: url(../images/icon/icon_logo_mb.png);
+    }
+  }
+}

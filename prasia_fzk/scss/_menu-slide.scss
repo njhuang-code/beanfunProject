@@ -1,0 +1,228 @@
+.menu-slide {
+  @include size(170px, 100%);
+  @include background-cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-image: url(../images/menu-slide-bg.png);
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.3s ease;
+  visibility: hidden;
+
+  &.open {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  .menu-slide-closed {
+    @include flex-center;
+    @include size(48px);
+    position: absolute;
+    top: 0;
+    left: 170px;
+    z-index: 999;
+    background: $black-800;
+    cursor: pointer;
+    &::after {
+      @include size(32px);
+      @include background-cover;
+      content: "";
+      display: inline-block;
+      margin-right: 0;
+      background-image: url(../images/icon-closed.png);
+      background-size: contain;
+    }
+    &:hover {
+      background: $menu-slide-hover;
+    }
+  }
+
+  .menu-slide-content {
+    padding: px-rem(16) 0;
+  }
+
+  .menu-slide-row {
+    @include flex-center;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 0 8px;
+
+    &:nth-of-type(2) {
+      .menu-slide-item {
+        height: 50px;
+        margin-bottom: 8px;
+      }
+      .menu-slide-link {
+        height: 50px;
+        filter: none;
+        border: 1px solid #d0ad80;
+      }
+
+      .img {
+        &:hover {
+          &.img-android {
+            &::before {
+              background-image: url(../images/img-android-active.png);
+            }
+          }
+          &.img-ios {
+            &::before {
+              background-image: url(../images/img-ios-active.png);
+            }
+          }
+          &.img-pc {
+            &::before {
+              background-image: url(../images/img-pc-active.png);
+            }
+          }
+        }
+        &::before {
+          @include background-cover;
+          height: 100%;
+          border: none;
+        }
+        &::after {
+          content: none;
+        }
+        &.img-android {
+          &::before {
+            background-image: url(../images/img-android.png);
+          }
+        }
+        &.img-ios {
+          &::before {
+            background-image: url(../images/img-ios.png);
+          }
+        }
+        &.img-pc {
+          &::before {
+            background-image: url(../images/img-pc.png);
+          }
+        }
+      }
+    }
+  }
+
+  .menu-slide-item {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .menu-slide-img {
+    height: 100%;
+    margin-bottom: 8px;
+  }
+
+  .menu-slide-link {
+    width: 100%;
+    position: relative;
+    color: #858585;
+    filter: grayscale(1);
+
+    &:hover {
+      color: #ffebbc;
+      filter: grayscale(0);
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 70px;
+    }
+
+    &::before {
+      border: 1px solid #858585;
+    }
+
+    &::after {
+      opacity: 0;
+      background-image: url(../images/menu_slide_border.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+.menu-slide-button {
+  @include flex-center;
+  @include size(100%, 52px);
+  position: absolute;
+  top: 112px;
+  align-items: center;
+  max-width: 119px;
+  color: $white;
+  background: $black-800;
+  text-shadow: 0 4px 8px $menu-slide-text;
+  cursor: pointer;
+
+  &:hover {
+    background: $menu-slide-hover;
+  }
+
+  &::after {
+    @include size(20px);
+    @include background-cover;
+    content: "";
+    display: inline-block;
+    background-image: url(../images/menu-hamburger.png);
+    background-size: contain;
+  }
+  .button-text {
+    order: 1;
+    margin-left: 8px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: ($mbrwd-breakpoint* 1px)) {
+
+  .menu-slide {
+    .menu-slide-button {
+      @include size(24px);
+      position: initial;
+      background: transparent;
+      &:hover {
+        background: none;
+      }
+      .button-text {
+        display: none;
+        margin-left: 0;
+      }
+    }
+    .menu-slide-link {
+      width: 100%;
+      padding: 12px 0;
+      border-bottom: 1px solid $menu-slide-border;
+      border-top: 1px solid $menu-slide-border;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .menu-slide-row {
+    &:nth-of-type(2) {
+      .menu-slide-item {
+        &:last-child {
+          display: none;
+        }
+      }
+      .menu-slide-link {
+        &::before {
+          display: block;
+        }
+      }
+    }
+  }
+
+}

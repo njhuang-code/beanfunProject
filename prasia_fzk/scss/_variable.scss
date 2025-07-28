@@ -1,0 +1,121 @@
+$primary: #fffade;
+$secondary: #fff;
+$third: #fff;
+$fourth: #fff;
+$header-color: #cbb692;
+$nav-text: #d0d0d0;
+$menu-slide-hover: #534c45;
+$menu-slide-text: #ffcc9699;
+$menu-slide-border: #403734;
+
+// Basic color
+$black-900: #000000;
+$black-800: #13100e;
+$black-700: #282828;
+$black-600: #333333;
+$black-500: #4d4d4d;
+$black-400: #666666;
+$black-300: #808080;
+$black-200: #999999;
+$black-100: #b3b3b3;
+$black-50: #cccccc;
+$white: #ffffff;
+
+// Breakpoint
+$pcrwd-breakpoint: 1597;
+$pc-midrwd-breakpoint: 1200;
+$mbrwd-breakpoint: 768;
+
+@mixin d-flex {
+  display: flex;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin background-cover {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@mixin background-contain {
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+
+@function xy($xy, $ttlw) {
+  @return ($xy / $ttlw * 100%);
+}
+
+@function pct($target) {
+  $vw-context: (
+    $pc-midrwd-breakpoint * .01) * 1px;
+  @return ($target / $vw-context) * 1%;
+}
+
+@function vw($target) {
+  $vw-context: (
+    $pc-midrwd-breakpoint * .01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function vwm($target){
+  $vw-context: ($mbrwd-breakpoint * .01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function px-em($px, $base: 16) {
+  @return ($px / $base * 1em);
+}
+
+@function px-rem($px, $base: 16) {
+  @return ($px / $base * 1rem);
+}
+
+@mixin posXY($x: 0, $y: 0) {
+  left: calc(50% + #{$x}px);
+  top: xy($y, $h);
+}
+
+@mixin size($w: null, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
+@mixin hover-only {
+  @media (any-hover: hover) {
+    @content;
+  }
+}

@@ -1,0 +1,112 @@
+@media (max-width: ($mbrwd-breakpoint* 1px)) {
+
+  .section {
+    picture {
+      @include flex-center;
+    }
+  }
+
+  .section-slide {
+    height: auto;
+    max-height: 100%;
+    .swiper-wrapper {
+      .swiper-slide {
+        &:nth-child(2) {
+          height: vwm(2000px);
+        }
+        &:nth-child(3) {
+          height: vwm(2000px);
+        }
+        &:nth-child(4) {
+          height: vwm(1320px);
+        }
+      }
+    }
+  }
+
+// kv visual
+// --------------------------------------------------
+.kv-section {
+
+  .kv-section-title {
+    @include size(vwm(700px), vwm(480px));
+  }
+
+  .kv-section-date {
+    font-size: vwm(28px * 1.2);
+    letter-spacing: vwm(12px);
+    margin: vwm(0px) auto vwm(32px);
+  }
+
+  .kv-section-btn {
+    @include size(vwm(333px), vwm(229px));
+  }
+
+  .kv-section-deco {
+    @include size(vwm(266px), vwm(382px));
+    position: absolute;
+    bottom: vwm(-160px);
+    right: 0;
+  }
+
+}
+
+// s2 section style
+// --------------------------------------------------
+.s2-section {
+  .section-wrapper {
+    padding-top: vwm(140px);
+  }
+  .s2-section-head {
+    @include size(vwm(720px * 1.1), vwm(142px * 1.1));
+  }
+
+  .s2-section-body {
+    @include size(vwm(676px * 1.1), vwm(1659px * 1.1));
+    margin-top: vwm(-80px);
+  }
+}
+
+// s3 section style
+// --------------------------------------------------
+.s3-section {
+
+  .s3-section-head {
+    @include size(vwm(759px * 1.05), vwm(141px * 1.05));
+    margin-bottom: vwm(40px);
+  }
+
+  .s3-section-body {
+    @include size(vwm(658px * 1.25), vwm(1069px * 1.25));
+  }
+
+  .s3-section-btn {
+    @include size(vwm(279px * 1.2), vwm(79px * 1.2));
+  }
+
+}
+
+// s4 section style
+// --------------------------------------------------
+.s4-section {
+
+  .section-wrapper {
+    margin-top: vwm(-120px);
+  }
+
+  .s4-section-head {
+    @include size(vwm(747px * 1.25), vwm(183px * 1.25));
+  }
+
+  .s4-section-body {
+    @include size(vwm(732px), vwm(656px));
+    margin-top: vwm(16px);
+  }
+
+}
+
+.UNI-footer .gradeArea .gradeArea__img img {
+  width: 50px;
+}
+
+}

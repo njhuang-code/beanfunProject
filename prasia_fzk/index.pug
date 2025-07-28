@@ -1,0 +1,49 @@
+extends _layout.pug
+
+append vars
+block append nav
+block content
+  main.content
+    .swiper.section-slide
+      .swiper-wrapper
+        section#sectionMain.swiper-slide
+          .section.kv-section
+            .kv-section-bg
+              video.section-video(autoplay loop muted playsinline)
+                source(src='./images/video/kv-video-pc.mp4')
+            .section-container
+              .section-wrapper.column
+                picture
+                  source(srcset="./images/kv-title-mobile.png" media="(max-width: 768px)" type="image/png")
+                  img.kv-section-title(src="./images/kv-title.png", alt="")
+                p.kv-section-date 2025.08.27 (三) UPDATE
+                button.kv-section-btn
+                img.kv-section-deco(src="./images/kv-deco.png", alt="")
+        section#sectionSec.swiper-slide
+          .section.s2-section
+            .section-bg.s2-section-bg
+            .section-container
+              .section-wrapper.column
+                img.section-head.s2-section-head(src="./images/s2-head.png", alt="")
+                picture
+                  source(srcset="./images/s2-body-mobile.png" media="(max-width: 768px)" type="image/png")
+                  img.s2-section-body(src="./images/s2-body.png", alt="")
+        section#sectionThird.swiper-slide
+          .section.s3-section
+            .section-bg.s3-section-bg
+            .section-container
+              .section-wrapper.column
+                img.section-head.s3-section-head(src="./images/s3-head.png", alt="")
+                picture
+                  source(srcset="./images/s3-body-mobile.png" media="(max-width: 768px)" type="image/png")
+                  img.s3-section-body(src="./images/s3-body.png", alt="")
+                a.s3-section-btn(href="javascript:void(0);")
+        section#sectionFourth.swiper-slide
+          .section.s4-section
+            .section-bg.s4-section-bg
+            .section-container
+              .section-wrapper.column
+                img.section-head.s4-section-head(src="./images/s4-head.png", alt="")
+                picture
+                  source(srcset="./images/s4-body-mobile.png" media="(max-width: 768px)" type="image/png")
+                  img.s4-section-body(src="./images/s4-body.png", alt="")

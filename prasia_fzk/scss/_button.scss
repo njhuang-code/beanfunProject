@@ -1,0 +1,90 @@
+// 開始遊戲、社群 button
+.btn-game {
+  @include flex-center;
+  @include size(180px,52px);
+  padding: 8px 16px;
+  background: $header-color;
+  border: 1px solid transparent;
+  transition: ease-in-out .2s;
+  white-space: nowrap;
+  &:hover {
+    border: 1px solid $white;
+    background: $black-900;
+    color: $white;
+    letter-spacing: 1px;
+  }
+}
+
+.btn-game-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  transition: all .3s;
+  &:hover {
+    &::before {
+      border: 1px solid $white;
+      background: $black-900;
+    }
+    .home,.fb,.yt {
+      filter: invert(100%) sepia(48%) saturate(155%) hue-rotate(291deg) brightness(119%) contrast(100%);
+    }
+  }
+  &::before {
+    @include size(100%);
+    content: "";
+    position: absolute;
+    border: 1px solid $header-color;
+    transform: rotate(45deg);
+  }
+}
+
+.btn-game-icon {
+  @include size(42px);
+  display: inline-flex;
+  align-items: center;
+  filter: invert(78%) sepia(25%) saturate(340%) hue-rotate(359deg) brightness(92%) contrast(86%);;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  &.home {
+    background-image: url(../images/icon/icon_home.svg);
+  }
+  &.fb {
+    background-image: url(../images/icon/icon_facebook.svg);
+  }
+  &.yt {
+    background-image: url(../images/icon/icon_youtube.svg);
+  }
+}
+
+.gotop {
+  @include flex-center;
+  @include size(42px);
+  position: fixed;
+  right: 42px;
+  bottom: 42px;
+  z-index: 990;
+  border-radius: 4px;
+  background: #00000080;
+  &::before {
+    @include background-cover;
+    @include size(40%,50%);
+    content: "";
+    display: inline-block;
+    background-image: url(../images/icon-gotop.svg);
+    opacity: .8;
+  }
+}
+
+@media screen and (max-width: ($mbrwd-breakpoint* 1px)) {
+
+  .btn-game-icon {
+    @include size(24px);
+  }
+
+  .gotop {
+    right: 16px;
+    bottom: 16px;
+  }
+
+}

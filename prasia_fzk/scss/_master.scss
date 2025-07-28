@@ -1,0 +1,141 @@
+.section {
+  &:not(.kv-section) {
+    .section-wrapper {
+      gap: px-rem(24);
+    }
+  }
+
+  .section-head {
+    transform: scale(.9);
+  }
+}
+
+// kv visual
+// --------------------------------------------------
+.kv-section {
+
+  .kv-section-bg {
+    &::after {
+      content: "";
+      display: block;
+      background: #000;
+      opacity: 0.5;
+      @include background-cover;
+      @include size(100%,100%);
+      @include center;
+    }
+  }
+
+  .kv-section-title {
+    @include size(1176px, 196px);
+  }
+
+  .kv-section-date {
+    font-size: px-rem(28);
+    letter-spacing: px-rem(12);
+    color: $white;
+    font-weight: bold;
+    margin: px-rem(-16) auto 32px;
+    // animation: fadeUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+    // transition-delay: 900ms;
+    filter: drop-shadow(0 0 7px rgba(255, 250, 108, .4)) drop-shadow(0 0 6px rgba(255, 250, 108, .6));
+
+  }
+
+  .kv-section-btn {
+    @include size(px-rem(333), px-rem(229));
+    background: url(../images/btn-play.png);
+    @include background-cover;
+    background-position: 80% 0;
+    position: relative;
+    animation: flameWind 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+    
+    @include hover-only {
+      &:hover {
+        background: url(../images/btn-play-hover.png);
+        @include background-cover;
+      }
+    }
+  }
+
+  .kv-section-deco {
+    @include size(266px, 382px);
+    position: absolute;
+    bottom: px-rem(-160);
+    right: px-rem(60);
+  }
+
+}
+
+// s2 section style
+// --------------------------------------------------
+.s2-section {
+
+  .s2-section-bg {
+    background: url(../images/s2-bg.png);
+    @include background-cover;
+  }
+
+  .s2-section-head {
+    @include size(px-rem(720), px-rem(142));
+    flex-shrink: 0;
+  }
+
+  .s2-section-body {
+    @include size(px-rem(1263), px-rem(677));
+  }
+}
+
+// s3 section style
+// --------------------------------------------------
+.s3-section {
+
+  .s3-section-bg {
+    background: url(../images/s3-bg.jpg);
+    @include background-cover;
+  }
+
+  .s3-section-head {
+    @include size(px-rem(759), px-rem(141));
+  }
+
+  .s3-section-body {
+    @include size(px-rem(1210), px-rem(684));
+    margin-top: px-rem(-54);
+  }
+
+  .s3-section-btn {
+    @include size(px-rem(279), px-rem(79));
+    background-image: url(../images/s3-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+    cursor: pointer;
+    @include hover-only {
+      &:hover {
+        background-position: 50% 0;
+      }
+    }
+  }
+
+}
+
+// s4 section style
+// --------------------------------------------------
+.s4-section {
+
+  .s4-section-bg {
+    background: url(../images/s4-bg.jpg);
+    @include background-cover;
+  }
+
+  .s4-section-head {
+    @include size(px-rem(747), px-rem(183));
+  }
+
+  .s4-section-body {
+    @include size(px-rem(930), px-rem(700));
+    margin-top: px-rem(-60);
+  }
+
+}

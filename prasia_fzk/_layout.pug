@@ -1,0 +1,138 @@
+doctype html
+html(lang="zh-Hant")
+  block vars
+    - var hasLoading = false
+    - var hasSwiper = true
+    - var hasCopyright = true
+    - var header_title = '波拉西亞戰記｜<波拉西亞戰記> 首次與 <風之王國：燕> 進行合作！'
+    - var author = 'Wars of Prasia'
+    - var og_title = '波拉西亞戰記｜<波拉西亞戰記> 首次與 <風之王國：燕> 進行合作！'
+    - var og_image = './images/facebook_cover_1200x630.jpg'
+    - var og_url = ''
+    - var og_desc = '<風之王國：燕> 的鬼怪森林，已透過世界裂縫與 <波拉西亞戰記> 相連。擊敗佔領國內城王宮的鬼怪王，並在黎奈亞大陸上尋找寶物鬼怪吧！'
+    - var meta_keyword = '波拉西亞戰記｜<波拉西亞戰記> 首次與 <風之王國：燕> 進行合作！'
+    - var date_publish = '2025-07-26'
+  
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(http-equiv='X-UA-Compatible', content="IE=edge, Chrome=1")
+      meta(http-equiv="Pragma" content="no-cache")
+      meta(http-equiv="Expires" content="0")
+      //- mobile only
+      meta(name="HandheldFriendly" content="true")
+      meta(name="MobileOptimized" content="320")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0 , viewport-fit=cover")
+      //- meta info
+      title #{og_title ? og_title + ' | ' + author : ''}
+      meta(property='description', content=og_desc ? og_desc : '')
+      meta(property='og:title', content=og_title ? og_title + ' | ' + author : '')
+      meta(property='og:image', content=og_image ? og_image : '')
+      meta(property='og:url', content=og_url ? og_url : '')
+      meta(property='og:type', content='website')
+      meta(property='og:locale', content='zh_TW')
+      meta(property='og:site_name', content=og_title)
+      meta(name='author', content=author)
+      meta(name='copyright', content=author)
+      if meta_keyword != ''
+        meta(name='keywords', content=meta_keyword)
+      //- 標準網址
+      link(rel='canonical', href=og_url)
+      link(rel="shortcut icon", href="./images/icon/favicon.ico", type="image/x-icon")
+      //- google fonts
+      link(rel="preconnect", href="https://fonts.googleapis.com")
+      link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+      if hasSwiper
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+      link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet")
+      link(rel="stylesheet", href="./css/style.css")
+      script(src="https://tw.beanfun.com/js/GA_CodeNew.js" type="text/javascript")
+  body
+    if hasLoading
+      block loading
+        #loading 
+          .loading
+            .loading__content
+              .loading__logo
+                img(src="./images/icon/icon_logo.png", alt="")
+              .loading__bar
+                .loading__progress
+              .loading__text.text-sm loading
+    block lightbox
+      #fade.black-overlay
+      .lightbox
+        .lightbox-container
+          .lightbox-wrapper
+            button.lightbox-closed
+            .lightbox-videobox
+              iframe.lightbox-video(src="https://www.youtube.com/embed/qFToCr74NYE?mute=1&amp;autoplay=0&amp;loop=1&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen) 
+    block header
+      header.header
+        .header-container.row
+          .header__left
+            .header__logo
+              a(href="https://warsofprasia.beanfun.com/Main" target="_blank").logo.mb-logo
+            button.menu-slide-button
+              p.button-text.event-text.fw-lg 活動
+            .menu-slide
+              .menu-slide-closed
+              .menu-slide-content.text-center
+                a(href="https://warsofprasia.beanfun.com/Main" target="_blank").logo
+                ul.menu-slide-row
+                  li.menu-slide-item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10634" target="blank").menu-slide-link
+                      img.menu-slide__img.d-none-sm(src="./images/banner01.jpg", alt="")
+                      h4.text-sm 直升30等
+                  li.menu-slide-item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/EventAD/EventAD?eventAdId=10884" target="blank").menu-slide-link
+                      img.menu-slide__img.d-none-sm(src="./images/banner02.jpg", alt="")
+                      h4.text-sm 波拉魂養成班
+                  li.menu-slide-item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10872" target="_black").menu-slide-link
+                      img.menu-slide__img.d-none-sm(src="./images/banner03.jpg", alt="")
+                      h4.text-sm 特別 WP Coupon
+                  li.menu-slide-item.text-center
+                    a(href="https://warsofprasia-event.beanfun.com/eventad/eventad?eventADID=10431" target="_black").menu-slide-link
+                      img.menu-slide__img.d-none-sm(src="./images/banner04.jpg", alt="")
+                      h4.text-sm 10% 紅利回饋
+                ul.menu-slide-row.device__row
+                  li.menu-slide-item
+                    a.menu-slide-link.img.img-android(href="https://play.google.com/store/apps/details?id=com.gamania.twp&hl=zh-TW" target="_blank")
+                  li.menu-slide-item
+                    a.menu-slide-link.img.img-ios(href="https://apps.apple.com/tw/app/%E6%B3%A2%E6%8B%89%E8%A5%BF%E4%BA%9E%E6%88%B0%E8%A8%98/id6451229143" target="_blank")
+                  li.menu-slide-item
+                    a.menu-slide-link.img.img-pc(href="https://warsofprasia.beanfun.com/Download?downloadTarget=1" target="_blank")
+          .header-right
+            ul.header__row.row
+              li.header-item.d-none-sm
+                a.btn-game.text-md.fw-md(href="https://galaxy.beanfun.com/webapi/view/login/twp?redirect_url=https://warsofprasia.beanfun.com/Main" target="_blank") GAME START
+              li.header-item
+                a(href="https://warsofprasia.beanfun.com/Main" target="_blank").btn-game-link
+                  i.btn-game-icon.home
+              li.header-item 
+                a(href="https://www.facebook.com/warsofprasia.tw" target="_blank").btn-game-link
+                  i.btn-game-icon.fb
+              li.header-item
+                a(href="https://www.youtube.com/@user-warsofprasia" target="_blank").btn-game-link
+                  i.btn-game-icon.yt
+    block nav
+      .menu-nav.d-none-md
+        nav.menu-nav__container
+          ul.column.menu-nav-row
+            li.menu-nav-item.active
+              a(href="#sectionMain").menu-nav-name.text-md [首次合作] 波拉西亞戰記 x 風之王國：燕
+            li.menu-nav-item
+              a(href="#sectionSec").menu-nav-name.text-md 聯名內容更新
+            li.menu-nav-item
+              a(href="#sectionThird").menu-nav-name.text-md 風之鬼怪森林
+            li.menu-nav-item
+              a(href="#sectionFourth").menu-nav-name.text-md 修行者之路
+    block content
+    block script
+      script(src="./js/jquery-3.7.1.min.js") 
+      script(src="./js/animate.js")
+      if hasSwiper
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+      script(src="./js/main.js")
+      if hasCopyright
+        script(src="https://frontend.beanfun.com/plugins/game-footer/game-footer.js" type="text/javascript" id="game-footer" prod="波拉西亞" theme="dark")
