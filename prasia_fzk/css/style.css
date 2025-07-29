@@ -787,7 +787,7 @@ body {
   color: #fffade;
 }
 .color-secondary {
-  color: #fff;
+  color: #d1d8f5;
 }
 
 .text-center {
@@ -1001,8 +1001,35 @@ body {
   gap: 1.5rem;
 }
 .section .section-head {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.75rem;
+}
+.section .section-title {
+  font-size: 3.375rem;
+  font-weight: bold;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d1d8f5));
+  background: linear-gradient(180deg, #ffffff, #d1d8f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+.section .section-msg {
+  font-size: 1.5rem;
+  color: #fdfcf9;
+  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+}
+.section .section-alert {
+  font-size: 1.25rem;
+  color: #d1d8f5;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .kv-section .kv-section-bg::after {
@@ -1115,9 +1142,9 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-.s4-section .s4-section-head {
-  width: 46.6875rem;
-  height: 11.4375rem;
+.s4-section .section-msg {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed rgba(255, 250, 250, 0.5);
 }
 .s4-section .s4-section-body {
   width: 58.125rem;
