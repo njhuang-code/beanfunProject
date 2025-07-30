@@ -1,8 +1,27 @@
 @media (max-width: ($mbrwd-breakpoint* 1px)) {
 
   .section {
+    padding: vwm(0px) vwm(24px);
     picture {
       @include flex-center;
+    }
+    .section-head {
+      gap: vwm(12px * 1.4);
+    }
+
+    .section-title {
+      font-size: vwm(54px * 1.5);
+    }
+
+    .section-msg {
+      font-size: vwm(24px * 1.4);
+      span {
+        display: inline;
+      }
+    }
+
+    .section-alert {
+      font-size: vwm(20px * 1.65);
     }
   }
 
@@ -54,12 +73,11 @@
 // s2 section style
 // --------------------------------------------------
 .s2-section {
+
   .section-wrapper {
     padding-top: vwm(140px);
   }
-  .s2-section-head {
-    @include size(vwm(720px * 1.1), vwm(142px * 1.1));
-  }
+
 
   .s2-section-body {
     @include size(vwm(676px * 1.1), vwm(1659px * 1.1));
@@ -71,13 +89,14 @@
 // --------------------------------------------------
 .s3-section {
 
-  .s3-section-head {
-    @include size(vwm(759px * 1.05), vwm(141px * 1.05));
-    margin-bottom: vwm(40px);
+  .section-head {
+    width: 90%;
+    padding: 0 vwm(24px);
   }
 
   .s3-section-body {
     @include size(vwm(658px * 1.25), vwm(1069px * 1.25));
+    margin-top: vwm(-80px);
   }
 
   .s3-section-btn {

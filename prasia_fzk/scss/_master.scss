@@ -26,13 +26,15 @@
     text-align: center;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-weight: 500;
+    span {
+      display: block;
+    }
   }
 
   .section-alert {
     font-size: px-rem(20);
     color: $secondary;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
   }
 }
 
@@ -102,11 +104,6 @@
     @include background-cover;
   }
 
-  .s2-section-head {
-    @include size(px-rem(720), px-rem(142));
-    flex-shrink: 0;
-  }
-
   .s2-section-body {
     @include size(px-rem(1263), px-rem(677));
   }
@@ -119,10 +116,6 @@
   .s3-section-bg {
     background: url(../images/s3-bg.jpg);
     @include background-cover;
-  }
-
-  .s3-section-head {
-    @include size(px-rem(759), px-rem(141));
   }
 
   .s3-section-body {

@@ -1,14 +1,40 @@
 @media screen and (max-height: 1000px) and (min-width: 769px) {
 
   .section {
-    .section-head {
-      transform: scale(.8);
+    &:not(.kv-section) {
+      .section-wrapper {
+        gap: 0;
+      }
     }
+
+    .section-head {
+      transform: scale(0.9);
+    }
+
   }
 
 }
 
 @media (max-width: ($pc-midrwd-breakpoint* 1px)) {
+
+  .section {
+    .section-head {
+      gap: vw(12px);
+    }
+
+    .section-title {
+      font-size: vw(54px);
+    }
+
+    .section-msg {
+      font-size: vw(24px);
+    }
+
+    .section-alert {
+      font-size: vw(20px);
+    }
+
+  }
   
   .section-slide {
     height: auto;
@@ -51,11 +77,6 @@
 // --------------------------------------------------
 .s2-section {
 
-  .s2-section-head {
-    @include size(vw(720px), vw(142px));
-    flex-shrink: 0;
-  }
-
   .s2-section-body {
     @include size(vw(1263px), vw(677px));
     transform: scale(0.9);
@@ -66,17 +87,14 @@
 // --------------------------------------------------
 .s3-section {
 
-  .s3-section-head {
-    @include size(vw(759px), vw(141px));
-  }
-
   .s3-section-body {
     @include size(vw(1210px), vw(684px));
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
 
   .s3-section-btn {
     @include size(vw(279px), vw(79px));
+    margin-top: vw(-60px);
   }
 
 }
@@ -84,10 +102,6 @@
 // s4 section style
 // --------------------------------------------------
 .s4-section {
-
-  .s4-section-head {
-    @include size(vw(747px), vw(183px));
-  }
 
   .s4-section-body {
     @include size(vw(930px), vw(700px));
